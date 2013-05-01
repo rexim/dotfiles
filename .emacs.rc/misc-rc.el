@@ -10,6 +10,8 @@
               tab-width 4
               indent-tabs-mode nil)
 
+(set-default-font "Monospace 12")
+
 (tool-bar-mode 0)
 (menu-bar-mode 0)
 (column-number-mode 1)
