@@ -6,9 +6,7 @@
 (global-set-key (kbd "C-c <C-down>")  'windmove-down)
 
 (setq-default inhibit-splash-screen t
-              make-backup-files nil
-              tab-width 4
-              indent-tabs-mode nil)
+              make-backup-files nil)
 
 (set-default-font "Monospace 12")
 

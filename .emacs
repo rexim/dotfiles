@@ -6,6 +6,7 @@
 (load "~/.emacs.rc/ccmode-rc.el")
 (load "~/.emacs.rc/gruber-darker-theme-rc.el")
 (load "~/.emacs.rc/paredit-rc.el")
+(load "~/.emacs.rc/emacs-lisp-mode-rc.el")
 (load "~/.emacs.rc/clojure-mode-rc.el")
 (load "~/.emacs.rc/markdown-mode-rc.el")
 (load "~/.emacs.rc/scala-mode2-rc.el")
