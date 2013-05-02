@@ -11,6 +11,7 @@
 (load "~/.emacs.rc/scala-mode2-rc.el")
 (load "~/.emacs.rc/haskell-mode-rc.el")
 (load "~/.emacs.rc/egg-rc.el")
+(load "~/.emacs.rc/multiple-cursors-rc.el")
 
 ;;; Custom's stuff
 (custom-set-variables
