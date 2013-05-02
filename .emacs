@@ -12,6 +12,7 @@
 (load "~/.emacs.rc/haskell-mode-rc.el")
 (load "~/.emacs.rc/egg-rc.el")
 (load "~/.emacs.rc/multiple-cursors-rc.el")
+(load "~/.emacs.rc/ggtags-rc.el")
 
 ;;; Custom's stuff
 (custom-set-variables
