@@ -9,6 +9,7 @@
 (load "~/.emacs.rc/clojure-mode-rc.el")
 (load "~/.emacs.rc/markdown-mode-rc.el")
 (load "~/.emacs.rc/scala-mode2-rc.el")
+(load "~/.emacs.rc/jade-mode-rc.el")
 (load "~/.emacs.rc/haskell-mode-rc.el")
 (load "~/.emacs.rc/egg-rc.el")
 (load "~/.emacs.rc/multiple-cursors-rc.el")
