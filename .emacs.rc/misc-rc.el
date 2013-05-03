@@ -10,7 +10,9 @@
               tab-width 4
               indent-tabs-mode nil)
 
-(set-default-font "Monospace 12")
+(cond
+ ((eq system-type 'windows-nt) (set-default-font "Consolas-13"))
+ ((eq system-type 'gnu/linux)  (set-default-font "Monospace-12")))
 
 (tool-bar-mode 0)
 (menu-bar-mode 0)

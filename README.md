@@ -10,4 +10,5 @@ Just a regular emacs configuration.
 
 ## Deployment ##
 
-Clone the repo somewhere and run the deploy.sh script.
+Clone the repo somewhere and run deploy.sh for Linux, or deploy.bat
+for Windows.
