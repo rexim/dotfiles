@@ -14,6 +14,7 @@
 (load "~/.emacs.rc/egg-rc.el")
 (load "~/.emacs.rc/multiple-cursors-rc.el")
 (load "~/.emacs.rc/ggtags-rc.el")
+(load "~/.emacs.rc/openwith-rc.el")
 
 ;;; Custom's stuff
 (custom-set-variables
