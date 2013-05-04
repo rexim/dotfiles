@@ -2,5 +2,6 @@
 
 (openwith-mode 1)
 
-(setq openwith-associations
-      '(("\\.pdf\\'" "evince" (file))))
+(when (eq system-type 'gnu/linux)
+  (setq openwith-associations
+        '(("\\.pdf\\'" "evince" (file)))))
