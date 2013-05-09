@@ -15,6 +15,8 @@
 (load "~/.emacs.rc/multiple-cursors-rc.el")
 (load "~/.emacs.rc/ggtags-rc.el")
 (load "~/.emacs.rc/openwith-rc.el")
+(load "~/.emacs.rc/dired-rc.el")
+;; (load "~/.emacs.rc/")
 
 ;;; Custom's stuff
 (custom-set-variables
