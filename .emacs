@@ -16,7 +16,7 @@
 (load "~/.emacs.rc/ggtags-rc.el")
 (load "~/.emacs.rc/openwith-rc.el")
 (load "~/.emacs.rc/dired-rc.el")
-;; (load "~/.emacs.rc/")
+(load "~/.emacs.rc/helm-rc.el")
 
 ;;; Custom's stuff
 (custom-set-variables
