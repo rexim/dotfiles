@@ -9,13 +9,3 @@
               make-backup-files nil
               tab-width 4
               indent-tabs-mode nil)
-
-(cond
- ((eq system-type 'windows-nt) (set-default-font "Consolas-13"))
- ((eq system-type 'gnu/linux)  (set-default-font "Monospace-12")))
-
-(tool-bar-mode 0)
-(menu-bar-mode 0)
-(column-number-mode 1)
-(global-linum-mode 1)
-(show-paren-mode 1)
