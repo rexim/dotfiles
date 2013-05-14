@@ -17,6 +17,7 @@
 (load "~/.emacs.rc/dired-rc.el")
 (load "~/.emacs.rc/helm-rc.el")
 (load "~/.emacs.rc/yasnippet-rc.el")
+(load "~/.emacs.rc/rainbow-rc.el")
 
 ;;; Custom's stuff
 (custom-set-variables
