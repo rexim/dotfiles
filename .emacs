@@ -19,6 +19,7 @@
 (load "~/.emacs.rc/yasnippet-rc.el")
 (load "~/.emacs.rc/rainbow-rc.el")
 (load "~/.emacs.rc/qml-mode-rc.el")
+(load "~/.emacs.rc/latex-mode-rc.el")
 
 ;;; Custom's stuff
 (custom-set-variables
