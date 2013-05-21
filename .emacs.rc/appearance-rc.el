@@ -11,5 +11,7 @@
 (show-paren-mode 1)
 
 ;;; Color theme
-(rc/ensure-package-installed 'gruber-darker-theme)
-(load-theme 'gruber-darker t)
+;; (rc/ensure-package-installed 'gruber-darker-theme)
+;; (load-theme 'gruber-darker t)
+(rc/ensure-package-installed 'zenburn-theme)
+(load-theme 'zenburn t)
