@@ -15,3 +15,4 @@
 (add-hook 'c-mode-common-hook   'rc/turn-on-yasnippets)
 (add-hook 'scala-mode-hook      'rc/turn-on-yasnippets)
 (add-hook 'js-mode-hook         'rc/turn-on-yasnippets)
+(add-hook 'html-mode-hook       'rc/turn-on-yasnippets)
