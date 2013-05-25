@@ -1,6 +1,4 @@
 (rc/ensure-package-installed 'rainbow-mode)
-;; (rc/ensure-package-installed 'rainbow-delimiters)
-;; (global-rainbow-delimiters-mode)
 
 (defun rc/turn-on-rainbow-mode ()
   (interactive)
