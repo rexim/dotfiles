@@ -1,7 +1,7 @@
 ;;; Fonts
 (cond
  ((eq system-type 'windows-nt) (set-default-font "Consolas-13"))
- ((eq system-type 'gnu/linux)  (set-default-font "Monospace-15")))
+ ((eq system-type 'gnu/linux)  (set-default-font "Monospace-12")))
 
 ;;; GUI
 (tool-bar-mode 0)
@@ -11,8 +11,8 @@
 (show-paren-mode 1)
 
 ;;; Color theme
-;; (rc/ensure-package-installed 'gruber-darker-theme)
-;; (load-theme 'gruber-darker t)
+(rc/ensure-package-installed 'gruber-darker-theme)
+(load-theme 'gruber-darker t)
 
-(rc/ensure-package-installed 'zenburn-theme)
-(load-theme 'zenburn t)
+;; (rc/ensure-package-installed 'zenburn-theme)
+;; (load-theme 'zenburn t)
