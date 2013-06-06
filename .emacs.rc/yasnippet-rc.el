@@ -1,6 +1,11 @@
 (rc/ensure-package-installed 'yasnippet)
+(rc/ensure-package-installed 'dropdown-list)
 
+(require 'dropdown-list)
 (require 'yasnippet)
+
+;; http://stackoverflow.com/questions/6888189/drop-down-menu-for-emacs
+(setq yas/prompt-functions '(yas/dropdown-prompt))
 
 (add-to-list 'yas-snippet-dirs "~/.emacs.snippets/")
 
