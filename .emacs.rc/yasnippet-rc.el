@@ -21,3 +21,4 @@
 (add-hook 'scala-mode-hook      'rc/turn-on-yasnippets)
 (add-hook 'js-mode-hook         'rc/turn-on-yasnippets)
 (add-hook 'html-mode-hook       'rc/turn-on-yasnippets)
+(add-hook 'nxml-mode-hook       'rc/turn-on-yasnippets)
