@@ -4,4 +4,5 @@
 
 (when (eq system-type 'gnu/linux)
   (setq openwith-associations
-        '(("\\.pdf\\'" "evince" (file)))))
+        '(("\\.pdf\\'" "evince" (file))
+          ("\\.docx\\'" "libreoffice" (file)))))

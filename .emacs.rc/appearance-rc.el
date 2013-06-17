@@ -11,17 +11,8 @@
 (show-paren-mode 1)
 
 ;;; Color theme
-;; (rc/ensure-package-installed 'gruber-darker-theme)
-;; (load-theme 'gruber-darker t)
-
-(defun load-gruber-darker ()
-  (interactive)
-  (load-theme 'gruber-darker t))
-
-(add-to-list 'custom-theme-load-path
-             "~/Programming/mine/gruber-darker-theme/")
-(load-gruber-darker)
-(global-set-key (kbd "C-c C-b") 'load-gruber-darker)
+(rc/ensure-package-installed 'gruber-darker-theme)
+(load-theme 'gruber-darker t)
 
 ;; (rc/ensure-package-installed 'zenburn-theme)
 ;; (load-theme 'zenburn t)
