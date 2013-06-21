@@ -11,8 +11,22 @@
 (show-paren-mode 1)
 
 ;;; Color theme
-(rc/ensure-package-installed 'gruber-darker-theme)
-(load-theme 'gruber-darker t)
+(add-to-list 'custom-theme-load-path
+             "~/Programming/mine/desert-theme/")
+(add-to-list 'custom-theme-load-path
+             "~/Programming/mine/gruber-darker-theme/")
+(add-to-list 'custom-theme-load-path
+             "~/Programming/foreign/zenburn-emacs/")
 
-;; (rc/ensure-package-installed 'zenburn-theme)
-;; (load-theme 'zenburn t)
+(defvar rc/current-theme 'gruber-darker)
+
+(defun rc/reload-theme (theme)
+  (interactive)
+  (load-theme theme t))
+
+(rc/reload-theme rc/current-theme)
+
+(global-set-key (kbd "C-c C-b")
+                '(lambda ()
+                   (interactive)
+                   (rc/reload-theme rc/current-theme)))
