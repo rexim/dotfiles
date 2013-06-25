@@ -6,7 +6,7 @@
 (setq-default inhibit-splash-screen t
               make-backup-files nil
               tab-width 4
-              indent-tabs-mode (getenv "WORK_4GEO"))
+              indent-tabs-mode nil)
 
 ;;; Taken from here:
 ;;; http://stackoverflow.com/questions/2416655/file-path-to-clipboard-in-emacs
@@ -14,11 +14,11 @@
   "Put the current file name on the clipboard"
   (interactive)
   (let ((filename (if (equal major-mode 'dired-mode)
-					  default-directory
-					(buffer-file-name))))
-	(when filename
-	  (kill-new filename)
-	  (message filename))))
+                      default-directory
+                    (buffer-file-name))))
+    (when filename
+      (kill-new filename)
+      (message filename))))
 
 (defun rc/put-buffer-name-on-clipboard ()
   "Put the current buffer name on the clipboard"
