@@ -23,6 +23,7 @@
 (load "~/.emacs.rc/latex-mode-rc.el")
 (load "~/.emacs.rc/d-mode-rc.el")
 (load "~/.emacs.rc/slime-rc.el")
+(load "~/.emacs.rc/batch-mode-rc.el")
 
 ;;; Custom's stuff
 (custom-set-variables
