@@ -11,22 +11,26 @@
 (show-paren-mode 1)
 
 ;;; Color theme
-(add-to-list 'custom-theme-load-path
-             "~/Programming/mine/desert-theme/")
-(add-to-list 'custom-theme-load-path
-             "~/Programming/mine/gruber-darker-theme/")
-(add-to-list 'custom-theme-load-path
-             "~/Programming/foreign/zenburn-emacs/")
+(rc/ensure-package-installed 'gruber-darker-theme)
+(load-theme 'gruber-darker t)
 
-(defvar rc/current-theme 'gruber-darker)
+;; FIXME(rexim): for this sort of things a special mode is required.
+;; (add-to-list 'custom-theme-load-path
+;;              "~/Programming/mine/desert-theme/")
+;; (add-to-list 'custom-theme-load-path
+;;              "~/Programming/mine/gruber-darker-theme/")
+;; (add-to-list 'custom-theme-load-path
+;;              "~/Programming/foreign/zenburn-emacs/")
 
-(defun rc/reload-theme (theme)
-  (interactive)
-  (load-theme theme t))
+;; (defvar rc/current-theme 'gruber-darker)
 
-(rc/reload-theme rc/current-theme)
+;; (defun rc/reload-theme (theme)
+;;   (interactive)
+;;   (load-theme theme t))
 
-(global-set-key (kbd "C-c C-b")
-                '(lambda ()
-                   (interactive)
-                   (rc/reload-theme rc/current-theme)))
+;; (rc/reload-theme rc/current-theme)
+
+;; (global-set-key (kbd "C-c C-b")
+;;                 '(lambda ()
+;;                    (interactive)
+;;                    (rc/reload-theme rc/current-theme)))
