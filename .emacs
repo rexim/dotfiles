@@ -25,6 +25,7 @@
 (load "~/.emacs.rc/slime-rc.el")
 (load "~/.emacs.rc/batch-mode-rc.el")
 (load "~/.emacs.rc/erlang-rc.el")
+(load "~/.emacs.rc/nsis-mode-rc.el")
 
 ;;; Custom's stuff
 (custom-set-variables
