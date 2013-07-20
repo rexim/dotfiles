@@ -20,12 +20,12 @@
 (load "~/.emacs.rc/yasnippet-rc.el")
 (load "~/.emacs.rc/rainbow-rc.el")
 (load "~/.emacs.rc/js-mode-rc.el")
-(load "~/.emacs.rc/latex-mode-rc.el")
 (load "~/.emacs.rc/d-mode-rc.el")
 (load "~/.emacs.rc/slime-rc.el")
 (load "~/.emacs.rc/batch-mode-rc.el")
 (load "~/.emacs.rc/erlang-rc.el")
 (load "~/.emacs.rc/nsis-mode-rc.el")
+(load "~/.emacs.rc/auto-fill-mode-rc.el")
 
 ;;; Custom's stuff
 (custom-set-variables
