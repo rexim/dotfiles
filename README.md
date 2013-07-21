@@ -2,13 +2,19 @@
 
 Just a regular emacs configuration.
 
-## Requirements ##
+# Requirements #
 
 * Emacs 24+
+* Any *nix or Windows 7+
 * git
 * Internet connection
 
-## Deployment ##
+# Deployment #
 
-Clone the repo somewhere and run deploy.sh for Linux, or deploy.bat
-for Windows.
+## *nix ##
+
+Clone the repo somewhere and run deploy.sh.
+
+## Windows ##
+
+Clone the repo somewhere and run deploy.bat as Administrator.
