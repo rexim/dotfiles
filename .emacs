@@ -26,8 +26,8 @@
 (load "~/.emacs.rc/erlang-rc.el")
 (load "~/.emacs.rc/nsis-mode-rc.el")
 (load "~/.emacs.rc/auto-fill-mode-rc.el")
-(load "~/.emacs.rc/html-mode-rc.el")
 (load "~/.emacs.rc/yaml-mode-rc.el")
+(load "~/.emacs.rc/tt-mode-rc.el")
 
 ;;; Custom's stuff
 (custom-set-variables

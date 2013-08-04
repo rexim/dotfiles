@@ -2,6 +2,8 @@
 
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(add-to-list 'package-archives
+             '("local" . "/home/rexim/Programming/foreign/melpa/packages/") t)
 
 (defvar rc/package-contents-refreshed nil)
 
