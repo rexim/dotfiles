@@ -25,3 +25,11 @@
   (interactive)
   (kill-new (buffer-name))
   (message (buffer-name)))
+
+(defun rc/kill-autoloads-buffers ()
+  (interactive)
+  (dolist (buffer (buffer-list))
+    (let ((name (buffer-name buffer)))
+      (when (string-match-p "-autoloads.el" name)
+        (kill-buffer buffer)
+        (message "Killed autoloads buffer %s" name)))))
