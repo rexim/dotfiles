@@ -17,7 +17,7 @@
 (load "~/.emacs.rc/openwith-rc.el")
 (load "~/.emacs.rc/dired-rc.el")
 (load "~/.emacs.rc/helm-rc.el")
-;; (load "~/.emacs.rc/yasnippet-rc.el")
+(load "~/.emacs.rc/yasnippet-rc.el")
 (load "~/.emacs.rc/rainbow-rc.el")
 (load "~/.emacs.rc/js-mode-rc.el")
 (load "~/.emacs.rc/d-mode-rc.el")
