@@ -28,6 +28,7 @@
 (load "~/.emacs.rc/auto-fill-mode-rc.el")
 (load "~/.emacs.rc/yaml-mode-rc.el")
 (load "~/.emacs.rc/tt-mode-rc.el")
+(load "~/.emacs.rc/glsl-mode-rc.el")
 
 ;;; Custom's stuff
 (custom-set-variables
@@ -37,7 +38,8 @@
  ;; If there is more than one, they won't work right.
  '(safe-local-variable-values
    (quote ((eval when (fboundp (quote flymake-mode)) (flymake-mode 1))
-           (eval when (fboundp (quote rainbow-mode)) (rainbow-mode 1))))))
+           (eval when (fboundp (quote rainbow-mode)) (rainbow-mode 1))
+           (indent-tabs-mode t)))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
