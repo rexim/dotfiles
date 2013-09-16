@@ -29,6 +29,7 @@
 (rc/ensure-package-installed 'yaml-mode)
 (rc/ensure-package-installed 'tt-mode)
 (rc/ensure-package-installed 'glsl-mode)
+(rc/ensure-package-installed 'tuareg)
 
 ;;; Custom's stuff
 (custom-set-variables
