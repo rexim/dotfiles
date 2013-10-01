@@ -1,7 +1,11 @@
 ;;; Fonts
 (cond
- ((eq system-type 'windows-nt) (set-default-font "Consolas-13"))
- ((eq system-type 'gnu/linux)  (set-default-font "Monospace-12")))
+ ((eq system-type 'windows-nt)
+  (add-to-list 'default-frame-alist
+               '(font . "Consolas-13")))
+ ((eq system-type 'gnu/linux)
+  (add-to-list 'default-frame-alist
+               '(font . "Monospace-15"))))
 
 ;;; GUI
 (tool-bar-mode 0)
