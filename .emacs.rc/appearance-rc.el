@@ -5,7 +5,7 @@
                '(font . "Consolas-13")))
  ((eq system-type 'gnu/linux)
   (add-to-list 'default-frame-alist
-               '(font . "Monospace-15"))))
+               '(font . "Monospace-12"))))
 
 ;;; GUI
 (tool-bar-mode 0)
@@ -15,8 +15,8 @@
 (show-paren-mode 1)
 
 ;;; Color theme
-(rc/ensure-package-installed 'zenburn-theme)
-(load-theme 'zenburn t)
+(rc/ensure-package-installed 'gruber-darker-theme)
+(load-theme 'gruber-darker t)
 
 ;; FIXME(rexim): for this sort of things a special mode is required.
 ;; (add-to-list 'custom-theme-load-path
