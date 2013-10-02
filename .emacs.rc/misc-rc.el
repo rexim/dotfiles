@@ -6,7 +6,8 @@
 (setq-default inhibit-splash-screen t
               make-backup-files nil
               tab-width 4
-              indent-tabs-mode nil)
+              indent-tabs-mode nil
+              compilation-scroll-output t)
 
 ;;; Taken from here:
 ;;; http://stackoverflow.com/questions/2416655/file-path-to-clipboard-in-emacs
