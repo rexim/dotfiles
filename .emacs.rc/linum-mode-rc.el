@@ -7,3 +7,4 @@
 (add-hook 'haskell-mode-hook    'rc/turn-on-linum-mode)
 (add-hook 'perl-mode-hook       'rc/turn-on-linum-mode)
 (add-hook 'python-mode-hook     'rc/turn-on-linum-mode)
+(add-hook 'asm-mode-hook        'rc/turn-on-linum-mode)
