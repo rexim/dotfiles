@@ -2,7 +2,7 @@
   (interactive)
   (linum-mode 1))
 
-(setq rc/linum-compatible-modes
+(setq rc/linum-compatible-mode-hooks
       '(c-mode-common-hook
         emacs-lisp-mode-hook
         haskell-mode-hook
@@ -12,5 +12,5 @@
         html-mode-hook
         css-mode-hook))
 
-(dolist (mode rc/linum-compatible-modes)
-  (add-hook mode 'rc/turn-on-linum-mode))
+(dolist (mode-hook rc/linum-compatible-mode-hooks)
+  (add-hook mode-hook 'rc/turn-on-linum-mode))
