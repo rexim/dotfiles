@@ -7,3 +7,4 @@
 (add-hook 'html-mode-hook 'rc/turn-on-rainbow-mode)
 (add-hook 'css-mode-hook  'rc/turn-on-rainbow-mode)
 (add-hook 'js-mode-hook   'rc/turn-on-rainbow-mode)
+(add-hook 'nxml-mode-hook 'rc/turn-on-rainbow-mode)
