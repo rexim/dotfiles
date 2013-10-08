@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: display: none
+# key: dispn
+# --
+display: none;

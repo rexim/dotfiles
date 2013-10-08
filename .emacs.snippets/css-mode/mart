@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: margin-top: ...
+# key: mart
+# --
+margin-top: $1;

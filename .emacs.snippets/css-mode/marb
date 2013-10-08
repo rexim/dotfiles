@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: margin-bottom: ...
+# key: marb
+# --
+margin-bottom: $1;
