@@ -6,8 +6,7 @@
 
 ;; http://stackoverflow.com/questions/6888189/drop-down-menu-for-emacs
 (setq yas/prompt-functions '(yas/dropdown-prompt))
-
-(add-to-list 'yas-snippet-dirs "~/.emacs.snippets/")
+(setq yas-snippet-dirs '("~/.emacs.snippets/"))
 
 (eval-after-load 'yasnippet
   (yas-reload-all))
