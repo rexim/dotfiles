@@ -23,7 +23,8 @@
         html-mode-hook
         nxml-mode-hook
         css-mode-hook
-        latex-mode-hook))
+        latex-mode-hook
+        markdown-mode-hook))
 
 (dolist (mode-hook rc/yasnippet-compatible-mode-hooks)
   (add-hook mode-hook 'rc/turn-on-yasnippet))
