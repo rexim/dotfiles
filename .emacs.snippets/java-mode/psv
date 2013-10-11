@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: public static void
+# key: psv
+# --
+public static void 
