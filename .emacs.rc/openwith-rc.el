@@ -6,8 +6,6 @@
   (setq openwith-associations
         '(("\\.pdf\\'" "evince" (file))
           ("\\.djvu\\'" "evince" (file))
-
-          ;; FIXME(rexim): it's probably possible to merge this two
-          ;; entries.
           ("\\.docx\\'" "libreoffice" (file))
-          ("\\.doc\\'" "libreoffice" (file)))))
+          ("\\.doc\\'" "libreoffice" (file))
+          ("\\.rtf\\'" "libreoffice" (file)))))
