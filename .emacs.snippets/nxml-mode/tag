@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: <tag>\n...\n</tag>
+# key: tag
+# --
+<${1:tag}$2>
+$0
+</$1>
