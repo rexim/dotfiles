@@ -8,4 +8,5 @@
           ("\\.djvu\\'" "evince" (file))
           ("\\.docx\\'" "libreoffice" (file))
           ("\\.doc\\'" "libreoffice" (file))
-          ("\\.rtf\\'" "libreoffice" (file)))))
+          ("\\.rtf\\'" "libreoffice" (file))
+          ("\\.mp3\\'" "vlc" (file)))))
