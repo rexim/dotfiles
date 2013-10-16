@@ -2,4 +2,4 @@
 # name: #include <...>
 # key: inc
 # --
-#include <$1>
+#include <$0>
