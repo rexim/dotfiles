@@ -10,7 +10,8 @@
         python-mode-hook
         asm-mode-hook
         html-mode-hook
-        css-mode-hook))
+        css-mode-hook
+        nxml-mode-hook))
 
 (dolist (mode-hook rc/linum-compatible-mode-hooks)
   (add-hook mode-hook 'rc/turn-on-linum-mode))
