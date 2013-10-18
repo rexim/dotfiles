@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: <div class="...">\n...\n</div>
-# key: div
-# --
-<div class="$1">
-$0
-</div>

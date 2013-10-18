@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: margin-left: ...
-# key: marl
-# --
-margin-left: $1;

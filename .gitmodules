@@ -1,0 +1,3 @@
+[submodule "emacs.snippets"]
+	path = emacs.snippets
+	url = git@github.com:rexim/emacs.snippets.git

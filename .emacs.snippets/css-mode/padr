@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: padding-right: ...
-# key: padr
-# --
-padding-right: $1;

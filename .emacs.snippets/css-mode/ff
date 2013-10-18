@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: font-family: ...
-# key: ff
-# --
-font-family: $1;

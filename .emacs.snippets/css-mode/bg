@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: background-color: ...
-# key: bg
-# --
-background-color: #${1:DDD};

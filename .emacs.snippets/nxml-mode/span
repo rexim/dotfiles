@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: <span class="...">\n...\n</span>
-# key: span
-# --
-<span class="$1">$0</span>
