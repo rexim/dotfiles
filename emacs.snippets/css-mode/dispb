@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: display: block
+# key: dispb
+# --
+display: block;

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: padding: ...
+# key: pad
+# --
+padding: $1;

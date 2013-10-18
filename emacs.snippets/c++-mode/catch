@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: catch (...) { ... }
+# key: catch
+# --
+catch ($1) {
+$0
+}

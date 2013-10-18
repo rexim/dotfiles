@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: padding-bottom: ...
+# key: padb
+# --
+padding-bottom: $1;

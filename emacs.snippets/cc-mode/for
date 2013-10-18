@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: for (...; ...; ...) { ... }
+# key: for
+# --
+for (${1:init}; ${2:condition}; ${3:increment}) {
+$0
+}
