@@ -21,7 +21,6 @@
 (load "~/.emacs.rc/slime-rc.el")
 (load "~/.emacs.rc/batch-mode-rc.el")
 (load "~/.emacs.rc/auto-fill-mode-rc.el")
-(load "~/.emacs.rc/linum-mode-rc.el")
 (load "~/.emacs.rc/nxml-mode-rc.el")
 (rc/ensure-package-installed 'scala-mode2)
 (rc/ensure-package-installed 'jade-mode)
