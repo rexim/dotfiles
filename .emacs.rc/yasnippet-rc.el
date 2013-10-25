@@ -4,6 +4,8 @@
 (require 'dropdown-list)
 (require 'yasnippet)
 
+(setq yas/triggers-in-field t)
+
 ;; http://stackoverflow.com/questions/6888189/drop-down-menu-for-emacs
 (setq yas/prompt-functions '(yas/dropdown-prompt))
 (setq yas-snippet-dirs '("~/.emacs.snippets/"))
