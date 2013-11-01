@@ -31,6 +31,7 @@
 (rc/ensure-package-installed 'tt-mode)
 (rc/ensure-package-installed 'glsl-mode)
 (rc/ensure-package-installed 'tuareg)
+(rc/ensure-package-installed 'lua-mode)
 
 ;;; Custom's stuff
 (custom-set-variables
