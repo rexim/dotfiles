@@ -9,9 +9,9 @@ FILES="
 
 for f in $FILES; do
     if [ -L ~/$f ]; then
-	echo "[WARNING] $f is already deployed"
+        echo "[WARNING] $f is already deployed"
     else
-	ln -s $SCRIPT_DIR/$f ~/$f
-	echo "[OK] $f has been deployed"
+        ln -s $SCRIPT_DIR/$f ~/$f
+        echo "[OK] $f has been deployed"
     fi
 done
