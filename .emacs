@@ -22,6 +22,7 @@
 (load "~/.emacs.rc/batch-mode-rc.el")
 (load "~/.emacs.rc/auto-fill-mode-rc.el")
 (load "~/.emacs.rc/nxml-mode-rc.el")
+(load "~/.emacs.rc/perl-mode-rc.el")
 (rc/ensure-package-installed 'scala-mode2)
 (rc/ensure-package-installed 'jade-mode)
 (rc/ensure-package-installed 'd-mode)
