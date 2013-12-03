@@ -33,6 +33,7 @@
 (rc/ensure-package-installed 'glsl-mode)
 (rc/ensure-package-installed 'tuareg)
 (rc/ensure-package-installed 'lua-mode)
+(rc/ensure-package-installed 'less-css-mode)
 
 ;;; Custom's stuff
 (custom-set-variables
