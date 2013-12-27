@@ -5,7 +5,7 @@
                '(font . "Consolas-13")))
  ((eq system-type 'gnu/linux)
   (add-to-list 'default-frame-alist
-               '(font . "Ubuntu Mono-14"))))
+               '(font . "Ubuntu Mono-16"))))
 
 ;;; GUI
 (tool-bar-mode 0)
