@@ -34,6 +34,7 @@
 (rc/ensure-package-installed 'tuareg)
 (rc/ensure-package-installed 'lua-mode)
 (rc/ensure-package-installed 'less-css-mode)
+(rc/ensure-package-installed 'graphviz-dot-mode)
 
 ;;; Custom's stuff
 (custom-set-variables
