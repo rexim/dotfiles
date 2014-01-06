@@ -38,7 +38,7 @@
 (defun rc/url-from-clipboard-to-org-link ()
   (interactive)
   (let ((dest-buffer (current-buffer))
-        (url (substring-no-properties (x-get-selection))))
+        (url (substring-no-properties (current-kill 0))))
     (url-retrieve
      url
      `(lambda (s)
