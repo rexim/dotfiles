@@ -43,7 +43,7 @@
      url
      `(lambda (s)
         (goto-char (point-max))
-        (search-backward-regexp "<title>\\(.*\\)</title>")
+        (search-backward-regexp "<title>[[:space:]\n]*\\(.*\\)[[:space:]\n]*</title>")
         (let ((title (match-string 1)))
           (with-current-buffer ,dest-buffer
             (insert "[[" ,url "][" title "]]")))))))
