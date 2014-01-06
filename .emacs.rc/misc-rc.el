@@ -34,3 +34,16 @@
       (when (string-match-p "-autoloads.el" name)
         (kill-buffer buffer)
         (message "Killed autoloads buffer %s" name)))))
+
+(defun rc/url-from-clipboard-to-org-link ()
+  (interactive)
+  (let ((dest-buffer (current-buffer))
+        (url (substring-no-properties (x-get-selection))))
+    (url-retrieve
+     url
+     `(lambda (s)
+        (goto-char (point-max))
+        (search-backward-regexp "<title>\\(.*\\)</title>")
+        (let ((title (match-string 1)))
+          (with-current-buffer ,dest-buffer
+            (insert "[[" ,url "][" title "]]")))))))
