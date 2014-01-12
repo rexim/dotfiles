@@ -35,7 +35,7 @@
         (kill-buffer buffer)
         (message "Killed autoloads buffer %s" name)))))
 
-(defun rc/url-from-clipboard-to-org-link ()
+(defun rc/org-link-from-clipboarded-url ()
   (interactive)
   (let ((dest-buffer (current-buffer))
         (url (substring-no-properties (current-kill 0))))
