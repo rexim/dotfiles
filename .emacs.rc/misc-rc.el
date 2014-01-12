@@ -46,4 +46,4 @@
         (search-backward-regexp "<title>[[:space:]\n]*\\(.*\\)[[:space:]\n]*</title>")
         (let ((title (match-string 1)))
           (with-current-buffer ,dest-buffer
-            (insert "[[" ,url "][" title "]]")))))))
+            (insert (format "[[%s][%s]]" ,url title))))))))
