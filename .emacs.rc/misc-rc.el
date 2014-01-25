@@ -42,8 +42,9 @@
     (url-retrieve
      url
      `(lambda (s)
-        (goto-char (point-max))
-        (search-backward-regexp "<title>[[:space:]\n]*\\(.*\\)[[:space:]\n]*</title>")
-        (let ((title (match-string 1)))
-          (with-current-buffer ,dest-buffer
-            (insert (format "[[%s][%s]]" ,url title))))))))
+        (let ((content (decode-coding-string (buffer-string) 'utf-8)))
+          (string-match "<title>[[:space:]\n]*\\(.*\\)[[:space:]\n]*</title>"
+                        content)
+          (let ((title (match-string 1 content)))
+            (with-current-buffer ,dest-buffer
+              (insert (format "[[%s][%s]]" ,url title)))))))))
