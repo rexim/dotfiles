@@ -48,3 +48,10 @@
           (let ((title (match-string 1 content)))
             (with-current-buffer ,dest-buffer
               (insert (format "[[%s][%s]]" ,url title)))))))))
+
+(defun rc/start-python-simple-http-server ()
+  (interactive)
+  (shell-command "python -m SimpleHTTPServer 3001 &"
+                 "*Simple Python HTTP Server*"))
+
+(global-set-key (kbd "C-x p s") 'rc/start-python-simple-http-server)
