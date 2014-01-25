@@ -35,6 +35,17 @@
         (kill-buffer buffer)
         (message "Killed autoloads buffer %s" name)))))
 
+(defun rc/prepare-org-link-title (title)
+  (let ((replace-table '(("\\[" . "{")
+                         ("\\]" . "}")))
+        (max-length 77)
+        (result title))
+    (dolist (x replace-table)
+      (setq result (replace-regexp-in-string (car x) (cdr x) result)))
+    (when (> (length result) max-length)
+      (setq result (concat (substring result 0 max-length) "...")))
+    result))
+
 (defun rc/org-link-from-clipboarded-url ()
   (interactive)
   (let ((dest-buffer (current-buffer))
@@ -45,7 +56,7 @@
         (let ((content (decode-coding-string (buffer-string) 'utf-8)))
           (string-match "<title>[[:space:]\n]*\\(.*\\)[[:space:]\n]*</title>"
                         content)
-          (let ((title (match-string 1 content)))
+          (let ((title (rc/prepare-org-link-title (match-string 1 content))))
             (with-current-buffer ,dest-buffer
               (insert (format "[[%s][%s]]" ,url title)))))))))
 
