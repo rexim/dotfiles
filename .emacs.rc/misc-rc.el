@@ -49,6 +49,8 @@
             (with-current-buffer ,dest-buffer
               (insert (format "[[%s][%s]]" ,url title)))))))))
 
+(global-set-key (kbd "C-x p i") 'rc/org-link-from-clipboarded-url)
+
 (defun rc/start-python-simple-http-server ()
   (interactive)
   (shell-command "python -m SimpleHTTPServer 3001 &"
