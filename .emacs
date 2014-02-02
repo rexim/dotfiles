@@ -1,6 +1,7 @@
 ;;; RCs
 (load "~/.emacs.rc/package-manager-rc.el")
 (load "~/.emacs.rc/misc-rc.el")
+(load "~/.emacs.rc/cliplink-rc.el")
 (load "~/.emacs.rc/appearance-rc.el")
 (load "~/.emacs.rc/ido-smex-rc.el")
 (load "~/.emacs.rc/ccmode-rc.el")
