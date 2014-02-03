@@ -35,17 +35,6 @@
         (kill-buffer buffer)
         (message "Killed autoloads buffer %s" name)))))
 
-(defun rc/straight-string (s)
-  (mapconcat '(lambda (x) x) (split-string s) " "))
-
-(defun rc/extract-title-from-html (html)
-  (let ((start (string-match "<title>" html))
-        (end (string-match "</title>" html))
-        (chars-to-skip (length "<title>")))
-    (if (and start end (< start end))
-        (substring html (+ start chars-to-skip) end)
-      nil)))
-
 (defun rc/start-python-simple-http-server ()
   (interactive)
   (shell-command "python -m SimpleHTTPServer 3001 &"
