@@ -21,18 +21,21 @@
       (setq result (concat (substring result 0 max-length) "...")))
     result))
 
-(defun rc/insert-cliplink ()
+(defun rc/perform-cliplink (buffer url content)
+  (let* ((decoded-content (decode-coding-string content 'utf-8))
+         (title (rc/prepare-cliplink-title
+                 (rc/extract-title-from-html decoded-content))))
+    (with-current-buffer buffer
+      (insert (format "[[%s][%s]]" url title)))))
+
+(defun rc/cliplink ()
   (interactive)
   (let ((dest-buffer (current-buffer))
         (url (substring-no-properties (current-kill 0))))
     (url-retrieve
      url
      `(lambda (s)
-        (let* ((content (decode-coding-string
-                         (buffer-string) 'utf-8))
-               (title (rc/prepare-cliplink-title
-                       (rc/extract-title-from-html content))))
-          (with-current-buffer ,dest-buffer
-            (insert (format "[[%s][%s]]" ,url title))))))))
+        (rc/perform-cliplink ,dest-buffer ,url
+                             (buffer-string))))))
 
-(global-set-key (kbd "C-x p i") 'rc/insert-cliplink)
+(global-set-key (kbd "C-x p i") 'rc/cliplink)
