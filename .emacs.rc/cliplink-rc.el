@@ -23,10 +23,11 @@
 
 (defun rc/perform-cliplink (buffer url content)
   (let* ((decoded-content (decode-coding-string content 'utf-8))
-         (title (rc/prepare-cliplink-title
-                 (rc/extract-title-from-html decoded-content))))
+         (title (rc/extract-title-from-html decoded-content)))
     (with-current-buffer buffer
-      (insert (format "[[%s][%s]]" url title)))))
+      (if title
+          (insert (format "[[%s][%s]]" url (rc/prepare-cliplink-title title)))
+        (insert (format "[[%s]]" url))))))
 
 (defun rc/cliplink ()
   (interactive)
