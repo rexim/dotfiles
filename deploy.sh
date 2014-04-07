@@ -5,6 +5,7 @@ FILES="
 .emacs
 .emacs.rc
 .emacs.snippets
+.emacs.local
 "
 
 for f in $FILES; do
