@@ -25,6 +25,7 @@
 (load "~/.emacs.rc/nxml-mode-rc.el")
 (load "~/.emacs.rc/perl-mode-rc.el")
 (load "~/.emacs.rc/fan-mode-rc.el")
+(load "~/.emacs.rc/crappy-jsp-mode-rc.el")
 (rc/ensure-package-installed 'scala-mode2)
 (rc/ensure-package-installed 'jade-mode)
 (rc/ensure-package-installed 'd-mode)
