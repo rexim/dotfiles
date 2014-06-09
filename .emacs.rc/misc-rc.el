@@ -58,3 +58,6 @@ by using nxml's indentation rules."
         (backward-char) (insert "\n"))
       (indent-region begin end))
     (message "Ah, much better!"))
+
+;;; A little hack which fixes a problem with meta key in fluxbox.
+(setq x-alt-keysym 'meta)
