@@ -6,7 +6,6 @@
 (load "~/.emacs.rc/ido-smex-rc.el")
 (load "~/.emacs.rc/ccmode-rc.el")
 (load "~/.emacs.rc/paredit-rc.el")
-(load "~/.emacs.rc/clojure-mode-rc.el")
 (load "~/.emacs.rc/emacs-lisp-rc.el")
 (load "~/.emacs.rc/markdown-mode-rc.el")
 (load "~/.emacs.rc/haskell-mode-rc.el")
@@ -38,6 +37,7 @@
 (rc/ensure-package-installed 'lua-mode)
 (rc/ensure-package-installed 'less-css-mode)
 (rc/ensure-package-installed 'graphviz-dot-mode)
+(rc/ensure-package-installed 'clojure-mode)
 
 ;;; Custom's stuff
 (custom-set-variables
