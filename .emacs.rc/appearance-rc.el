@@ -15,10 +15,8 @@
 (show-paren-mode 1)
 
 ;;; Color theme
-;; (rc/ensure-package-installed 'gruber-darker-theme)
-;; (load-theme 'gruber-darker t)
-(rc/ensure-package-installed 'zenburn-theme)
-(load-theme 'zenburn t)
+(rc/ensure-package-installed 'gruber-darker-theme)
+(load-theme 'gruber-darker t)
 
 ;; FIXME(rexim): for this sort of things a special mode is required.
 ;; (add-to-list 'custom-theme-load-path
