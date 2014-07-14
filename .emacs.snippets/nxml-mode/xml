@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+# key: xml
+# --
+<?xml version="1.0" encoding="UTF-8" ?>
