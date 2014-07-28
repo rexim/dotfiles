@@ -1,0 +1,4 @@
+.emacs|symlink
+.emacs.rc|symlink
+.emacs.snippets|symlink
+.emacs.local|symlink
