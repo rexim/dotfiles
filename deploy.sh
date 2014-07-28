@@ -22,7 +22,7 @@ symlinkFile() {
     fi
 }
 
-for row in `cat MANIFEST`; do
+for row in `cat $SCRIPT_DIR/MANIFEST`; do
     filename=`echo $row | cut -d \| -f 1`
     operation=`echo $row | cut -d \| -f 2`
 
