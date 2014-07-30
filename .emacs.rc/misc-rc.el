@@ -9,6 +9,9 @@
               indent-tabs-mode nil
               compilation-scroll-output t)
 
+(setq browse-url-browser-function 'browse-url-generic
+      browse-url-generic-program "chromium-browser")
+
 ;;; Taken from here:
 ;;; http://stackoverflow.com/questions/2416655/file-path-to-clipboard-in-emacs
 (defun rc/put-file-name-on-clipboard ()
