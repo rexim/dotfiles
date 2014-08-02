@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: immutable
+# key: imm
+# --
+immutable $0
