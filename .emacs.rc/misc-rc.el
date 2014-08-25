@@ -62,5 +62,9 @@ by using nxml's indentation rules."
       (indent-region begin end))
     (message "Ah, much better!"))
 
-;;; A little hack which fixes a problem with meta key in fluxbox.
+(defun insert-autocommit-message ()
+  (interactive)
+  (insert (format-time-string "Autocommit %s")))
+
+;;; A little hack which fixes a problem with meta key in fluxbox under VNC.
 (setq x-alt-keysym 'meta)
