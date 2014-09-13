@@ -40,7 +40,6 @@
 (rc/ensure-package-installed 'less-css-mode)
 (rc/ensure-package-installed 'graphviz-dot-mode)
 (rc/ensure-package-installed 'clojure-mode)
-(rc/ensure-package-installed 'dirtree)
 
 ;;; Custom's stuff
 (custom-set-variables
