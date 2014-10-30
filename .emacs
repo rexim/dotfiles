@@ -27,7 +27,6 @@
 (load "~/.emacs.rc/crappy-jsp-mode-rc.el")
 (load "~/.emacs.rc/recentf-mode-rc.el")
 (load "~/.emacs.rc/tramp-rc.el")
-(load "~/.emacs.rc/dirtree-rc.el")
 (rc/ensure-package-installed 'scala-mode2)
 (rc/ensure-package-installed 'jade-mode)
 (rc/ensure-package-installed 'd-mode)
