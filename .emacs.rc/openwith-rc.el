@@ -1,4 +1,4 @@
-(rc/ensure-package-installed 'openwith)
+(rc/require 'openwith)
 
 (openwith-mode 1)
 

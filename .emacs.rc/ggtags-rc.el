@@ -1,4 +1,4 @@
-(rc/ensure-package-installed 'ggtags)
+(rc/require 'ggtags)
 
 (defun rc/turn-on-ggtags ()
   (interactive)

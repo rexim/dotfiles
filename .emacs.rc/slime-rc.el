@@ -1,4 +1,4 @@
-(rc/ensure-package-installed 'slime)
+(rc/require 'slime)
 (require 'slime-autoloads)
 ;; WARNING! If you're experiencing a problem with initialization of
 ;; SLIME, remove all its *.elc files.

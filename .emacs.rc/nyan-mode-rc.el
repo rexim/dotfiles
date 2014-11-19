@@ -1,2 +1,2 @@
-(rc/ensure-package-installed 'nyan-mode)
+(rc/require 'nyan-mode)
 (nyan-mode)

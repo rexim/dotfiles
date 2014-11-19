@@ -1,4 +1,4 @@
-(rc/ensure-package-installed 'paredit)
+(rc/require 'paredit)
 
 (defun rc/turn-on-paredit ()
   (interactive)

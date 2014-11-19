@@ -1,7 +1,7 @@
 ;; magit requres this lib, but it is not installed automatically on
 ;; Windows.
-(rc/ensure-package-installed 'cl-lib)
-(rc/ensure-package-installed 'magit)
+(rc/require 'cl-lib)
+(rc/require 'magit)
 
 (global-set-key (kbd "C-c m s") 'magit-status)
 (global-set-key (kbd "C-c m l") 'magit-log)

@@ -1,4 +1,4 @@
-(rc/ensure-package-installed 'rainbow-mode)
+(rc/require 'rainbow-mode)
 
 (defun rc/turn-on-rainbow-mode ()
   (interactive)

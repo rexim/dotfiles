@@ -1,5 +1,5 @@
-(rc/ensure-package-installed 'smex)
-(rc/ensure-package-installed 'ido-ubiquitous)
+(rc/require 'smex)
+(rc/require 'ido-ubiquitous)
 
 (ido-mode 1)
 (ido-everywhere 1)

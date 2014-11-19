@@ -1,6 +1,6 @@
-(rc/ensure-package-installed 'helm)
-(rc/ensure-package-installed 'helm-cmd-t)
-(rc/ensure-package-installed 'helm-git-grep)
+(rc/require 'helm)
+(rc/require 'helm-cmd-t)
+(rc/require 'helm-git-grep)
 
 (setq helm-ff-transformer-show-only-basename nil)
 

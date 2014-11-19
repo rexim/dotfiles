@@ -12,7 +12,7 @@
     (setq rc/package-contents-refreshed t)
     (package-refresh-contents)))
 
-(defun rc/ensure-package-installed (package)
+(defun rc/require (package)
   (when (not (package-installed-p package))
     (rc/package-refresh-contents-once)
     (package-install package)))

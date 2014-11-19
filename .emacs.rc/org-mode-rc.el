@@ -1,4 +1,4 @@
-(rc/ensure-package-installed 'org-cliplink)
+(rc/require 'org-cliplink)
 
 (global-set-key (kbd "C-c a l") 'org-agenda-list)
 (global-set-key (kbd "C-c a s") 'org-search-view)

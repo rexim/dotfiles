@@ -1,5 +1,5 @@
-(rc/ensure-package-installed 'yasnippet)
-(rc/ensure-package-installed 'dropdown-list)
+(rc/require 'yasnippet)
+(rc/require 'dropdown-list)
 
 (require 'dropdown-list)
 (require 'yasnippet)
