@@ -30,7 +30,6 @@
 (load "~/.emacs.rc/recentf-mode-rc.el")
 (load "~/.emacs.rc/tramp-rc.el")
 (load "~/.emacs.rc/org-mode-rc.el")
-(load "~/.emacs.rc/nyan-mode-rc.el")
 (rc/require 'scala-mode2)
 (rc/require 'jade-mode)
 (rc/require 'd-mode)
