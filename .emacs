@@ -44,6 +44,7 @@
 (rc/require 'less-css-mode)
 (rc/require 'graphviz-dot-mode)
 (rc/require 'clojure-mode)
+(rc/require 'cmake-mode)
 
 ;;; Custom's stuff
 (custom-set-variables
