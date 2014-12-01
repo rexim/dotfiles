@@ -31,20 +31,13 @@
 (load "~/.emacs.rc/tramp-rc.el")
 (load "~/.emacs.rc/org-mode-rc.el")
 (load "~/.emacs.rc/linum-mode-rc.el")
-(rc/require 'scala-mode2)
-(rc/require 'jade-mode)
-(rc/require 'd-mode)
-(rc/require 'erlang)
-(rc/require 'nsis-mode)
-(rc/require 'yaml-mode)
-(rc/require 'tt-mode)
-(rc/require 'glsl-mode)
-(rc/require 'tuareg)
-(rc/require 'lua-mode)
-(rc/require 'less-css-mode)
-(rc/require 'graphviz-dot-mode)
-(rc/require 'clojure-mode)
-(rc/require 'cmake-mode)
+
+;;; Packages that don't require configuration 
+(rc/require 'scala-mode2 'jade-mode 'd-mode
+            'erlang 'nsis-mode 'yaml-mode
+            'tt-mode 'glsl-mode 'tuareg
+            'lua-mode 'less-css-mode 'graphviz-dot-mode
+            'clojure-mode 'cmake-mode)
 
 ;;; Custom's stuff
 (custom-set-variables

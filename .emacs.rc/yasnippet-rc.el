@@ -1,5 +1,4 @@
-(rc/require 'yasnippet)
-(rc/require 'dropdown-list)
+(rc/require 'yasnippet 'dropdown-list)
 
 (require 'dropdown-list)
 (require 'yasnippet)

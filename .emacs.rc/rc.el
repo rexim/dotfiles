@@ -12,7 +12,11 @@
     (setq rc/package-contents-refreshed t)
     (package-refresh-contents)))
 
-(defun rc/require (package)
+(defun rc/require-one-package (package)
   (when (not (package-installed-p package))
     (rc/package-refresh-contents-once)
     (package-install package)))
+
+(defun rc/require (&rest packages)
+  (dolist (package packages)
+    (rc/require-one-package package)))

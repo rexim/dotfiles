@@ -1,5 +1,4 @@
-(rc/require 'smex)
-(rc/require 'ido-ubiquitous)
+(rc/require 'smex 'ido-ubiquitous)
 
 (ido-mode 1)
 (ido-everywhere 1)

@@ -1,6 +1,4 @@
-(rc/require 'helm)
-(rc/require 'helm-cmd-t)
-(rc/require 'helm-git-grep)
+(rc/require 'helm 'helm-cmd-t 'helm-git-grep)
 
 (setq helm-ff-transformer-show-only-basename nil)
 
