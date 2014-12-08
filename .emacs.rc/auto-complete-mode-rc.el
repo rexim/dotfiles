@@ -19,7 +19,9 @@
 (defun rc/ac-cc-mode-setup ()
   (add-to-list 'ac-sources 'ac-source-clang))
 
-(add-hook 'c-mode-common-hook 'rc/ac-cc-mode-setup)
+(add-hook 'c-mode-hook 'rc/ac-cc-mode-setup)
+(add-hook 'c++-mode-hook 'rc/ac-cc-mode-setup)
+
 (setq ac-clang-flags
       (mapcar (lambda (item)(concat "-I" item))
               (split-string
