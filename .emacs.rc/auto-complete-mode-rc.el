@@ -16,8 +16,6 @@
 (eval-after-load "auto-complete"
   '(add-to-list 'ac-modes 'haskell-interactive-mode))
 
-(setq ac-clang-auto-save t)
-
 (defun rc/ac-cc-mode-setup ()
   (add-to-list 'ac-sources 'ac-source-clang))
 
