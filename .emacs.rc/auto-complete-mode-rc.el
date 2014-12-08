@@ -1,9 +1,11 @@
 (rc/require 'auto-complete)
 (rc/require 'ac-haskell-process)
+(rc/require 'auto-complete-clang)
 
 (require 'auto-complete)
 (require 'auto-complete-config)
 (require 'ac-haskell-process)
+(require 'auto-complete-clang)
 
 (ac-config-default)
 
@@ -13,3 +15,24 @@
 (add-hook 'haskell-interactive-hook 'ac-haskell-process-setup)
 (eval-after-load "auto-complete"
   '(add-to-list 'ac-modes 'haskell-interactive-mode))
+
+(setq ac-clang-auto-save t)
+
+(defun rc/ac-cc-mode-setup ()
+  (add-to-list 'ac-sources 'ac-source-clang))
+
+(add-hook 'c-mode-common-hook 'rc/ac-cc-mode-setup)
+(setq ac-clang-flags
+      (mapcar (lambda (item)(concat "-I" item))
+              (split-string
+               "
+ /usr/include/c++/4.9
+ /usr/include/x86_64-linux-gnu/c++/4.9
+ /usr/include/c++/4.9/backward
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include
+ /usr/local/include
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+"
+               )))
