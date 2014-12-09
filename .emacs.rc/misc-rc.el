@@ -68,3 +68,5 @@ by using nxml's indentation rules."
 
 ;;; A little hack which fixes a problem with meta key in fluxbox under VNC.
 (setq x-alt-keysym 'meta)
+
+(setq confirm-kill-emacs 'y-or-n-p)
