@@ -14,12 +14,12 @@
 
 (global-set-key (kbd "C-x p c") 'rc/org-comment)
 
-(defvar rc/visited nil)
+(defvar rc/autopull-lock nil)
 
 (defun rc/autopull-changes ()
   (interactive)
-  (when (not rc/visited)
-    (setq rc/visited t)
+  (when (not rc/autopull-lock)
+    (setq rc/autopull-lock t)
     (async-shell-command "git pull")))
 
 (defun rc/autocommit-changes ()
