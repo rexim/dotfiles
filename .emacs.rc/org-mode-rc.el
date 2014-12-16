@@ -13,3 +13,15 @@
   (kmacro-exec-ring-item (quote ([3 33 return 134217730 32 2] 0 "%d")) arg))
 
 (global-set-key (kbd "C-x p c") 'rc/org-comment)
+
+(defvar rc/visited nil)
+
+(defun rc/autopull-changes ()
+  (interactive)
+  (when (not rc/visited)
+    (setq rc/visited t)
+    (async-shell-command "git pull")))
+
+(defun rc/autocommit-changes ()
+  (interactive)
+  (async-shell-command "git add -u && git commit -m \"Autocommit $(date +%s)\" && git push origin master"))
