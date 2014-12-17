@@ -31,7 +31,7 @@
 (load "~/.emacs.rc/recentf-mode-rc.el")
 (load "~/.emacs.rc/tramp-rc.el")
 (load "~/.emacs.rc/org-mode-rc.el")
-(load "~/.emacs.rc/linum-mode-rc.el")
+;; (load "~/.emacs.rc/linum-mode-rc.el")
 (load "~/.emacs.rc/auto-complete-mode-rc.el")
 
 ;;; Packages that don't require configuration 
