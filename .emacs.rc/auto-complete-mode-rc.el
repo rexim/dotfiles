@@ -22,6 +22,7 @@
 (add-hook 'c-mode-hook 'rc/ac-cc-mode-setup)
 (add-hook 'c++-mode-hook 'rc/ac-cc-mode-setup)
 
+;;; echo "" | g++ -v -x c++ -E -
 (setq ac-clang-flags
       (mapcar (lambda (item)(concat "-I" item))
               (split-string
