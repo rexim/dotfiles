@@ -25,3 +25,12 @@
 (defun rc/autocommit-changes ()
   (interactive)
   (async-shell-command "git add -u && git commit -m \"Autocommit $(date +%s)\" && git push origin master"))
+
+(defun rc/cliplink-task ()
+  (interactive)
+  (org-cliplink-retrieve-title (substring-no-properties (current-kill 0))
+                               '(lambda (url title)
+                                  (insert (concat "* TODO " title
+                                                  "\n  [[" url "][" title "]]")))))
+
+(global-set-key (kbd "C-x p t") 'rc/cliplink-task)
