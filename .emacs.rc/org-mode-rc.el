@@ -1,7 +1,6 @@
 (rc/require 'org-cliplink)
 
-(global-set-key (kbd "C-c a l") 'org-agenda-list)
-(global-set-key (kbd "C-c a s") 'org-search-view)
+(global-set-key (kbd "C-x a") 'org-agenda)
 (global-set-key (kbd "C-x p i") 'org-cliplink)
 
 (setq org-agenda-files (list "~/Documents/Personal/Tasks.org"
@@ -34,3 +33,7 @@
                                                   "\n  [[" url "][" title "]]")))))
 
 (global-set-key (kbd "C-x p t") 'rc/cliplink-task)
+
+(setq org-agenda-custom-commands
+      '(("u" "Unscheduled" tags-todo "unscheduled"
+         ((org-agenda-sorting-strategy '(priority-down))))))
