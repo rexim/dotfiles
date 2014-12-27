@@ -5,8 +5,7 @@
 
 (setq org-agenda-files (list "~/Documents/Personal/Tasks.org"
                              "~/Documents/Personal/Imported.org"
-                             "~/Documents/Personal/Archive.org"
-                             "~/Documents/Personal/Home.org"))
+                             "~/Documents/Personal/Archive.org"))
 
 (defun rc/org-comment (&optional arg)
   (interactive "p")
