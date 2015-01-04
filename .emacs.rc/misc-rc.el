@@ -70,3 +70,5 @@ by using nxml's indentation rules."
 (setq x-alt-keysym 'meta)
 
 (setq confirm-kill-emacs 'y-or-n-p)
+
+(server-start)
