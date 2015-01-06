@@ -4,8 +4,7 @@
 (global-set-key (kbd "C-x p i") 'org-cliplink)
 
 (setq org-agenda-files (list "~/Documents/Personal/Tasks.org"
-                             "~/Documents/Personal/Imported.org"
-                             "~/Documents/Personal/Archive.org"))
+                             "~/Documents/Personal/Imported.org"))
 
 (defun rc/org-comment (&optional arg)
   (interactive "p")
