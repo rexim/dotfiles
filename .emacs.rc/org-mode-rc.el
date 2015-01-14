@@ -1,10 +1,12 @@
+
 (rc/require 'org-cliplink)
 
 (global-set-key (kbd "C-x a") 'org-agenda)
 (global-set-key (kbd "C-x p i") 'org-cliplink)
 
 (setq org-agenda-files (list "~/Documents/Personal/Tasks.org"
-                             "~/Documents/Personal/Imported.org"))
+                             "~/Documents/Personal/Imported.org"
+                             "~/Documents/Personal/Itest.org"))
 
 (defun rc/org-comment (&optional arg)
   (interactive "p")
@@ -35,4 +37,7 @@
 
 (setq org-agenda-custom-commands
       '(("u" "Unscheduled" tags "unscheduled"
-         ((org-agenda-sorting-strategy '(priority-down))))))
+         ((org-agenda-sorting-strategy '(priority-down))))
+        ("p" "Personal" ((agenda "" ((org-agenda-tag-filter-preset (list "+personal"))))))
+        ("w" "Work" ((agenda "" ((org-agenda-tag-filter-preset (list "+work"))))))
+        ))
