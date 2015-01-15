@@ -15,6 +15,8 @@
 (global-set-key (kbd "C-x p c") 'rc/org-comment)
 
 (defvar rc/autopull-lock nil)
+(defvar rc/autocommit-lock nil)
+(defvar rc/autocommit-changed nil)
 
 (defun rc/autopull-changes ()
   (interactive)
@@ -22,9 +24,27 @@
     (setq rc/autopull-lock t)
     (async-shell-command "git pull")))
 
+(defun rc/run-commit-process ()
+  (start-process-shell-command "Autocommit"
+                               "*Autocommit*"
+                               "git add -u && git commit -m \"Autocommit $(date +%s)\" && git push origin master"))
+
+(defun rc/autocommit-beat (process event)
+  (if (not rc/autocommit-changed)
+      (setq rc/autocommit-lock nil)
+    (setq rc/autocommit-changed nil)
+    (set-process-sentinel (rc/run-commit-process)
+                          'rc/autocommit-beat))
+  )
+
 (defun rc/autocommit-changes ()
   (interactive)
-  (async-shell-command "git add -u && git commit -m \"Autocommit $(date +%s)\" && git push origin master"))
+  (if rc/autocommit-lock
+      (setq rc/autocommit-changed t)
+    (setq rc/autocommit-lock t)
+    (setq rc/autocommit-changed nil)
+    (set-process-sentinel (rc/run-commit-process)
+                          'rc/autocommit-beat)))
 
 (defun rc/cliplink-task ()
   (interactive)
