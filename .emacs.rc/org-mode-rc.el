@@ -27,7 +27,7 @@
 (defun rc/run-commit-process ()
   (start-process-shell-command "Autocommit"
                                "*Autocommit*"
-                               "git add -u && git commit -m \"Autocommit $(date +%s)\" && git push origin master"))
+                               "date; git add -u && git commit -m \"Autocommit $(date +%s)\" && git push origin master; echo '------------------------------'"))
 
 (defun rc/autocommit-beat (process event)
   (if (not rc/autocommit-changed)
