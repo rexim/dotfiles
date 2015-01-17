@@ -30,12 +30,12 @@
                                "date; git add -u && git commit -m \"Autocommit $(date +%s)\" && git push origin master; echo '------------------------------'"))
 
 (defun rc/autocommit-beat (process event)
+  (message "Autocommit is finished")
   (if (not rc/autocommit-changed)
       (setq rc/autocommit-lock nil)
     (setq rc/autocommit-changed nil)
     (set-process-sentinel (rc/run-commit-process)
-                          'rc/autocommit-beat))
-  )
+                          'rc/autocommit-beat)))
 
 (defun rc/autocommit-changes ()
   (interactive)
