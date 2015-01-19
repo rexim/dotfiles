@@ -18,6 +18,11 @@
 (defvar rc/autocommit-lock nil)
 (defvar rc/autocommit-changed nil)
 
+(defun rc/autocommit-reset-locks ()
+  (interactive)
+  (setq rc/autocommit-lock nil)
+  (setq rc/autocommit-changed nil))
+
 (defun rc/autopull-changes ()
   (interactive)
   (when (not rc/autopull-lock)
