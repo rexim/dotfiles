@@ -8,7 +8,7 @@
       (add-to-list 'default-frame-alist
                    '(font . "Ubuntu Mono-18"))
     (add-to-list 'default-frame-alist
-                 '(font . "Ubunut Mono-14")))))
+                 '(font . "Ubuntu Mono-14")))))
 
 ;;; GUI
 (tool-bar-mode 0)
