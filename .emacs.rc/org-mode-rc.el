@@ -64,7 +64,7 @@
 (global-set-key (kbd "C-x p t") 'rc/cliplink-task)
 
 (setq org-agenda-custom-commands
-      '(("u" "Unscheduled" tags "unscheduled"
+      '(("u" "Unscheduled" tags "-imported+personal-SCHEDULED={.+}-DEADLINE={.+}/!+TODO"
          ((org-agenda-sorting-strategy '(priority-down))))
         ("p" "Personal" ((agenda "" ((org-agenda-tag-filter-preset (list "+personal"))))))
         ("w" "Work" ((agenda "" ((org-agenda-tag-filter-preset (list "+work"))))))
