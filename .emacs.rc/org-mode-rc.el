@@ -9,6 +9,7 @@
                              "~/Documents/Personal/Itest.org"))
 
 (setq org-enforce-todo-dependencies t)
+(setq org-agenda-dim-blocked-tasks 'invisible)
 
 (defun rc/org-comment (&optional arg)
   (interactive "p")
