@@ -8,6 +8,8 @@
                              "~/Documents/Personal/Imported.org"
                              "~/Documents/Personal/Itest.org"))
 
+(setq org-enforce-todo-dependencies t)
+
 (defun rc/org-comment (&optional arg)
   (interactive "p")
   (kmacro-exec-ring-item (quote ([3 33 return 134217730 32 2] 0 "%d")) arg))
