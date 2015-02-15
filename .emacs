@@ -33,6 +33,7 @@
 (load "~/.emacs.rc/org-mode-rc.el")
 ;; (load "~/.emacs.rc/linum-mode-rc.el")
 (load "~/.emacs.rc/auto-complete-mode-rc.el")
+(load "~/.emacs.rc/powershell-rc.el")
 
 ;;; Packages that don't require configuration 
 (rc/require 'scala-mode2 'jade-mode 'd-mode
