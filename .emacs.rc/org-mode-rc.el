@@ -33,9 +33,11 @@
     (async-shell-command "git pull")))
 
 (defun rc/run-commit-process ()
-  (start-process-shell-command "Autocommit"
-                               "*Autocommit*"
-                               "date; git add -u && git commit -m \"Autocommit $(date +%s)\" && git push origin master; echo '------------------------------'"))
+  (let ((autocommit-message (format-time-string "Autocommit %s")))
+    (start-process-shell-command "Autocommit"
+                                 "*Autocommit*"
+                                 (format "git add -u && git commit -m \"%s\" && git push origin master; echo '------------------------------'"
+                                         autocommit-message))))
 
 (defun rc/autocommit-beat (process event)
   (message "Autocommit is finished")

@@ -1,5 +1,5 @@
 ﻿$Manifest = Import-Csv -Header ("file", "operation") -Delimiter ("|") -Path .\MANIFEST
-$EmacsHome = Get-ChildItem Env:\APPDATA | %{ $_.VALUE }
+$EmacsHome = $env:USERPROFILE
 foreach ($ManifestRow in $Manifest) {
     $DeployFile = $ManifestRow.file
     $DeployOp = $ManifestRow.operation
