@@ -36,7 +36,7 @@
   (let ((autocommit-message (format-time-string "Autocommit %s")))
     (start-process-shell-command "Autocommit"
                                  "*Autocommit*"
-                                 (format "git add -u && git commit -m \"%s\" && git push origin master; echo '------------------------------'"
+                                 (format "git add -u && git commit -m \"%s\" && git push origin master"
                                          autocommit-message))))
 
 (defun rc/autocommit-beat (process event)
