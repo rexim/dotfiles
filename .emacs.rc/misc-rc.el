@@ -7,7 +7,8 @@
               make-backup-files nil
               tab-width 4
               indent-tabs-mode nil
-              compilation-scroll-output t)
+              compilation-scroll-output t
+              default-input-method "russian-computer")
 
 (setq browse-url-browser-function 'browse-url-generic
       browse-url-generic-program "chromium-browser")
