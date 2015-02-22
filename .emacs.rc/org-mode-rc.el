@@ -5,7 +5,6 @@
 (global-set-key (kbd "C-x p i") 'org-cliplink)
 
 (setq org-agenda-files (list "~/Documents/Personal/Tasks.org"
-                             "~/Documents/Personal/Imported.org"
                              "~/Documents/Personal/Itest.org"))
 
 (setq org-enforce-todo-dependencies t)
@@ -66,7 +65,7 @@
 (global-set-key (kbd "C-x p t") 'rc/cliplink-task)
 
 (setq org-agenda-custom-commands
-      '(("u" "Unscheduled" tags "-imported+personal-SCHEDULED={.+}-DEADLINE={.+}/!+TODO"
+      '(("u" "Unscheduled" tags "+personal-SCHEDULED={.+}-DEADLINE={.+}/!+TODO"
          ((org-agenda-sorting-strategy '(priority-down))))
         ("p" "Personal" ((agenda "" ((org-agenda-tag-filter-preset (list "+personal"))))))
         ("w" "Work" ((agenda "" ((org-agenda-tag-filter-preset (list "+work"))))))
