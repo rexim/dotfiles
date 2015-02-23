@@ -5,10 +5,11 @@ Just a regular emacs configuration.
 # Requirements #
 
 * Emacs 24+
-* Any *nix
+* Any Linux distribution or Windows 7+
 * git
 * Internet connection
 
 # Deployment #
 
-Clone the repo somewhere and run deploy.sh.
+For Linux, clone the repo somewhere and run deploy.sh. For Windows 7+,
+clone the repo somewhere and run deploy.ps1 as Administrator.
