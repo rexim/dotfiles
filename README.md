@@ -11,5 +11,5 @@ Just a regular emacs configuration.
 
 # Deployment #
 
-For Linux, clone the repo somewhere and run deploy.sh. For Windows 7+,
-clone the repo somewhere and run deploy.ps1 as Administrator.
+For Linux, clone the repo somewhere and run `deploy.sh`. For Windows 7+,
+clone the repo somewhere and run `deploy.ps1` as Administrator.
