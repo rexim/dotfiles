@@ -40,7 +40,8 @@
             'erlang 'nsis-mode 'yaml-mode
             'tt-mode 'glsl-mode 'tuareg
             'lua-mode 'less-css-mode 'graphviz-dot-mode
-            'clojure-mode 'cmake-mode 'ack)
+            'clojure-mode 'cmake-mode 'ack
+            'cil-mode)
 
 ;;; Custom's stuff
 (custom-set-variables
