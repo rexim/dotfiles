@@ -1,5 +1,13 @@
-﻿$Manifest = Import-Csv -Header ("file", "operation") -Delimiter ("|") -Path .\MANIFEST
-$EmacsHome = $env:USERPROFILE
+﻿$HomeExists = Test-Path Env:HOME
+if ($HomeExists -ne $True) {
+    echo "Creating HOME environment variable and targeting it to $env:USERPROFILE"
+    [Environment]::SetEnvironmentVariable("HOME", $env:USERPROFILE, "User")
+} else {
+    Write-Warning "HOME environment variable already exists. Not modifying the existing value."
+}
+
+$Manifest = Import-Csv -Header ("file", "operation") -Delimiter ("|") -Path .\MANIFEST
+$EmacsHome = $env:HOME
 foreach ($ManifestRow in $Manifest) {
     $DeployFile = $ManifestRow.file
     $DeployOp = $ManifestRow.operation
@@ -7,12 +15,16 @@ foreach ($ManifestRow in $Manifest) {
     $DestPath = "$EmacsHome\$DeployFile"
     switch($DeployOp) {
         "symlink" {
-            if ((Get-Item $SourcePath) -is [System.IO.DirectoryInfo]) {
-                cmd /c mklink /D "$DestPath" "$SourcePath"
+            if (Test-Path $DestPath) {
+                Write-Warning "$DestPath is already symlinked"
             } else {
-                cmd /c mklink "$DestPath" "$SourcePath"
+                if ((Get-Item $SourcePath) -is [System.IO.DirectoryInfo]) {
+                    cmd /c mklink /D "$DestPath" "$SourcePath"
+                } else {
+                    cmd /c mklink "$DestPath" "$SourcePath"
+                }
+                echo "$DestPath has been symlinked"
             }
-            echo "$DeployFile has been symlinked"
         }
 
         "copy" {
@@ -24,3 +36,5 @@ foreach ($ManifestRow in $Manifest) {
         }
     }
 }
+
+pause
