@@ -64,6 +64,12 @@ by using nxml's indentation rules."
   (interactive)
   (insert (format-time-string "Autocommit %s")))
 
+(defun rc/markdown-linkify-jira-tasks (start end)
+  (interactive "r")
+  (replace-regexp "\\([A-Z]+-[0-9]+\\)"
+                  "[\\1](https://jira.spirenteng.com/browse/\\1)"
+                  nil start end))
+
 ;;; A little hack which fixes a problem with meta key in fluxbox under VNC.
 (setq x-alt-keysym 'meta)
 
