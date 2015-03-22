@@ -41,7 +41,7 @@
             'tt-mode 'glsl-mode 'tuareg
             'lua-mode 'less-css-mode 'graphviz-dot-mode
             'clojure-mode 'cmake-mode 'ack
-            'cil-mode 'ess 'swiper)
+            'cil-mode 'ess 'neotree)
 
 ;;; Custom's stuff
 (custom-set-variables
