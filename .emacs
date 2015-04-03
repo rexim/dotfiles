@@ -4,8 +4,8 @@
 (load "~/.emacs.rc/misc-rc.el")
 (load "~/.emacs.rc/appearance-rc.el")
 ;; (load "~/.emacs.rc/gotham-theme-rc.el")
-(load "~/.emacs.rc/zenburn-theme-rc.el")
-;; (load "~/.emacs.rc/gruber-darker-theme-rc.el")
+;; (load "~/.emacs.rc/zenburn-theme-rc.el")
+(load "~/.emacs.rc/gruber-darker-theme-rc.el")
 (load "~/.emacs.rc/ido-smex-rc.el")
 (load "~/.emacs.rc/ccmode-rc.el")
 (load "~/.emacs.rc/paredit-rc.el")
@@ -41,7 +41,7 @@
             'tt-mode 'glsl-mode 'tuareg
             'lua-mode 'less-css-mode 'graphviz-dot-mode
             'clojure-mode 'cmake-mode 'ack
-            'cil-mode 'ess 'neotree)
+            'cil-mode 'ess 'neotree 'groovy-mode)
 
 ;;; Custom's stuff
 (custom-set-variables
