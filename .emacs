@@ -42,7 +42,7 @@
             'lua-mode 'less-css-mode 'graphviz-dot-mode
             'clojure-mode 'cmake-mode 'ack
             'cil-mode 'ess 'neotree
-            'groovy-mode 'rust-mode)
+            'groovy-mode 'rust-mode 'floobits)
 
 ;;; Custom's stuff
 (custom-set-variables
