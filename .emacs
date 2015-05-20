@@ -44,7 +44,7 @@
             'clojure-mode 'cmake-mode 'ack
             'cil-mode 'ess 'neotree
             'groovy-mode 'rust-mode 'floobits
-            'csharp-mode 'nim-mode)
+            'csharp-mode 'nim-mode 'nodejs-repl)
 
 ;;; Custom's stuff
 (custom-set-variables
