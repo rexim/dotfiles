@@ -34,6 +34,7 @@
 ;; (load "~/.emacs.rc/linum-mode-rc.el")
 (load "~/.emacs.rc/auto-complete-mode-rc.el")
 (load "~/.emacs.rc/powershell-rc.el")
+(load "~/.emacs.rc/elfeed-rc.el")
 
 ;;; Packages that don't require configuration 
 (rc/require 'scala-mode2 'jade-mode 'd-mode
@@ -43,7 +44,7 @@
             'clojure-mode 'cmake-mode 'ack
             'cil-mode 'ess 'neotree
             'groovy-mode 'rust-mode 'floobits
-            'csharp-mode)
+            'csharp-mode 'nim-mode)
 
 ;;; Custom's stuff
 (custom-set-variables
