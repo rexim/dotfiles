@@ -35,6 +35,7 @@
 (load "~/.emacs.rc/auto-complete-mode-rc.el")
 (load "~/.emacs.rc/powershell-rc.el")
 (load "~/.emacs.rc/elfeed-rc.el")
+(load "~/.emacs.rc/repl-toggle-rc.el")
 
 ;;; Packages that don't require configuration 
 (rc/require 'scala-mode2 'jade-mode 'd-mode
