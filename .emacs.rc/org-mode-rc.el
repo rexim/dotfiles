@@ -4,8 +4,7 @@
 (global-set-key (kbd "C-x a") 'org-agenda)
 (global-set-key (kbd "C-x p i") 'org-cliplink)
 
-(setq org-agenda-files (list "~/Documents/Personal/Tasks.org"
-                             "~/Documents/Personal/Itest.org"))
+(setq org-agenda-files (list "~/Documents/Personal/"))
 
 (setq org-enforce-todo-dependencies t)
 (setq org-agenda-dim-blocked-tasks 'invisible)
