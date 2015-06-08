@@ -16,24 +16,25 @@
 (eval-after-load "auto-complete"
   '(add-to-list 'ac-modes 'haskell-interactive-mode))
 
-(defun rc/ac-cc-mode-setup ()
-  (add-to-list 'ac-sources 'ac-source-clang))
+;;; ac for clang config
+;; (defun rc/ac-cc-mode-setup ()
+;;   (add-to-list 'ac-sources 'ac-source-clang))
 
-(add-hook 'c-mode-hook 'rc/ac-cc-mode-setup)
-(add-hook 'c++-mode-hook 'rc/ac-cc-mode-setup)
+;; (add-hook 'c-mode-hook 'rc/ac-cc-mode-setup)
+;; (add-hook 'c++-mode-hook 'rc/ac-cc-mode-setup)
 
 ;;; echo "" | g++ -v -x c++ -E -
-(setq ac-clang-flags
-      (mapcar (lambda (item)(concat "-I" item))
-              (split-string
-               "
- /usr/include/c++/4.9
- /usr/include/x86_64-linux-gnu/c++/4.9
- /usr/include/c++/4.9/backward
- /usr/lib/gcc/x86_64-linux-gnu/4.9/include
- /usr/local/include
- /usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed
- /usr/include/x86_64-linux-gnu
- /usr/include
-"
-               )))
+;; (setq ac-clang-flags
+;;       (mapcar (lambda (item)(concat "-I" item))
+;;               (split-string
+;;                "
+;;  /usr/include/c++/4.9
+;;  /usr/include/x86_64-linux-gnu/c++/4.9
+;;  /usr/include/c++/4.9/backward
+;;  /usr/lib/gcc/x86_64-linux-gnu/4.9/include
+;;  /usr/local/include
+;;  /usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed
+;;  /usr/include/x86_64-linux-gnu
+;;  /usr/include
+;; "
+;;                )))
