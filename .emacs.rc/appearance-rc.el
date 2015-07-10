@@ -4,11 +4,8 @@
   (add-to-list 'default-frame-alist
                '(font . "Consolas-13")))
  ((eq system-type 'gnu/linux)
-  (if (getenv "XORED_WORK")
-      (add-to-list 'default-frame-alist
-                   '(font . "Ubuntu Mono-18"))
-    (add-to-list 'default-frame-alist
-                 '(font . "Ubuntu Mono-14")))))
+  (add-to-list 'default-frame-alist
+               '(font . "Ubuntu Mono-14"))))
 
 ;;; GUI
 (tool-bar-mode 0)
