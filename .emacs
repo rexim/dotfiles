@@ -37,6 +37,7 @@
 (load "~/.emacs.rc/elfeed-rc.el")
 (load "~/.emacs.rc/repl-toggle-rc.el")
 (load "~/.emacs.rc/jira-markup-mode-rc.el")
+(load "~/.emacs.rc/thought-stack-rc.el")
 
 ;;; Packages that don't require configuration 
 (rc/require 'scala-mode2 'jade-mode 'd-mode
