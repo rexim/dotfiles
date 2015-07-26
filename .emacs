@@ -33,7 +33,6 @@
 (load "~/.emacs.rc/auto-complete-mode-rc.el")
 (load "~/.emacs.rc/powershell-rc.el")
 (load "~/.emacs.rc/elfeed-rc.el")
-(load "~/.emacs.rc/repl-toggle-rc.el")
 (load "~/.emacs.rc/jira-markup-mode-rc.el")
 (load "~/.emacs.rc/thought-stack-rc.el")
 
