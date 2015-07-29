@@ -34,3 +34,4 @@
 (global-set-key (kbd "C-x t p") 'thought-stack-put)
 (global-set-key (kbd "C-x t q") 'thought-stack-pop)
 (global-set-key (kbd "C-x t t") 'thought-stack-top)
+(global-set-key (kbd "C-x t l") 'thought-stack-list)
