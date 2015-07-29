@@ -26,7 +26,6 @@
     (with-current-buffer thought-stack-list-buffer
       (erase-buffer)
       (dolist (thought thought-stack)
-        (insert "* TODO ")
         (insert thought)
         (insert "\n")))
     (switch-to-buffer thought-stack-list-buffer)))
