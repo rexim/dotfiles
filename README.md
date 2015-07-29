@@ -4,7 +4,7 @@ Just a regular emacs configuration.
 
 # Requirements #
 
-* Emacs 24+
+* Emacs 24.5+
 * Any Linux distribution or Windows 7+
 * git
 * Internet connection
