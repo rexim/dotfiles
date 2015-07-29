@@ -24,11 +24,18 @@
   (interactive)
   (let ((thought-stack-list-buffer (get-buffer-create thought-stack-list-buffer-name)))
     (with-current-buffer thought-stack-list-buffer
+      (local-set-key (kbd "C-x t s") 'thought-stack-replace-from-current-buffer)
       (erase-buffer)
       (dolist (thought thought-stack)
         (insert thought)
         (insert "\n")))
     (switch-to-buffer thought-stack-list-buffer)))
+
+(defun thought-stack-replace-from-current-buffer ()
+  (interactive)
+  (let ((new-thought-stack (split-string (buffer-string) "\n" t "\\s*")))
+    (setq thought-stack new-thought-stack)
+    (message "Modified Thought Stack")))
 
 (global-set-key (kbd "C-x t p") 'thought-stack-put)
 (global-set-key (kbd "C-x t q") 'thought-stack-pop)
