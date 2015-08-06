@@ -9,12 +9,6 @@
 (setq org-enforce-todo-dependencies t)
 (setq org-agenda-dim-blocked-tasks 'invisible)
 
-(defun rc/org-comment (&optional arg)
-  (interactive "p")
-  (kmacro-exec-ring-item (quote ([3 33 return 134217730 32 2] 0 "%d")) arg))
-
-(global-set-key (kbd "C-x p c") 'rc/org-comment)
-
 (defvar rc/autopull-lock nil)
 (defvar rc/autocommit-lock nil)
 (defvar rc/autocommit-changed nil)
