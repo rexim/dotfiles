@@ -46,7 +46,8 @@
             'cil-mode 'ess 'neotree
             'groovy-mode 'rust-mode 'floobits
             'csharp-mode 'nim-mode 'nodejs-repl
-            'picolisp-mode 'jinja2-mode 'jabber)
+            'picolisp-mode 'jinja2-mode 'jabber
+            'editorconfig)
 
 ;;; Custom's stuff
 (custom-set-variables
