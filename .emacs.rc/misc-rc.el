@@ -70,6 +70,16 @@ by using nxml's indentation rules."
                   "[\\1](https://jira.spirenteng.com/browse/\\1)"
                   nil start end))
 
+;;; Stolen from http://ergoemacs.org/emacs/emacs_unfill-paragraph.html
+(defun rc/unfill-paragraph ()
+  "Replace newline chars in current paragraph by single spaces.
+This command does the inverse of `fill-paragraph'."
+  (interactive)
+  (let ((fill-column 90002000)) ; 90002000 is just random. you can use `most-positive-fixnum'
+    (fill-paragraph nil)))
+
+(global-set-key (kbd "C-c M-q") 'rc/unfill-paragraph)
+
 ;;; A little hack which fixes a problem with meta key in fluxbox under VNC.
 (setq x-alt-keysym 'meta)
 
