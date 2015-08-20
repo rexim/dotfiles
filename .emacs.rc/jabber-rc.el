@@ -1,3 +1,3 @@
 (rc/require 'jabber)
 
-(setq jabber-auto-reconnect t)
+;; (setq jabber-auto-reconnect t)
