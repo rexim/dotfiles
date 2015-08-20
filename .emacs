@@ -36,6 +36,7 @@
 (load "~/.emacs.rc/elfeed-rc.el")
 (load "~/.emacs.rc/jira-markup-mode-rc.el")
 (load "~/.emacs.rc/google-translate-rc.el")
+(load "~/.emacs.rc/jabber-rc.el")
 
 ;;; Packages that don't require configuration 
 (rc/require 'scala-mode2 'jade-mode 'd-mode
@@ -46,8 +47,7 @@
             'cil-mode 'ess 'neotree
             'groovy-mode 'rust-mode 'floobits
             'csharp-mode 'nim-mode 'nodejs-repl
-            'picolisp-mode 'jinja2-mode 'jabber
-            'editorconfig)
+            'picolisp-mode 'jinja2-mode 'editorconfig)
 
 ;;; Custom's stuff
 (custom-set-variables
