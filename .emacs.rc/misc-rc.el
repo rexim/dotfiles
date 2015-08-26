@@ -3,7 +3,7 @@
 (global-set-key (kbd "C-c <C-up>")    'windmove-up)
 (global-set-key (kbd "C-c <C-down>")  'windmove-down)
 
-(global-set-key (kbd "C-x p") 'find-file-at-point)
+(global-set-key (kbd "C-c p") 'find-file-at-point)
 
 (setq-default inhibit-splash-screen t
               make-backup-files nil
