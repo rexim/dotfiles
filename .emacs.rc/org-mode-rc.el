@@ -8,6 +8,8 @@
 
 (setq org-enforce-todo-dependencies t)
 (setq org-agenda-dim-blocked-tasks 'invisible)
+(setq org-agenda-exporter-settings
+      '((org-agenda-tag-filter-preset (list "+personal"))))
 
 (defvar rc/autopull-lock nil)
 (defvar rc/autocommit-lock nil)
