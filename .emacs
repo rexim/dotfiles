@@ -10,7 +10,6 @@
 (load "~/.emacs.rc/ccmode-rc.el")
 (load "~/.emacs.rc/paredit-rc.el")
 (load "~/.emacs.rc/emacs-lisp-rc.el")
-(load "~/.emacs.rc/markdown-mode-rc.el")
 (load "~/.emacs.rc/haskell-mode-rc.el")
 (load "~/.emacs.rc/magit-rc.el")
 (load "~/.emacs.rc/multiple-cursors-rc.el")
@@ -49,7 +48,7 @@
             'groovy-mode 'rust-mode 'floobits
             'csharp-mode 'nim-mode 'nodejs-repl
             'picolisp-mode 'jinja2-mode 'editorconfig
-            'htmlize)
+            'htmlize 'markdown-mode)
 
 (setq custom-file "~/.emacs-custom.el")
 (load custom-file)
