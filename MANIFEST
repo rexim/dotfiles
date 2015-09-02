@@ -2,3 +2,4 @@
 .emacs.rc|symlink
 .emacs.snippets|symlink
 .emacs.local|symlink
+.emacs-custom.el|symlink
