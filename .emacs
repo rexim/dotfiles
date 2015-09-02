@@ -37,6 +37,7 @@
 (load "~/.emacs.rc/jira-markup-mode-rc.el")
 (load "~/.emacs.rc/google-translate-rc.el")
 (load "~/.emacs.rc/jabber-rc.el")
+(load "~/.emacs.rc/erc-rc.el")
 
 ;;; Packages that don't require configuration 
 (rc/require 'scala-mode2 'jade-mode 'd-mode
