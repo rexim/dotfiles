@@ -2,6 +2,7 @@
 (load "~/.emacs.rc/rc.el")
 
 (load "~/.emacs.rc/misc-rc.el")
+(load "~/.emacs.rc/jira-rc.el")
 (load "~/.emacs.rc/appearance-rc.el")
 ;; (load "~/.emacs.rc/gotham-theme-rc.el")
 ;; (load "~/.emacs.rc/zenburn-theme-rc.el")

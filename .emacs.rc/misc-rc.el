@@ -66,12 +66,6 @@ by using nxml's indentation rules."
   (interactive)
   (insert (format-time-string "Autocommit %s")))
 
-(defun rc/markdown-linkify-jira-tasks (start end)
-  (interactive "r")
-  (replace-regexp "\\([A-Z]+-[0-9]+\\)"
-                  "[\\1](https://jira.spirenteng.com/browse/\\1)"
-                  nil start end))
-
 ;;; Stolen from http://ergoemacs.org/emacs/emacs_unfill-paragraph.html
 (defun rc/unfill-paragraph ()
   "Replace newline chars in current paragraph by single spaces.
