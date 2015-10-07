@@ -20,3 +20,4 @@
    t))
 
 (global-set-key (kbd "C-c i o") 'rc/open-issue-folder)
+(global-set-key (kbd "C-c i l") 'rc/markdown-linkify-jira-tasks)
