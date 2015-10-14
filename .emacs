@@ -49,8 +49,8 @@
             'cil-mode 'ess 'neotree
             'groovy-mode 'rust-mode 'floobits
             'csharp-mode 'nim-mode 'nodejs-repl
-            'picolisp-mode 'jinja2-mode 'editorconfig
-            'htmlize 'markdown-mode)
+            'picolisp-mode 'jinja2-mode 'htmlize
+            'markdown-mode)
 
 (setq custom-file "~/.emacs-custom.el")
 (load custom-file)
