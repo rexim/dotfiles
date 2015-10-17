@@ -72,6 +72,10 @@ This command does the inverse of `fill-paragraph'."
 
 (global-set-key (kbd "C-c M-q") 'rc/unfill-paragraph)
 
+(defun rc/load-path-here ()
+  (interactive)
+  (add-to-list 'load-path default-directory))
+
 ;;; A little hack which fixes a problem with meta key in fluxbox under VNC.
 (setq x-alt-keysym 'meta)
 
