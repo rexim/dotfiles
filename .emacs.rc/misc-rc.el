@@ -62,10 +62,6 @@ by using nxml's indentation rules."
     (indent-region begin end))
   (message "Ah, much better!"))
 
-(defun insert-autocommit-message ()
-  (interactive)
-  (insert (format-time-string "Autocommit %s")))
-
 ;;; Stolen from http://ergoemacs.org/emacs/emacs_unfill-paragraph.html
 (defun rc/unfill-paragraph ()
   "Replace newline chars in current paragraph by single spaces.
