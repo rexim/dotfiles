@@ -65,6 +65,17 @@
 
 (global-set-key (kbd "C-x p t") 'rc/cliplink-task)
 
+(defun rc/org-get-heading-name ()
+  (nth 4 (org-heading-components)))
+
+(defun rc/org-kill-heading-name-save ()
+  (interactive)
+  (let ((heading-name (rc/org-get-heading-name)))
+    (kill-new heading-name)
+    (message "Kill \"%s\"" heading-name)))
+
+(global-set-key (kbd "C-x p w") 'rc/org-kill-heading-name-save)
+
 (setq org-agenda-custom-commands
       '(("u" "Unscheduled" tags "+personal-SCHEDULED={.+}-DEADLINE={.+}/!+TODO"
          ((org-agenda-sorting-strategy '(priority-down))))
