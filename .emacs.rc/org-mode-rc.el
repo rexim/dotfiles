@@ -36,7 +36,7 @@
                                            autocommit-message)))))
 
 (defun rc/autocommit-beat (process event)
-  (message "Autocommit is finished")
+  (message "Autocommit: %s" event)
   (if (not rc/autocommit-changed)
       (setq rc/autocommit-lock nil)
     (setq rc/autocommit-changed nil)
