@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: todo
+# key: todo
+# type: command
+# binding: C-x t
+# --
+(if (region-active-p)
+    (yas-expand-snippet "<!--TODO:-->`yas-selected-text`<!--$0-->")
+  (yas-expand-snippet "<!--TODO: $0 -->"))
