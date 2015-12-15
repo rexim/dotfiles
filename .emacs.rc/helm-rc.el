@@ -6,3 +6,4 @@
 (global-set-key (kbd "C-c h g") 'helm-git-grep)
 (global-set-key (kbd "C-c h f") 'helm-find)
 (global-set-key (kbd "C-c h a") 'helm-org-agenda-files-headings)
+(global-set-key (kbd "C-c h r") 'helm-recentf)

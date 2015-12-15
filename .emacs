@@ -39,6 +39,7 @@
 (load "~/.emacs.rc/jabber-rc.el")
 (load "~/.emacs.rc/erc-rc.el")
 (load "~/.emacs.rc/eldoc-mode-rc.el")
+(load "~/.emacs.rc/recentf-mode-rc.el")
 
 ;;; Packages that don't require configuration 
 (rc/require 'scala-mode2 'jade-mode 'd-mode
