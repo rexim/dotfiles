@@ -41,6 +41,7 @@
 (load "~/.emacs.rc/erc-rc.el")
 (load "~/.emacs.rc/eldoc-mode-rc.el")
 (load "~/.emacs.rc/recentf-mode-rc.el")
+(load "~/.emacs.rc/neotree-rc.el")
 
 ;;; Packages that don't require configuration 
 (rc/require 'scala-mode2 'jade-mode 'd-mode
@@ -48,7 +49,7 @@
             'tt-mode 'glsl-mode 'tuareg
             'lua-mode 'less-css-mode 'graphviz-dot-mode
             'clojure-mode 'cmake-mode 'ack
-            'cil-mode 'ess 'neotree
+            'cil-mode 'ess
             'groovy-mode 'rust-mode 'floobits
             'csharp-mode 'nim-mode 'nodejs-repl
             'picolisp-mode 'jinja2-mode 'htmlize
