@@ -42,6 +42,7 @@
 (load "~/.emacs.rc/eldoc-mode-rc.el")
 (load "~/.emacs.rc/recentf-mode-rc.el")
 (load "~/.emacs.rc/neotree-rc.el")
+(load "~/.emacs.rc/0blayout-rc.el")
 
 ;;; Packages that don't require configuration 
 (rc/require 'scala-mode2 'jade-mode 'd-mode
