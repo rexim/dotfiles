@@ -4,7 +4,7 @@
 # --
 ;;; ${1:`(file-name-nondirectory (buffer-file-name))`} --- Pacman for Emacs -*- lexical-binding: t -*-
 
-;; Copyright (C) 2015 Codingteam
+;; Copyright (C) `(format-time-string "%Y" (current-time))` Codingteam
 
 ;; Author: Codingteam <codingteam@conference.jabber.ru>
 ;; Maintainer: Alexey Kutepov <reximkut@gmail.com>
