@@ -1,14 +1,12 @@
 ;;; Fonts
-(cond
- ((eq system-type 'windows-nt)
-  (add-to-list 'default-frame-alist
-               '(font . "Consolas-13")))
- ((eq system-type 'gnu/linux)
-  (if (getenv "REXIM_STREAMER")
-      (add-to-list 'default-frame-alist
-                   '(font . "Ubuntu Mono-18"))
-    (add-to-list 'default-frame-alist
-                 '(font . "Ubuntu Mono-14")))))
+(defun rc/get-default-font ()
+  (cond
+   ((eq system-type 'windows-nt) "Consolas-13")
+   ((eq system-type 'gnu/linux) (if (getenv "REXIM_STREAMER")
+                                    "Ubuntu Mono-18"
+                                  "Ubuntu Mono-14"))))
+
+(add-to-list 'default-frame-alist `(font . ,(rc/get-default-font)))
 
 ;;; GUI
 (tool-bar-mode 0)
