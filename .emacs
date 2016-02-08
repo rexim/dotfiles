@@ -42,6 +42,9 @@
 (load "~/.emacs.rc/eldoc-mode-rc.el")
 (load "~/.emacs.rc/recentf-mode-rc.el")
 (load "~/.emacs.rc/neotree-rc.el")
+(load "~/.emacs.rc/flycheck-rc.el")
+(load "~/.emacs.rc/company-rc.el")
+(load "~/.emacs.rc/rtags-rc.el")
 
 ;;; Packages that don't require configuration 
 (rc/require 'scala-mode2 'jade-mode 'd-mode
@@ -53,7 +56,7 @@
             'groovy-mode 'rust-mode 'floobits
             'csharp-mode 'nim-mode 'nodejs-repl
             'picolisp-mode 'jinja2-mode 'htmlize
-            'markdown-mode 'purescript-mode 'rtags
+            'markdown-mode 'purescript-mode
             'cmake-ide)
 
 (setq custom-file "~/.emacs-custom.el")
