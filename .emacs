@@ -24,7 +24,6 @@
 ;; (load "~/.emacs.rc/auto-fill-mode-rc.el")
 (load "~/.emacs.rc/nxml-mode-rc.el")
 (load "~/.emacs.rc/perl-mode-rc.el")
-;; (load "~/.emacs.rc/fan-mode-rc.el")
 (load "~/.emacs.rc/tramp-rc.el")
 (load "~/.emacs.rc/org-mode-rc.el")
 (load "~/.emacs.rc/org-cliplink-rc.el")
