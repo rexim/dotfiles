@@ -4,8 +4,6 @@
 (load "~/.emacs.rc/misc-rc.el")
 (load "~/.emacs.rc/jira-rc.el")
 (load "~/.emacs.rc/appearance-rc.el")
-;; (load "~/.emacs.rc/gotham-theme-rc.el")
-;; (load "~/.emacs.rc/zenburn-theme-rc.el")
 (load "~/.emacs.rc/gruber-darker-theme-rc.el")
 (load "~/.emacs.rc/ido-smex-rc.el")
 (load "~/.emacs.rc/ccmode-rc.el")
