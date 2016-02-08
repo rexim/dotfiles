@@ -52,12 +52,10 @@
             'tt-mode 'glsl-mode 'tuareg
             'lua-mode 'less-css-mode 'graphviz-dot-mode
             'clojure-mode 'cmake-mode 'ack
-            'cil-mode 'ess
-            'groovy-mode 'rust-mode 'floobits
-            'csharp-mode 'nim-mode 'nodejs-repl
-            'picolisp-mode 'jinja2-mode 'htmlize
-            'markdown-mode 'purescript-mode
-            'cmake-ide)
+            'cil-mode 'groovy-mode 'rust-mode
+            'csharp-mode 'nim-mode 'picolisp-mode
+            'jinja2-mode 'htmlize 'markdown-mode
+            'purescript-mode 'cmake-ide)
 
 (setq custom-file "~/.emacs-custom.el")
 (load custom-file)
