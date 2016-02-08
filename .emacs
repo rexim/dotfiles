@@ -32,7 +32,7 @@
 (load "~/.emacs.rc/org-cliplink-rc.el")
 (load "~/.emacs.rc/org-capture-rc.el")
 ;; (load "~/.emacs.rc/linum-mode-rc.el")
-(load "~/.emacs.rc/auto-complete-mode-rc.el")
+;; (load "~/.emacs.rc/auto-complete-mode-rc.el")
 (load "~/.emacs.rc/powershell-rc.el")
 (load "~/.emacs.rc/elfeed-rc.el")
 (load "~/.emacs.rc/jira-markup-mode-rc.el")
@@ -53,7 +53,8 @@
             'groovy-mode 'rust-mode 'floobits
             'csharp-mode 'nim-mode 'nodejs-repl
             'picolisp-mode 'jinja2-mode 'htmlize
-            'markdown-mode 'purescript-mode 'rtags)
+            'markdown-mode 'purescript-mode 'rtags
+            'cmake-ide)
 
 (setq custom-file "~/.emacs-custom.el")
 (load custom-file)
