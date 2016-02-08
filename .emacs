@@ -45,6 +45,7 @@
 (load "~/.emacs.rc/flycheck-rc.el")
 (load "~/.emacs.rc/company-rc.el")
 (load "~/.emacs.rc/rtags-rc.el")
+(load "~/.emacs.rc/cmake-ide-rc.el")
 
 ;;; Packages that don't require configuration 
 (rc/require 'scala-mode2 'jade-mode 'd-mode
@@ -55,7 +56,7 @@
             'cil-mode 'groovy-mode 'rust-mode
             'csharp-mode 'nim-mode 'picolisp-mode
             'jinja2-mode 'htmlize 'markdown-mode
-            'purescript-mode 'cmake-ide)
+            'purescript-mode)
 
 (setq custom-file "~/.emacs-custom.el")
 (load custom-file)
