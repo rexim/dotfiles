@@ -53,7 +53,7 @@
             'groovy-mode 'rust-mode 'floobits
             'csharp-mode 'nim-mode 'nodejs-repl
             'picolisp-mode 'jinja2-mode 'htmlize
-            'markdown-mode 'purescript-mode)
+            'markdown-mode 'purescript-mode 'rtags)
 
 (setq custom-file "~/.emacs-custom.el")
 (load custom-file)
