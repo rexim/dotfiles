@@ -21,7 +21,6 @@
 (load "~/.emacs.rc/js-mode-rc.el")
 (load "~/.emacs.rc/slime-rc.el")
 (load "~/.emacs.rc/batch-mode-rc.el")
-;; (load "~/.emacs.rc/auto-fill-mode-rc.el")
 (load "~/.emacs.rc/nxml-mode-rc.el")
 (load "~/.emacs.rc/perl-mode-rc.el")
 (load "~/.emacs.rc/tramp-rc.el")
