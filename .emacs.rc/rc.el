@@ -21,6 +21,14 @@
   (dolist (package packages)
     (rc/require-one-package package)))
 
+(defun rc/require-theme (theme)
+  (let ((theme-package (->> theme
+                            (symbol-name)
+                            (funcall (-flip #'concat) "-theme")
+                            (intern))))
+    (rc/require theme-package)
+    (load-theme theme t)))
+
 (rc/require 'dash)
 (require 'dash)
 
