@@ -20,3 +20,9 @@
 (defun rc/require (&rest packages)
   (dolist (package packages)
     (rc/require-one-package package)))
+
+(rc/require 'dash)
+(require 'dash)
+
+(rc/require 'dash-functional)
+(require 'dash-functional)
