@@ -16,4 +16,4 @@
 (show-paren-mode 1)
 
 ;;; Themes
-(rc/require-theme 'zenburn)
+(rc/require-theme 'gruber-darker)
