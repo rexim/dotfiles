@@ -2,6 +2,7 @@ URxvt.depth: 32
 URxvt.transparent: false
 URxvt.font: xft:Ubuntu Mono:size=14
 URxvt.scrollBar: false
+URxvt.iconFile: /usr/share/icons/Mint-X/apps/16/gnome-term.xpm
 
 URxvt*foreground: #e4e4ef
 URxvt*background: #181818
