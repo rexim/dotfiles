@@ -1,12 +1,13 @@
-# emacs.rc #
+# dotfiles #
 
-Just a regular emacs configuration.
+Just config files for some programs that I actively use.
 
 # Requirements #
 
 * Emacs 24.5+
+* rxvt-unicode v9.19+
+* Git
 * Any Linux distribution or Windows 7+
-* git
 * Internet connection
 
 # Deployment #
