@@ -2,10 +2,23 @@
 
 (setq org-agenda-files (list "~/Documents/Personal/"))
 
-(setq org-enforce-todo-dependencies t)
-(setq org-agenda-dim-blocked-tasks 'invisible)
-(setq org-agenda-exporter-settings
-      '((org-agenda-tag-filter-preset (list "+personal"))))
+(custom-set-variables
+ '(org-modules
+   (quote
+    (org-bbdb
+     org-bibtex
+     org-docview
+     org-gnus
+     org-habit
+     org-info
+     org-irc
+     org-mhe
+     org-rmail
+     org-w3m)))
+ '(org-enforce-todo-dependencies t)
+ '(org-agenda-dim-blocked-tasks (quote invisible))
+ '(org-agenda-exporter-settings
+   (quote ((org-agenda-tag-filter-preset (list "+personal"))))))
 
 (defvar rc/autopull-lock nil)
 (defvar rc/autocommit-lock nil)
