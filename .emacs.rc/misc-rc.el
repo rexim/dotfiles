@@ -6,7 +6,7 @@
               indent-tabs-mode nil
               compilation-scroll-output t
               default-input-method "russian-computer"
-              visible-bell t)
+              visible-bell (equal system-type 'windows-nt))
 
 ;;; Taken from here:
 ;;; http://stackoverflow.com/questions/2416655/file-path-to-clipboard-in-emacs
