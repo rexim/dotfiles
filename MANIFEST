@@ -4,3 +4,4 @@
 .emacs.local|symlink
 .emacs-custom.el|symlink
 .Xresources|symlink
+.tmux.conf|symlink
