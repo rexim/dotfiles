@@ -1,0 +1,3 @@
+.Xresources|symlink
+.tmux.conf|symlink
+.zshrc|symlink

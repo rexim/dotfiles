@@ -22,21 +22,28 @@ symlinkFile() {
     fi
 }
 
-for row in `cat $SCRIPT_DIR/MANIFEST`; do
-    filename=`echo $row | cut -d \| -f 1`
-    operation=`echo $row | cut -d \| -f 2`
+deployManifest() {
+    for row in `cat $SCRIPT_DIR/$1`; do
+        filename=`echo $row | cut -d \| -f 1`
+        operation=`echo $row | cut -d \| -f 2`
 
-    case $operation in
-        copy)
-            copyFile $filename
-            ;;
+        case $operation in
+            copy)
+                copyFile $filename
+                ;;
 
-        symlink)
-            symlinkFile $filename
-            ;;
+            symlink)
+                symlinkFile $filename
+                ;;
 
-        *)
-            echo "[WARNING] Unknown operation $operation. Skipping..."
-            ;;
-    esac
-done
+            *)
+                echo "[WARNING] Unknown operation $operation. Skipping..."
+                ;;
+        esac
+    done
+}
+
+echo "--- Common configs ---"
+deployManifest MANIFEST
+echo "--- Linux configs ---"
+deployManifest MANIFEST.linux
