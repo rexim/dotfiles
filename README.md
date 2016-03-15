@@ -6,6 +6,8 @@ Just config files for some programs that I actively use.
 
 * Emacs 24.5+
 * rxvt-unicode v9.19+
+* zsh 5.0.2+ (with oh-my-zsh)
+* tmux 1.8+
 * Git
 * Any Linux distribution or Windows 7+
 * Internet connection

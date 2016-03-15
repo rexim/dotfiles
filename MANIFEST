@@ -5,3 +5,4 @@
 .emacs-custom.el|symlink
 .Xresources|symlink
 .tmux.conf|symlink
+.zshrc|symlink
