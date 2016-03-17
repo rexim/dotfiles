@@ -1,5 +1,6 @@
 ﻿function Symlink-File {
     $DestPath = $args[0]
+    $SourcePath = $args[1]
     if (Test-Path $DestPath) {
         Write-Warning "$DestPath is already symlinked"
     } else {
@@ -26,7 +27,7 @@ function Deploy-Manifest {
         $DestPath = "$EmacsHome\$DeployFile"
         switch($DeployOp) {
             "symlink" {
-                Symlink-File "$DestPath"
+                Symlink-File $DestPath $SourcePath
             }
     
             "copy" {
