@@ -50,7 +50,7 @@
             'cil-mode 'groovy-mode 'rust-mode
             'csharp-mode 'nim-mode 'picolisp-mode
             'jinja2-mode 'htmlize 'markdown-mode
-            'purescript-mode 'gradle-mode)
+            'purescript-mode 'gradle-mode 'simple-call-tree)
 
 (setq custom-file "~/.emacs-custom.el")
 (load custom-file)
