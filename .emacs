@@ -40,6 +40,7 @@
 (load "~/.emacs.rc/rtags-rc.el")
 (load "~/.emacs.rc/cmake-ide-rc.el")
 (load "~/.emacs.rc/crux-rc.el")
+(load "~/.emacs.rc/tide-rc.el")
 
 ;;; Packages that don't require configuration 
 (rc/require 'scala-mode2 'jade-mode 'd-mode
