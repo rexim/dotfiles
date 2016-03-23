@@ -1,6 +1,6 @@
 (global-set-key (kbd "C-x a") 'org-agenda)
 
-(setq org-agenda-files (list "~/Documents/Personal/"))
+(setq org-agenda-files (list "~/Documents/Agenda/"))
 
 (custom-set-variables
  '(org-modules
@@ -37,7 +37,7 @@
 
 (defun rc/run-commit-process ()
   (let ((autocommit-message (format-time-string "Autocommit %s")))
-    (let ((default-directory "~/Documents/Personal/"))
+    (let ((default-directory "~/Documents/Agenda/"))
       (start-process-shell-command "Autocommit"
                                    "*Autocommit*"
                                    (format "git add -u && git commit -m \"%s\" && git push origin master"
