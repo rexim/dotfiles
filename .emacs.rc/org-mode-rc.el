@@ -33,7 +33,8 @@
   (interactive)
   (when (not rc/autopull-lock)
     (setq rc/autopull-lock t)
-    (async-shell-command "git pull")))
+    (message "Syncing the Agenda")
+    (shell-command "git pull")))
 
 (defun rc/run-commit-process ()
   (let ((autocommit-message (format-time-string "Autocommit %s")))
