@@ -12,4 +12,5 @@
          ("\\.xlsx\\'" "libreoffice" (file))
          ("\\.doc\\'" "libreoffice" (file))
          ("\\.rtf\\'" "libreoffice" (file))
+         ("\\.ods\\'" "libreoffice" (file))
          ("\\.mp3\\'" "vlc" (file)))))
