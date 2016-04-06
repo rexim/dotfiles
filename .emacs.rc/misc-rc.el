@@ -72,6 +72,18 @@ This command does the inverse of `fill-paragraph'."
   (interactive)
   (add-to-list 'load-path default-directory))
 
+(defconst rc/frame-transparency 85)
+
+(defun rc/toggle-transparency ()
+  (interactive)
+  (let ((frame-alpha (frame-parameter nil 'alpha)))
+    (if (or (not frame-alpha)
+            (= (cadr frame-alpha) 100))
+        (set-frame-parameter nil 'alpha
+                             `(,rc/frame-transparency
+                               ,rc/frame-transparency))
+      (set-frame-parameter nil 'alpha '(100 100)))))
+
 ;;; A little hack which fixes a problem with meta key in fluxbox under VNC.
 (setq x-alt-keysym 'meta)
 
