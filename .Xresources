@@ -11,7 +11,7 @@ URxvt.iconFile: /usr/share/icons/Mint-X/apps/16/gnome-term.xpm
 
 URxvt*depth: 32
 URxvt*foreground: #e4e4ef
-URxvt*background: rgba:0200/0200/0200/c800
+URxvt*background: #181818
 
 *color0:  #2E3436
 *color1:  #a40000
