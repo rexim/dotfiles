@@ -53,7 +53,7 @@
             'csharp-mode 'nim-mode 'picolisp-mode
             'jinja2-mode 'htmlize 'markdown-mode
             'purescript-mode 'gradle-mode 'simple-call-tree
-            'typescript-mode 'nix-mode)
+            'typescript-mode 'nix-mode 'dockerfile-mode)
 
 (setq custom-file "~/.emacs-custom.el")
 (load custom-file)
