@@ -9,6 +9,7 @@
 (load "~/.emacs.rc/paredit-rc.el")
 (load "~/.emacs.rc/emacs-lisp-rc.el")
 (load "~/.emacs.rc/haskell-mode-rc.el")
+(load "~/.emacs.rc/whitespace-mode-rc.el")
 (load "~/.emacs.rc/magit-rc.el")
 (load "~/.emacs.rc/multiple-cursors-rc.el")
 (load "~/.emacs.rc/ggtags-rc.el")
