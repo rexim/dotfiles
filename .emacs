@@ -44,7 +44,7 @@
 (load "~/.emacs.rc/tide-rc.el")
 (load "~/.emacs.rc/merlin-rc.el")
 
-;;; Packages that don't require configuration 
+;;; Packages that don't require configuration
 (rc/require 'scala-mode2 'jade-mode 'd-mode
             'erlang 'nsis-mode 'yaml-mode
             'tt-mode 'glsl-mode 'tuareg
