@@ -2,6 +2,8 @@
 
 (setq org-agenda-files (list "~/Documents/Agenda/"))
 
+(setq org-export-backends '(md))
+
 (custom-set-variables
  '(org-modules
    (quote
