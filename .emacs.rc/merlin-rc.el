@@ -1,4 +1,3 @@
-
 (let* ((opam-executable (executable-find "opam"))
        (opam-config-command (when opam-executable
                               (concat opam-executable
@@ -7,7 +6,7 @@
                      (substring (shell-command-to-string opam-config-command)
                                 0 -1))))
   (add-to-list 'load-path (concat opam-share "/emacs/site-lisp"))
-  (when (require 'merlin)
+  (when (require 'merlin nil t)
 
     (add-hook 'tuareg-mode-hook 'merlin-mode t)
     (add-hook 'caml-mode-hook 'merlin-mode t)
