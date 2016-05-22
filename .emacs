@@ -41,8 +41,8 @@
 (load "~/.emacs.rc/crux-rc.el")
 (load "~/.emacs.rc/tide-rc.el")
 (load "~/.emacs.rc/merlin-rc.el")
-;; (load "~/.emacs.rc/flycheck-rc.el")
 (load "~/.emacs.rc/racer-rc.el")
+(load "~/.emacs.rc/flycheck-rc.el")
 ;; (load "~/.emacs.rc/cmake-ide-rc.el")
 
 ;;; Packages that don't require configuration
@@ -54,7 +54,7 @@
             'cil-mode 'groovy-mode 'rust-mode
             'csharp-mode 'nim-mode 'picolisp-mode
             'jinja2-mode 'htmlize 'markdown-mode
-            'purescript-mode 'gradle-mode 'simple-call-tree
+            'purescript-mode 'gradle-mode ;; 'simple-call-tree
             'typescript-mode 'nix-mode 'dockerfile-mode
             'love-minor-mode)
 
