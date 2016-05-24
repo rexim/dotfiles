@@ -21,3 +21,4 @@
 (add-hook 'emacs-lisp-mode-hook 'rc/set-up-whitespace-handling)
 (add-hook 'java-mode-hook 'rc/set-up-whitespace-handling)
 (add-hook 'lua-mode-hook 'rc/set-up-whitespace-handling)
+(add-hook 'rust-mode-hook 'rc/set-up-whitespace-handling)
