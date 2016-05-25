@@ -1,6 +1,8 @@
 (setq org-capture-templates
       '(("p" "Add Personal task" entry (file "~/Documents/Agenda/Tasks.org")
          "* TODO %?\n  SCHEDULED: %t\n")
+        ("s" "Add Stream task" entry (file "~/Documents/Agenda/Stream.org")
+         "* TODO %?\n  SCHEDULED: %t\n")
         ("i" "Add iTest task" entry (file "~/Documents/Agenda/Itest.org")
          "* TODO %?\n  SCHEDULED: %t\n")
         ("K" "Personal Cliplink" entry (file "~/Documents/Agenda/Tasks.org")
