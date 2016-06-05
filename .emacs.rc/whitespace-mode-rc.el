@@ -14,7 +14,7 @@
 (custom-set-variables
  '(whitespace-style (quote (face tabs spaces trailing space-before-tab
                                  newline indentation empty space-after-tab
-                                 space-mark tab-mark newline-mark))))
+                                 space-mark tab-mark))))
 
 (add-hook 'tuareg-mode-hook 'rc/set-up-whitespace-handling)
 (add-hook 'c++-mode-hook 'rc/set-up-whitespace-handling)
