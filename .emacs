@@ -46,7 +46,7 @@
 ;; (load "~/.emacs.rc/cmake-ide-rc.el")
 
 ;;; Packages that don't require configuration
-(rc/require 'scala-mode2 'jade-mode 'd-mode
+(rc/require 'scala-mode 'jade-mode 'd-mode
             'erlang 'nsis-mode 'yaml-mode
             'tt-mode 'glsl-mode 'tuareg
             'lua-mode 'less-css-mode 'graphviz-dot-mode
