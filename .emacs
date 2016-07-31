@@ -12,7 +12,7 @@
 (load "~/.emacs.rc/whitespace-mode-rc.el")
 (load "~/.emacs.rc/magit-rc.el")
 (load "~/.emacs.rc/multiple-cursors-rc.el")
-(load "~/.emacs.rc/ggtags-rc.el")
+;; (load "~/.emacs.rc/ggtags-rc.el")
 (load "~/.emacs.rc/openwith-rc.el")
 (load "~/.emacs.rc/dired-rc.el")
 (load "~/.emacs.rc/helm-rc.el")
