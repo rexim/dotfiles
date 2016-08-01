@@ -1,0 +1,5 @@
+[user]
+	email = reximkut@gmail.com
+	name = rexim
+[merge]
+	conflictStyle = diff3

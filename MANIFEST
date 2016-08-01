@@ -3,3 +3,4 @@
 .emacs.snippets|symlink
 .emacs.local|symlink
 .emacs-custom.el|symlink
+.gitconfig|symlink
