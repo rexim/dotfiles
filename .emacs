@@ -56,7 +56,8 @@
             'jinja2-mode 'htmlize 'markdown-mode
             'purescript-mode 'gradle-mode ;; 'simple-call-tree
             'typescript-mode 'nix-mode 'dockerfile-mode
-            'love-minor-mode 'toml-mode 'ensime 'zeal-at-point)
+            'love-minor-mode 'toml-mode 'ensime 'zeal-at-point
+            'elm-mode 'nginx-mode)
 
 (setq custom-file "~/.emacs-custom.el")
 (load custom-file)
