@@ -6,14 +6,10 @@
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 
 (defun rc/guard-from-path (file-path stop-folder)
-  (let* ((cmps (-> file-path
-                   (split-string "[/\\.]")
-                   (reverse)))
-         (result ""))
-    (while (and cmps (not (string= (car cmps) stop-folder)))
-      (setq result (concat (car cmps) "_" result))
-      (pop cmps))
-    (upcase result)))
+  (->> (split-string file-path "[/\\.]")
+       (reverse)
+       (-take-while (-lambda (x) (not (string= stop-folder x))))
+       (-reduce-from (-lambda (acc x) (concat (upcase x) "_" acc)) "")))
 
 (defun rc/update-include-guard ()
   (interactive)
