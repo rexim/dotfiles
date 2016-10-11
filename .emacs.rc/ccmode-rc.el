@@ -5,27 +5,20 @@
 
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 
-(defun rc/guard-from-path (file-path)
+(defun rc/guard-from-path (file-path stop-folder)
   (let* ((cmps (-> file-path
                    (split-string "[/\\.]")
                    (reverse)))
-         (result nil)
-         (guard ""))
-    (while (and cmps
-                (not (string= (car cmps) "src")))
-      (push (car cmps) result)
+         (result ""))
+    (while (and cmps (not (string= (car cmps) stop-folder)))
+      (setq result (concat (car cmps) "_" result))
       (pop cmps))
-
-    (while result
-      (setq guard (concat guard (car result) "_"))
-      (pop result))
-
-    (upcase guard)))
+    (upcase result)))
 
 (defun rc/update-include-guard ()
   (interactive)
   (let* ((file-path (buffer-file-name))
-         (guard (rc/guard-from-path file-path)))
+         (guard (rc/guard-from-path file-path "src")))
     (goto-char 0)
     (forward-word)
     (forward-char)
