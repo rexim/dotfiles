@@ -7,7 +7,7 @@ URxvt.depth: 32
 URxvt.transparent: false
 URxvt.font: xft:Ubuntu Mono:size=18
 URxvt.scrollBar: false
-URxvt.iconFile: /usr/share/icons/Mint-X/apps/16/gnome-term.xpm
+URxvt.iconFile: .rexim/icons/terminal-icon.png
 
 URxvt*depth: 32
 URxvt*foreground: #e4e4ef
