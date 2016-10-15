@@ -5,7 +5,7 @@ Xft.hintstyle:  hintmedium
 
 URxvt.depth: 32
 URxvt.transparent: false
-URxvt.font: xft:Ubuntu Mono:size=14
+URxvt.font: xft:Ubuntu Mono:size=18
 URxvt.scrollBar: false
 URxvt.iconFile: /usr/share/icons/Mint-X/apps/16/gnome-term.xpm
 
