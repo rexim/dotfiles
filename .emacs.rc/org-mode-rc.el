@@ -78,19 +78,6 @@
     (set-process-sentinel (rc/run-commit-process)
                           'rc/autocommit-beat)))
 
-(defun rc/cliplink-task ()
-  (interactive)
-  (org-cliplink-retrieve-title
-   (substring-no-properties (current-kill 0))
-   '(lambda (url title)
-      (insert (if title
-                  (concat "* TODO " title
-                          "\n  [[" url "][" title "]]")
-                (concat "* TODO " url
-                        "\n  [[" url "]]"))))))
-
-(global-set-key (kbd "C-x p t") 'rc/cliplink-task)
-
 (defun rc/org-get-heading-name ()
   (nth 4 (org-heading-components)))
 
