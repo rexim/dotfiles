@@ -22,9 +22,17 @@
  '(org-agenda-exporter-settings
    (quote ((org-agenda-tag-filter-preset (list "+personal"))))))
 
+(defvar rc/autocommit-offline nil)
 (defvar rc/autopull-lock nil)
 (defvar rc/autocommit-lock nil)
 (defvar rc/autocommit-changed nil)
+
+(defun rc/toggle-autocommit-offline ()
+  (interactive)
+  (setq rc/autocommit-offline (not rc/autocommit-offline))
+  (if rc/autocommit-offline
+      (message "[OFFLINE] Autocommit Mode")
+    (message "[ONLINE] Autocommit Mode")))
 
 (defun rc/autocommit-reset-locks ()
   (interactive)
@@ -35,19 +43,26 @@
   (interactive)
   (when (not rc/autopull-lock)
     (setq rc/autopull-lock t)
-    (message "Syncing the Agenda")
-    (shell-command "git pull")))
+    (if rc/autocommit-offline
+        (message "[OFFLINE] NOT Syncing the Agenda")
+      (message "Syncing the Agenda")
+      (shell-command "git pull"))))
 
 (defun rc/run-commit-process ()
   (let ((autocommit-message (format-time-string "Autocommit %s")))
     (let ((default-directory "~/Documents/Agenda/"))
       (start-process-shell-command "Autocommit"
                                    "*Autocommit*"
-                                   (format "git add -u && git commit -m \"%s\" && git push origin master"
+                                   (format (if rc/autocommit-offline
+                                               "git add -u && git commit -m \"%s\""
+                                             "git add -u && git commit -m \"%s\" && git push origin master")
                                            autocommit-message)))))
 
 (defun rc/autocommit-beat (process event)
-  (message "Autocommit: %s" event)
+  (message (if rc/autocommit-offline
+               "[OFFLINE] Autocommit: %s"
+             "Autocommit: %s")
+           event)
   (if (not rc/autocommit-changed)
       (setq rc/autocommit-lock nil)
     (setq rc/autocommit-changed nil)
