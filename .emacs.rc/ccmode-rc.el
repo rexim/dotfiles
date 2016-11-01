@@ -11,10 +11,13 @@
        (-take-while (-lambda (x) (not (string= stop-folder x))))
        (-reduce-from (-lambda (acc x) (concat (upcase x) "_" acc)) "")))
 
-(defun rc/update-include-guard ()
-  (interactive)
+
+(defun rc/update-include-guard (stop-folder)
+  (interactive "sStop folder [src]: ")
   (let* ((file-path (buffer-file-name))
-         (guard (rc/guard-from-path file-path "src")))
+         (guard (rc/guard-from-path file-path (if (= 0 (length stop-folder))
+                                                  "src"
+                                                stop-folder))))
     (goto-char 0)
     (forward-word)
     (forward-char)
