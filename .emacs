@@ -60,7 +60,8 @@
             'typescript-mode 'nix-mode 'dockerfile-mode
             'love-minor-mode 'toml-mode 'ensime 'zeal-at-point
             'elm-mode 'nginx-mode 'kotlin-mode
-            'org-pomodoro 'bnfc 'fixmee 'buffer-move)
+            'org-pomodoro 'bnfc 'fixmee 'buffer-move
+            'go-mode)
 
 (setq custom-file "~/.emacs-custom.el")
 (load custom-file)
