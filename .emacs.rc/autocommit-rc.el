@@ -36,8 +36,8 @@
        "Autocommit"
        "*Autocommit*"
        (format (if rc/autocommit-offline
-                   "git add -u && git commit -m \"%s\""
-                 "git add -u && git commit -m \"%s\" && git push origin master")
+                   "git add -A && git commit -m \"%s\""
+                 "git add -A && git commit -m \"%s\" && git push origin master")
                autocommit-message)))))
 
 (defun rc/autocommit-beat (process event)
