@@ -61,7 +61,7 @@
             'love-minor-mode 'toml-mode 'ensime 'zeal-at-point
             'elm-mode 'nginx-mode 'kotlin-mode
             'org-pomodoro 'bnfc 'fixmee 'buffer-move
-            'go-mode)
+            'go-mode 'php-mode)
 
 (setq custom-file "~/.emacs-custom.el")
 (load custom-file)
