@@ -45,6 +45,7 @@
 (load "~/.emacs.rc/merlin-rc.el")
 (load "~/.emacs.rc/racer-rc.el")
 (load "~/.emacs.rc/flycheck-rc.el")
+(load "~/.emacs.rc/elpy-rc.el")
 ;; (load "~/.emacs.rc/cmake-ide-rc.el")
 
 ;;; Packages that don't require configuration
