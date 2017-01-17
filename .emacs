@@ -62,7 +62,7 @@
             'love-minor-mode 'toml-mode 'ensime 'zeal-at-point
             'elm-mode 'nginx-mode 'kotlin-mode
             'org-pomodoro 'bnfc 'fixmee 'buffer-move
-            'go-mode 'php-mode 'csv-nav)
+            'go-mode 'php-mode 'csv-nav 'package-lint)
 
 (setq custom-file "~/.emacs-custom.el")
 (load custom-file)
