@@ -9,3 +9,4 @@
 (add-hook 'lisp-mode-hook        'rc/turn-on-paredit)
 (add-hook 'common-lisp-mode-hook 'rc/turn-on-paredit)
 (add-hook 'scheme-mode-hook      'rc/turn-on-paredit)
+(add-hook 'racket-mode-hook      'rc/turn-on-paredit)
