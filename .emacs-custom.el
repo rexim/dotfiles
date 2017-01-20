@@ -5,7 +5,8 @@
  ;; If there is more than one, they won't work right.
  '(safe-local-variable-values
    (quote
-    ((eval progn
+    ((fixmee-mode . t)
+     (eval progn
            (auto-revert-mode 1)
            (rc/autopull-changes)
            (add-hook
