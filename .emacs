@@ -27,6 +27,7 @@
 (load "~/.emacs.rc/tramp-rc.el")
 (load "~/.emacs.rc/org-mode-rc.el")
 (load "~/.emacs.rc/org-cliplink-rc.el")
+(load "~/.emacs.rc/org-babel-rc.el")
 (load "~/.emacs.rc/org-capture-rc.el")
 (load "~/.emacs.rc/autocommit-rc.el")
 (load "~/.emacs.rc/powershell-rc.el")
