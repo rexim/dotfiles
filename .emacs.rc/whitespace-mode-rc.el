@@ -25,3 +25,4 @@
 (add-hook 'scala-mode-hook 'rc/set-up-whitespace-handling)
 (add-hook 'markdown-mode-hook 'rc/set-up-whitespace-handling)
 (add-hook 'js2-mode-hook 'rc/set-up-whitespace-handling)
+(add-hook 'haskell-mode-hook 'rc/set-up-whitespace-handling)
