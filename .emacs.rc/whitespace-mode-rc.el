@@ -17,17 +17,18 @@
                                  space-mark tab-mark))))
 
 (let ((whitespace-enabled-modes
-       (list 'tuareg-mode-hook
-             'c++-mode-hook
-             'emacs-lisp-mode
-             'java-mode-hook
-             'lua-mode-hook
-             'rust-mode-hook
-             'scala-mode-hook
-             'markdown-mode-hook
-             'js2-mode-hook
-             'haskell-mode-hook
-             'python-mode-hook
-             )))
+       '(
+         tuareg-mode-hook
+         c++-mode-hook
+         emacs-lisp-mode
+         java-mode-hook
+         lua-mode-hook
+         rust-mode-hook
+         scala-mode-hook
+         markdown-mode-hook
+         js2-mode-hook
+         haskell-mode-hook
+         python-mode-hook
+         )))
   (dolist (mode whitespace-enabled-modes)
     (add-hook mode 'rc/set-up-whitespace-handling)))
