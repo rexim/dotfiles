@@ -18,7 +18,6 @@
      org-rmail
      org-w3m)))
  '(org-enforce-todo-dependencies t)
- '(org-agenda-dim-blocked-tasks (quote invisible))
  '(org-agenda-exporter-settings
    (quote ((org-agenda-tag-filter-preset (list "+personal"))))))
 
