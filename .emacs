@@ -1,9 +1,9 @@
 ;;; RCs
 
 (package-initialize)                    ;Package.el won't shut up
-                                        ;without this line specificaly
-                                        ;here and not anywhere else
-                                        ;~_~
+                                        ;without this line being
+                                        ;specificaly here and not
+                                        ;anywhere else ~_~
 (load "~/.emacs.rc/rc.el")
 
 (load "~/.emacs.rc/misc-rc.el")
