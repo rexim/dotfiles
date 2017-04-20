@@ -8,14 +8,25 @@
               default-input-method "russian-computer"
               visible-bell (equal system-type 'windows-nt))
 
+(defun rc/buffer-file-name ()
+  (if (equal major-mode 'dired-mode)
+      default-directory
+    (buffer-file-name)))
+
+(defun rc/clipboard-org-mode-file-link ()
+  (interactive)
+  (let ((org-mode-file-link (format "file:%s::%d"
+                                    (rc/buffer-file-name)
+                                    (line-number-at-pos))))
+    (kill-new org-mode-file-link)
+    (message org-mode-file-link)))
+
 ;;; Taken from here:
 ;;; http://stackoverflow.com/questions/2416655/file-path-to-clipboard-in-emacs
 (defun rc/put-file-name-on-clipboard ()
   "Put the current file name on the clipboard"
   (interactive)
-  (let ((filename (if (equal major-mode 'dired-mode)
-                      default-directory
-                    (buffer-file-name))))
+  (let ((filename (rc/buffer-file-name)))
     (when filename
       (kill-new filename)
       (message filename))))
