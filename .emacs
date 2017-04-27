@@ -70,7 +70,8 @@
             'elm-mode 'nginx-mode 'kotlin-mode
             'org-pomodoro 'bnfc 'fixmee 'buffer-move
             'go-mode 'php-mode 'csv-nav 'package-lint 'racket-mode
-            'morganey-mode 'uuidgen 'handlebars-mode)
+            'morganey-mode 'uuidgen 'handlebars-mode
+            'qml-mode)
 
 (setq custom-file "~/.emacs-custom.el")
 (load custom-file)
