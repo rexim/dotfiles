@@ -1,3 +1,6 @@
+;;; TODO(0b04f219-6c37-4811-898f-e9252f52c3f3): interactive function
+;;; for creating dir local variables file
+
 (defvar rc/autocommit-offline nil)
 (defvar rc/autopull-lock nil)
 (defvar rc/autocommit-lock nil)
