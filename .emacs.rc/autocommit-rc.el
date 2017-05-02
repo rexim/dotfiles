@@ -1,5 +1,13 @@
-;;; TODO(0b04f219-6c37-4811-898f-e9252f52c3f3): interactive function
-;;; for creating dir local variables file
+;; TODO(0b04f219-6c37-4811-898f-e9252f52c3f3): interactive function
+;; for creating dir local variables file
+;;
+;; This is how dir local vars for autocommit look like:
+;; ((nil . ((eval . (progn
+;;                    (auto-revert-mode 1)
+;;                    (rc/autopull-changes)
+;;                    (add-hook 'after-save-hook
+;;                              'rc/autocommit-changes
+;;                              nil 'make-it-local))))))
 
 (defvar rc/autocommit-offline nil)
 (defvar rc/autopull-lock nil)
