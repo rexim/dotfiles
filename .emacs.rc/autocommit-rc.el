@@ -8,6 +8,9 @@
 ;;                    (add-hook 'after-save-hook
 ;;                              'rc/autocommit-changes
 ;;                              nil 'make-it-local))))))
+;;
+;; I think such init function should also create gitignores. Or at
+;; lease append it with it's own stuff.
 
 (defvar rc/autocommit-offline nil)
 (defvar rc/autopull-lock nil)
