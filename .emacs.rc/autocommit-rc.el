@@ -12,6 +12,8 @@
 ;; I think such init function should also create gitignores. Or at
 ;; lease append it with it's own stuff.
 
+;; TODO(fd11723d-3a6f-424b-9ac5-2d8414c758e4): single autocommit dir locals function
+
 (defvar rc/autocommit-offline nil)
 (defvar rc/autopull-lock nil)
 (defvar rc/autocommit-lock nil)
