@@ -43,6 +43,15 @@
           (setq rc/autocommit-offline t)
           (message "[OFFLINE] NOT Syncing the Agenda"))))))
 
+(defun rc/autocommit-changes ()
+  (interactive)
+  (if rc/autocommit-lock
+      (setq rc/autocommit-changed t)
+    (setq rc/autocommit-lock t)
+    (setq rc/autocommit-changed nil)
+    (set-process-sentinel (rc/run-commit-process)
+                          'rc/autocommit-beat)))
+
 (defun rc/run-commit-process ()
   (let ((autocommit-message (format-time-string "Autocommit %s")))
     (let ((default-directory "~/Documents/Agenda/"))
@@ -61,15 +70,6 @@
            event)
   (if (not rc/autocommit-changed)
       (setq rc/autocommit-lock nil)
-    (setq rc/autocommit-changed nil)
-    (set-process-sentinel (rc/run-commit-process)
-                          'rc/autocommit-beat)))
-
-(defun rc/autocommit-changes ()
-  (interactive)
-  (if rc/autocommit-lock
-      (setq rc/autocommit-changed t)
-    (setq rc/autocommit-lock t)
     (setq rc/autocommit-changed nil)
     (set-process-sentinel (rc/run-commit-process)
                           'rc/autocommit-beat)))
