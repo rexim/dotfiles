@@ -12,12 +12,20 @@
 ;; I think such init function should also create gitignores. Or at
 ;; lease append it with it's own stuff.
 
-;; TODO(fd11723d-3a6f-424b-9ac5-2d8414c758e4): single autocommit dir locals function
-
 (defvar rc/autocommit-offline nil)
 (defvar rc/autopull-lock nil)
 (defvar rc/autocommit-lock nil)
 (defvar rc/autocommit-changed nil)
+
+(defun rc/autocommit-dir-locals ()
+  "The function that has to be put into the .dir-locals.el file
+of the autocommit folder as evaluated for any mode."
+  (interactive)
+  (auto-revert-mode 1)
+  (rc/autopull-changes)
+  (add-hook 'after-save-hook
+            'rc/autocommit-changes
+            nil 'make-it-local))
 
 (defun rc/toggle-autocommit-offline ()
   "Toggle between OFFLINE and ONLINE modes.
