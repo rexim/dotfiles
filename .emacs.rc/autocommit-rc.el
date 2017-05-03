@@ -2,15 +2,10 @@
 ;; for creating dir local variables file
 ;;
 ;; This is how dir local vars for autocommit look like:
-;; ((nil . ((eval . (progn
-;;                    (auto-revert-mode 1)
-;;                    (rc/autopull-changes)
-;;                    (add-hook 'after-save-hook
-;;                              'rc/autocommit-changes
-;;                              nil 'make-it-local))))))
+;; ((nil . ((eval . (rc/autocommit-dir-locals)))))
 ;;
 ;; I think such init function should also create gitignores. Or at
-;; lease append it with it's own stuff.
+;; least append it with it's own stuff.
 
 (defvar rc/autocommit-offline nil)
 (defvar rc/autopull-lock nil)
