@@ -20,6 +20,11 @@
 (defvar rc/autocommit-changed nil)
 
 (defun rc/toggle-autocommit-offline ()
+  "Toggle between OFFLINE and ONLINE modes.
+
+Autocommit can be in two modes: OFFLINE and ONLINE. When ONLINE
+rc/autocommit-changes does `git commit && git push'. When OFFLINE
+rc/autocommit does only `git commit'."
   (interactive)
   (setq rc/autocommit-offline (not rc/autocommit-offline))
   (if rc/autocommit-offline
@@ -27,11 +32,21 @@
     (message "[ONLINE] Autocommit Mode")))
 
 (defun rc/autocommit-reset-locks ()
+  "Reset all of the autocommit locks.
+
+Autocommit is asynchronous and to perform its job without any
+race conditions it maintains a set of internal locks. If this set
+goes into an incosistent state you can reset them with this
+function."
   (interactive)
   (setq rc/autocommit-lock nil)
   (setq rc/autocommit-changed nil))
 
 (defun rc/autopull-changes ()
+  "Pull the recent changes.
+
+Should be invoked once before working with the content under
+autocommit. Usually put into the dir locals file."
   (interactive)
   (when (not rc/autopull-lock)
     (setq rc/autopull-lock t)
@@ -46,6 +61,10 @@
           (message "[OFFLINE] NOT Syncing the Agenda"))))))
 
 (defun rc/autocommit-changes ()
+  "Commit all of the changes under the autocommit folder.
+
+Should be invoked each time a change is made. Usually put into
+dir locals file."
   (interactive)
   (if rc/autocommit-lock
       (setq rc/autocommit-changed t)
