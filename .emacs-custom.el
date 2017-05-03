@@ -30,6 +30,7 @@
             (quote rc/autocommit-changes)
             nil
             (quote make-it-local)))
+     (eval rc/autocommit-dir-locals)
      (eval when
            (fboundp
             (quote flymake-mode))
