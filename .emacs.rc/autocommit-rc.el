@@ -1,16 +1,53 @@
-;; TODO(0b04f219-6c37-4811-898f-e9252f52c3f3): interactive function
-;; for creating dir local variables file
+;; TODO(0b04f219-6c37-4811-898f-e9252f52c3f3): interactive function for creating dir local variables file
+;; Subtasks:
+;; - [ ] 845361b1-a0e8-4f1d-89c8-2f7b4d0c92f8
+;; - [ ] 15404e89-5246-4a31-94a1-81d00c066a74
+;; - [ ] 94f35abc-e2d8-4c3c-a2f9-8bdfcf4f6586
+;; - [ ] 4309af7f-53bf-4ef3-a668-67c38e8a4be5
 ;;
 ;; This is how dir local vars for autocommit look like:
 ;; ((nil . ((eval . (rc/autocommit-dir-locals)))))
 ;;
 ;; I think such init function should also create gitignores. Or at
 ;; least append it with it's own stuff.
+;;
+;; Useful links:
+;; - https://www.gnu.org/software/emacs/manual/html_node/elisp/Directory-Local-Variables.html
 
 (defvar rc/autocommit-offline nil)
 (defvar rc/autopull-lock nil)
 (defvar rc/autocommit-lock nil)
 (defvar rc/autocommit-changed nil)
+
+;;; TODO(15404e89-5246-4a31-94a1-81d00c066a74): implement ask-if-exists
+;;;
+;;; Parent: 0b04f219-6c37-4811-898f-e9252f52c3f3
+(defun rc/autocommit--ask-if-exists (file-name question)
+  )
+
+;;; TODO(94f35abc-e2d8-4c3c-a2f9-8bdfcf4f6586): implement create-dir-locals
+;;;
+;;; Parent: 0b04f219-6c37-4811-898f-e9252f52c3f3
+(defun rc/autocommit--create-dir-locals (dir-locals-file-name)
+  )
+
+;;; TODO(4309af7f-53bf-4ef3-a668-67c38e8a4be5): implement print-filename
+;;;
+;;; Parent: 0b04f219-6c37-4811-898f-e9252f52c3f3
+(defun rc/autocommit--print-file-name (file-name)
+  )
+
+;;; TODO(845361b1-a0e8-4f1d-89c8-2f7b4d0c92f8): optional dir argument for rc/autocommit-init-dir
+;;;
+;;; Parent: 0b04f219-6c37-4811-898f-e9252f52c3f3
+(defun rc/autocommit-init-dir ()
+  "Initialize autcommit folder."
+  (interactive)
+  (-> default-directory
+      (concat dir-locals-file)
+      (rc/autocommit--ask-if-exists "Do you really wanna replace it?")
+      (rc/autocommit--create-dir-locals)
+      (rc/autocommit--print-file-name)))
 
 (defun rc/autocommit-dir-locals ()
   "The function that has to be put into the .dir-locals.el file
