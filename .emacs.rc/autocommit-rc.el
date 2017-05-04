@@ -1,7 +1,7 @@
 ;; TODO(0b04f219-6c37-4811-898f-e9252f52c3f3): interactive function for creating dir local variables file
 ;; Subtasks:
 ;; - [ ] 845361b1-a0e8-4f1d-89c8-2f7b4d0c92f8
-;; - [ ] 15404e89-5246-4a31-94a1-81d00c066a74
+;; - [X] 15404e89-5246-4a31-94a1-81d00c066a74
 ;; - [ ] 94f35abc-e2d8-4c3c-a2f9-8bdfcf4f6586
 ;; - [ ] 4309af7f-53bf-4ef3-a668-67c38e8a4be5
 ;;
@@ -19,11 +19,12 @@
 (defvar rc/autocommit-lock nil)
 (defvar rc/autocommit-changed nil)
 
-;;; TODO(15404e89-5246-4a31-94a1-81d00c066a74): implement ask-if-exists
-;;;
-;;; Parent: 0b04f219-6c37-4811-898f-e9252f52c3f3
 (defun rc/autocommit--ask-if-exists (file-name question)
-  )
+  (when (or (not (file-exists-p file-name))
+            (y-or-n-p (format "%s already exists. %s"
+                              file-name
+                              question)))
+    file-name))
 
 ;;; TODO(94f35abc-e2d8-4c3c-a2f9-8bdfcf4f6586): implement create-dir-locals
 ;;;
