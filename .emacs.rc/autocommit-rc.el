@@ -16,43 +16,25 @@
 (defvar rc/autocommit-lock nil)
 (defvar rc/autocommit-changed nil)
 
-(defun rc/autocommit--ask-if-exists (file-name question)
-  (when (or (not (file-exists-p file-name))
-            (y-or-n-p (format "%s already exists. %s"
-                              file-name
-                              question)))
-    file-name))
+(defun rc/autocommit--create-dir-locals (file-name)
+  (write-region "((nil . ((eval . (rc/autocommit-dir-locals)))))"
+                nil file-name))
 
-(defun rc/autocommit--create-dir-locals (dir-locals-file-name)
-  (when dir-locals-file-name
-    (write-region "((nil . ((eval . (rc/autocommit-dir-locals)))))"
-                  nil dir-locals-file-name)
-    dir-locals-file-name))
-
-(defun rc/autocommit--print-created-file-name (file-name)
-  (if file-name
-      (message (format "Created file %s" file-name))
-    (message "Nothing was created")))
+(defun rc/y-or-n-if (predicate question action)
+  (when (or (not (funcall predicate))
+            (y-or-n-p question))
+    (funcall action)))
 
 ;;; TODO(845361b1-a0e8-4f1d-89c8-2f7b4d0c92f8): optional dir argument for rc/autocommit-init-dir
 ;;; Parent: 0b04f219-6c37-4811-898f-e9252f52c3f3
 (defun rc/autocommit-init-dir ()
   "Initialize autcommit folder."
   (interactive)
-  ;; TODO(80dbf927-bfd3-4ace-92e9-e4f4519b216c): refactor implementation of rc/autocommit-init-dir
-  ;;
-  ;; Use approach with higher-order functions:
-  ;; ```lisp
-  ;; (ask-if
-  ;;  (-partial #'file-exists-p file-name)
-  ;;  (-partial #'write-region content nil file-name))
-  ;; ```
-  ;; instead of the current bullshit
-  (-> default-directory
-      (concat dir-locals-file)
-      (rc/autocommit--ask-if-exists "Do you really wanna replace it?")
-      (rc/autocommit--create-dir-locals)
-      (rc/autocommit--print-created-file-name)))
+  (let ((file-name (concat default-directory
+                           dir-locals-file)))
+    (rc/y-or-n-if (-partial #'file-exists-p file-name)
+                  (format "%s already exists. Replace it?" file-name)
+                  (-partial #'rc/autocommit--create-dir-locals file-name))))
 
 (defun rc/autocommit-dir-locals ()
   "The function that has to be put into the .dir-locals.el file
