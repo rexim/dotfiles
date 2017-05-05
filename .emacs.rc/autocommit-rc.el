@@ -39,6 +39,15 @@
 (defun rc/autocommit-init-dir ()
   "Initialize autcommit folder."
   (interactive)
+  ;; TODO(80dbf927-bfd3-4ace-92e9-e4f4519b216c): refactor implementation of rc/autocommit-init-dir
+  ;;
+  ;; Use approach with higher-order functions:
+  ;; ```lisp
+  ;; (ask-if
+  ;;  (-partial #'file-exists-p file-name)
+  ;;  (-partial #'write-region content nil file-name))
+  ;; ```
+  ;; instead of the current bullshit
   (-> default-directory
       (concat dir-locals-file)
       (rc/autocommit--ask-if-exists "Do you really wanna replace it?")
