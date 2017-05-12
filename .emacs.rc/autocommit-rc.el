@@ -1,16 +1,3 @@
-;; TODO(0b04f219-6c37-4811-898f-e9252f52c3f3): interactive function for creating dir local variables file
-;; Subtasks:
-;; - 845361b1-a0e8-4f1d-89c8-2f7b4d0c92f8
-;;
-;; This is how dir local vars for autocommit look like:
-;; ((nil . ((eval . (rc/autocommit-dir-locals)))))
-;;
-;; I think such init function should also create gitignores. Or at
-;; least append it with it's own stuff.
-;;
-;; Useful links:
-;; - https://www.gnu.org/software/emacs/manual/html_node/elisp/Directory-Local-Variables.html
-
 (defvar rc/autocommit-offline nil)
 (defvar rc/autopull-lock nil)
 (defvar rc/autocommit-lock nil)
@@ -25,13 +12,12 @@
             (y-or-n-p question))
     (funcall action)))
 
-;;; TODO(845361b1-a0e8-4f1d-89c8-2f7b4d0c92f8): optional dir argument for rc/autocommit-init-dir
-;;; Parent: 0b04f219-6c37-4811-898f-e9252f52c3f3
-(defun rc/autocommit-init-dir ()
-  "Initialize autcommit folder."
-  (interactive)
-  (let ((file-name (concat default-directory
-                           dir-locals-file)))
+(defun rc/autocommit-init-dir (&optional dir)
+  "Initialize autocommit folder."
+  (interactive "DAutocommit directory: ")
+  (let* ((autocommit-dir (if dir dir default-directory))
+         (file-name (concat autocommit-dir
+                            dir-locals-file)))
     (rc/y-or-n-if (-partial #'file-exists-p file-name)
                   (format "%s already exists. Replace it?" file-name)
                   (-partial #'rc/autocommit--create-dir-locals file-name))))
