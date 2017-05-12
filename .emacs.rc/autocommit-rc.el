@@ -1,3 +1,4 @@
+;;; TODO(e266bfaa-2a01-4881-9e7f-ce2c592f7cdd): support several autocommit folders simultaneously
 (defvar rc/autocommit-offline nil)
 (defvar rc/autopull-lock nil)
 (defvar rc/autocommit-lock nil)
