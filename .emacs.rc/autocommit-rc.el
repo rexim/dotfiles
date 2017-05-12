@@ -12,6 +12,18 @@
             (y-or-n-p question))
     (funcall action)))
 
+;;; TODO(4229cf9a-4768-4f5e-aca1-865256c64a23): rc/autocommit-init-dir should modify dir locals file on AST level
+;;;
+;;; Right know it just overrides .dir-locals file on text level. I
+;;; want it to
+;;; - read .dir-locals,
+;;; - parse the assoc list,
+;;; - check if there is already autocommit stuff
+;;; - add autocommit stuff to the assoc list if needed
+;;; - and write it back to the file
+;;;
+;;; That will enable us with modifying dir locals that contains custom
+;;; stuff unrelated to autocommit
 (defun rc/autocommit-init-dir (&optional dir)
   "Initialize autocommit folder."
   (interactive "DAutocommit directory: ")
