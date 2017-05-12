@@ -1,3 +1,7 @@
+;;; TODO(c3bdae31-4329-4217-98a0-743b9dcbb6d2): extract autocommit into a separate package
+;;;
+;;; Once e266bfaa-2a01-4881-9e7f-ce2c592f7cdd is done, I think we can do that.
+
 ;;; TODO(e266bfaa-2a01-4881-9e7f-ce2c592f7cdd): support several autocommit folders simultaneously
 (defvar rc/autocommit-offline nil)
 (defvar rc/autopull-lock nil)
