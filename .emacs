@@ -73,8 +73,7 @@
             'morganey-mode 'uuidgen 'handlebars-mode
             'qml-mode 'ag)
 
-(when (file-exists-p "~/.emacs.shadow/shadow-rc.el")
-  (load "~/.emacs.shadow/shadow-rc.el"))
+(load "~/.emacs.shadow/shadow-rc.el" t)
 
 (setq custom-file "~/.emacs-custom.el")
 (load custom-file)
