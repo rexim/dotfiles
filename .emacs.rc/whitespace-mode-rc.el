@@ -29,6 +29,7 @@
          js2-mode-hook
          haskell-mode-hook
          python-mode-hook
+         erlang-mode-hook
          )))
   (dolist (mode whitespace-enabled-modes)
     (add-hook mode 'rc/set-up-whitespace-handling)))
