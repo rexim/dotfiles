@@ -1,6 +1,6 @@
-(rc/require 'smex 'ido-ubiquitous)
+(rc/require 'smex 'ido-completing-read+)
 
-(require 'ido-ubiquitous)
+(require 'ido-completing-read+)
 
 (ido-mode 1)
 (ido-everywhere 1)
