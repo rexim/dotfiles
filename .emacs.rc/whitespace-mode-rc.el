@@ -20,6 +20,7 @@
        '(
          tuareg-mode-hook
          c++-mode-hook
+         c-mode-hook
          emacs-lisp-mode
          java-mode-hook
          lua-mode-hook
