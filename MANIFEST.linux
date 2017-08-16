@@ -1,4 +1,4 @@
-.Xresources|symlink
-.tmux.conf|symlink
-.zshrc|symlink
-.vimrc|symlink
+.Xresources|symlink|
+.tmux.conf|symlink|
+.vimrc|symlink|
+i3|symlink|.config

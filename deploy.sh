@@ -2,38 +2,33 @@
 
 SCRIPT_DIR="$( cd "$( dirname "$BASH_SOURCE[0]" )" && pwd )"
 
-copyFile() {
-    filename=$1
-    if [ -f ~/$filename ] || [ -d ~/$filename ]; then
-        echo "[WARNING] $filename is already copied"
-    else
-        cp -r $SCRIPT_DIR/$filename ~/$filename
-        echo "[OK] $filename has been copied"
-    fi
-}
-
 symlinkFile() {
-    filename=$1
-    if [ -L ~/$filename ]; then
-        echo "[WARNING] $filename is already symlinked"
+    filename="$SCRIPT_DIR/$1"
+    destination="$HOME/$2/$1"
+
+    mkdir -p $(dirname "$destination")
+    
+    if [ ! -L "$destination" ]; then
+        if [ -e "$destination" ]; then
+            echo "[ERROR] $destination exists but it's not a symlink. Please fix that manually" && exit 1
+        else
+            ln -s "$filename" "$destination"
+            echo "[OK] $destination -> $filename"
+        fi
     else
-        ln -s $SCRIPT_DIR/$filename ~/$filename
-        echo "[OK] $filename has been symlinked"
+        echo "[WARNING] $filename already symlinked"
     fi
 }
 
 deployManifest() {
-    for row in `cat $SCRIPT_DIR/$1`; do
-        filename=`echo $row | cut -d \| -f 1`
-        operation=`echo $row | cut -d \| -f 2`
+    for row in $(cat $SCRIPT_DIR/$1); do
+        filename=$(echo $row | cut -d \| -f 1)
+        operation=$(echo $row | cut -d \| -f 2)
+        destination=$(echo $row | cut -d \| -f 3)
 
         case $operation in
-            copy)
-                copyFile $filename
-                ;;
-
             symlink)
-                symlinkFile $filename
+                symlinkFile $filename $destination
                 ;;
 
             *)
