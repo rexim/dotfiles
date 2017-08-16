@@ -13,7 +13,7 @@ symlinkFile() {
             echo "[ERROR] $destination exists but it's not a symlink. Please fix that manually" && exit 1
         else
             ln -s "$filename" "$destination"
-            echo "[OK] $destination -> $filename"
+            echo "[OK] $filename -> $destination"
         fi
     else
         echo "[WARNING] $filename already symlinked"
