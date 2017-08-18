@@ -155,5 +155,5 @@ bar {
         status_command /nix/store/5a0yzs0kfp5lglkn6wdqa547in08xlgh-i3status-2.11/bin/i3status
 }
 
-exec "xmodmap -e 'keycode 102 = Super_L'"
-exec "setxkbmap -layout us,ru -option grp:shifts_toggle"
+exec --no-startup-id "setxkbmap -layout us,ru -option grp:shifts_toggle"
+exec --no-startup-id sh -c "xmodmap -e 'keycode 102 = Super_L'"
