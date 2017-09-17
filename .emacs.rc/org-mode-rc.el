@@ -21,7 +21,8 @@
  '(org-enforce-todo-dependencies nil)
  '(org-agenda-dim-blocked-tasks nil)
  '(org-agenda-exporter-settings
-   (quote ((org-agenda-tag-filter-preset (list "+personal"))))))
+   (quote ((org-agenda-tag-filter-preset (list "+personal")))))
+ '(org-refile-use-outline-path (quote file)))
 
 (defun rc/org-increment-move-counter ()
   (interactive)
