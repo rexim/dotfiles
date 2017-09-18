@@ -3,3 +3,5 @@
 	name = rexim
 [merge]
 	conflictStyle = diff3
+[magit]
+	hideCampaign = true
