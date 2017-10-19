@@ -32,6 +32,7 @@
          python-mode-hook
          erlang-mode-hook
          asm-mode-hook
+         nasm-mode-hook
          )))
   (dolist (mode whitespace-enabled-modes)
     (add-hook mode 'rc/set-up-whitespace-handling)))

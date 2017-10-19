@@ -55,6 +55,7 @@
 (load "~/.emacs.rc/typescript-rc.el")
 ;; (load "~/.emacs.rc/cmake-ide-rc.el")
 (load "~/.emacs.rc/editorconfig-rc.el")
+(load "~/.emacs.rc/nasm-mode-rc.el")
 
 ;;; Packages that don't require configuration
 (rc/require 'scala-mode 'jade-mode 'd-mode
