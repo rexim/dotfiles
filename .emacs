@@ -73,7 +73,7 @@
             'org-pomodoro 'bnfc 'fixmee 'buffer-move
             'go-mode 'php-mode 'csv-nav 'package-lint 'racket-mode
             'morganey-mode 'uuidgen 'handlebars-mode
-            'qml-mode 'ag)
+            'qml-mode 'ag 'xquery-mode)
 
 (load "~/.emacs.shadow/shadow-rc.el" t)
 
