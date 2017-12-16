@@ -3,6 +3,7 @@ Xft.antialias:  1
 Xft.hinting:    1
 Xft.hintstyle:  hintmedium
 
+URxvt.termName: rxvt
 URxvt.depth: 32
 URxvt.transparent: false
 URxvt.font: xft:Ubuntu Mono:size=18
