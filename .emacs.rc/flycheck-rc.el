@@ -11,7 +11,7 @@
   (setq flycheck-gcc-language-standard "c++11"))
 
 ;; (add-hook 'c++-mode-hook 'rc/turn-on-flycheck)
-;; (add-hook 'c-mode-hook 'rc/turn-on-flycheck)
+(add-hook 'c-mode-hook 'rc/turn-on-flycheck)
 
 (add-hook 'rust-mode-hook #'(lambda ()
                               (flycheck-mode 1)
