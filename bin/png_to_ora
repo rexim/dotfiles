@@ -1,0 +1,31 @@
+#!/bin/sh
+
+if [[ $# -ne 1 ]]; then
+    >&2 echo "Usage ./png_to_ora <png-file>"
+    exit 1
+fi
+
+set -xe
+
+PNG_PATH="$1"
+PNG_FILE=$(basename "${PNG_PATH}")
+PNG_NAME="${PNG_FILE%.*}"
+
+mkdir -p "${PNG_NAME}/data"
+
+echo "image/openraster" > "${PNG_NAME}/mimetype"
+cp "${PNG_FILE}"          "${PNG_NAME}/data/layer-00.png"
+echo "}"                > "${PNG_NAME}/data/layer-00-strokemap.dat"
+cat <<EOF               > "${PNG_NAME}/stack.xml"
+<?xml version='1.0' encoding='UTF-8'?>
+<image xmlns:mypaint="http://mypaint.org/ns/openraster" h="3520" version="0.0.5" w="2496" mypaint:frame-active="false">
+  <stack composite-op="svg:src-over" isolation="isolate" opacity="1.0" visibility="visible">
+    <layer composite-op="svg:src-over" mypaint_strokemap_v2="data/layer-00-strokemap.dat" name="Layer" opacity="1.0" selected="true" src="data/layer-00.png" visibility="visible" x="0" y="0" mypaint:strokemap="data/layer-00-strokemap.dat" />
+  </stack>
+</image>
+EOF
+
+pushd "${PNG_NAME}"
+zip -r ../"${PNG_NAME}.ora" *
+popd
+rm -r "${PNG_NAME}"
