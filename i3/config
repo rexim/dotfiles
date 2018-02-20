@@ -159,3 +159,5 @@ exec --no-startup-id "setxkbmap -layout us,ru -option grp:shifts_toggle,ctrl:noc
 exec --no-startup-id sh -c "xmodmap -e 'keycode 102 = Super_L'"
 
 exec --no-startup-id nm-applet
+
+focus_follows_mouse no
