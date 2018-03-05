@@ -2,7 +2,6 @@
 ;;;
 ;;; Once e266bfaa-2a01-4881-9e7f-ce2c592f7cdd is done, I think we can do that.
 
-;;; TODO(e266bfaa-2a01-4881-9e7f-ce2c592f7cdd): support several autocommit folders simultaneously
 (defvar rc/autocommit-local-locks
   (make-hash-table :test 'equal))
 
