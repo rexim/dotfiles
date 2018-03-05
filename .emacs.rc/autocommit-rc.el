@@ -3,7 +3,31 @@
 ;;; Once e266bfaa-2a01-4881-9e7f-ce2c592f7cdd is done, I think we can do that.
 
 ;;; TODO(e266bfaa-2a01-4881-9e7f-ce2c592f7cdd): support several autocommit folders simultaneously
+(defvar rc/autocommit-local-locks
+  (make-hash-table :test 'equal))
+
+(defun rc/autocommit--id ()
+  (let ((id (-> default-directory
+                (file-truename)
+                (rc/autocommit--touch-lock-id))))
+    (unless (gethash id rc/autocommit-local-locks)
+      (puthash id nil rc/autocommit-local-locks))
+    id))
+
+(defun rc/autocommit--get-lock (lock)
+  (-> (rc/autocommit--id)
+      (gethash rc/autocommit-local-locks)
+      (plist-get lock)))
+
+(defun rc/autocommit--set-lock (lock value)
+  (puthash (rc/autocommit--id)
+           (-> (rc/autocommit--id)
+               (gethash rc/autocommit-local-locks)
+               (plist-put lock value))
+           rc/autocommit-local-locks))
+
 (defvar rc/autocommit-offline nil)
+;;; TODO: replace all local locks with global locks
 (defvar rc/autopull-lock nil)
 (defvar rc/autocommit-lock nil)
 (defvar rc/autocommit-changed nil)
