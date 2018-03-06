@@ -6,9 +6,7 @@
   (make-hash-table :test 'equal))
 
 (defun rc/autocommit--id ()
-  (let ((id (-> default-directory
-                (file-truename)
-                (rc/autocommit--touch-lock-id))))
+  (let ((id (file-truename default-directory)))
     (unless (gethash id rc/autocommit-local-locks)
       (puthash id nil rc/autocommit-local-locks))
     id))
@@ -25,8 +23,8 @@
                (plist-put lock value))
            rc/autocommit-local-locks))
 
-(defvar rc/autocommit-offline nil)
 ;;; TODO: replace all local locks with global locks
+(defvar rc/autocommit-offline nil)
 (defvar rc/autopull-lock nil)
 (defvar rc/autocommit-lock nil)
 (defvar rc/autocommit-changed nil)
@@ -105,13 +103,14 @@ autocommit. Usually put into the dir locals file."
     (setq rc/autopull-lock t)
     (if rc/autocommit-offline
         (message "[OFFLINE] NOT Syncing the Agenda")
-      (if (y-or-n-p "Sync the Agenda?")
+      (if (y-or-n-p (format "Sync the Agenda? [%s]" (rc/autocommit--id)))
           (progn
-            (message "Syncing the Agenda")
+            (message (format "Syncing the Agenda [%s]" (rc/autocommit--id)))
             (shell-command "git pull"))
         (progn
           (setq rc/autocommit-offline t)
-          (message "[OFFLINE] NOT Syncing the Agenda"))))))
+          (message (format "[OFFLINE] NOT Syncing the Agenda [%s]"
+                           (rc/autocommit--id))))))))
 
 (defun rc/autocommit-changes ()
   "Commit all of the changes under the autocommit folder.
@@ -123,21 +122,21 @@ dir locals file."
       (setq rc/autocommit-changed t)
     (setq rc/autocommit-lock t)
     (setq rc/autocommit-changed nil)
-    (set-process-sentinel (rc/run-commit-process)
-                          'rc/autocommit-beat)))
+    (set-process-sentinel (rc/run-commit-process (rc/autocommit--id))
+                          (-partial 'rc/autocommit-beat (rc/autocommit--id)))))
 
-(defun rc/run-commit-process ()
+(defun rc/run-commit-process (autocommit-directory)
   (let ((autocommit-message (format-time-string "Autocommit %s")))
-    (let ((default-directory "~/Documents/Agenda/"))
+    (let ((default-directory autocommit-directory))
       (start-process-shell-command
-       "Autocommit"
-       "*Autocommit*"
+       (format "Autocommit-%s" autocommit-directory)
+       (format "*Autocommit-%s*" autocommit-directory)
        (format (if rc/autocommit-offline
                    "git add -A && git commit -m \"%s\""
                  "git add -A && git commit -m \"%s\" && git push origin master")
                autocommit-message)))))
 
-(defun rc/autocommit-beat (process event)
+(defun rc/autocommit-beat (autocommit-directory process event)
   (message (if rc/autocommit-offline
                "[OFFLINE] Autocommit: %s"
              "Autocommit: %s")
@@ -145,5 +144,5 @@ dir locals file."
   (if (not rc/autocommit-changed)
       (setq rc/autocommit-lock nil)
     (setq rc/autocommit-changed nil)
-    (set-process-sentinel (rc/run-commit-process)
-                          'rc/autocommit-beat)))
+    (set-process-sentinel (rc/run-commit-process autocommit-directory)
+                          (-partial 'rc/autocommit-beat autocommit-directory))))
