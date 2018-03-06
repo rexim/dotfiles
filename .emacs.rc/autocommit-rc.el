@@ -70,6 +70,9 @@ of the autocommit folder as evaluated for any mode."
             'rc/autocommit-changes
             nil 'make-it-local))
 
+;;; TODO: rc/toggle-autocommit-offline doesn't work correctly
+;;;
+;;; It should toggle offline for all of the folders at once
 (defun rc/toggle-autocommit-offline ()
   "Toggle between OFFLINE and ONLINE modes.
 
