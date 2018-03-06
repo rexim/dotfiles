@@ -23,11 +23,11 @@
                (plist-put lock value))
            rc/autocommit-local-locks))
 
-;;; TODO: replace all local locks with global locks
-(defvar rc/autocommit-offline nil)
-(defvar rc/autopull-lock nil)
-(defvar rc/autocommit-lock nil)
-(defvar rc/autocommit-changed nil)
+(defun rc/autocommit--toggle-lock (lock)
+  (-> lock
+      (rc/autocommit--get-lock)
+      (not)
+      (rc/autocommit--set-lock)))
 
 (defun rc/autocommit--create-dir-locals (file-name)
   (write-region "((nil . ((eval . (rc/autocommit-dir-locals)))))"
@@ -77,21 +77,10 @@ Autocommit can be in two modes: OFFLINE and ONLINE. When ONLINE
 rc/autocommit-changes does `git commit && git push'. When OFFLINE
 rc/autocommit does only `git commit'."
   (interactive)
-  (setq rc/autocommit-offline (not rc/autocommit-offline))
-  (if rc/autocommit-offline
+  (rc/autocommit--toggle-lock 'autocommit-offline)
+  (if (rc/autocommit--get-lock 'autocommit-offline)
       (message "[OFFLINE] Autocommit Mode")
     (message "[ONLINE] Autocommit Mode")))
-
-(defun rc/autocommit-reset-locks ()
-  "Reset all of the autocommit locks.
-
-Autocommit is asynchronous and to perform its job without any
-race conditions it maintains a set of internal locks. If this set
-goes into an incosistent state you can reset them with this
-function."
-  (interactive)
-  (setq rc/autocommit-lock nil)
-  (setq rc/autocommit-changed nil))
 
 (defun rc/autopull-changes ()
   "Pull the recent changes.
@@ -99,16 +88,16 @@ function."
 Should be invoked once before working with the content under
 autocommit. Usually put into the dir locals file."
   (interactive)
-  (when (not rc/autopull-lock)
-    (setq rc/autopull-lock t)
-    (if rc/autocommit-offline
+  (when (not (rc/autocommit--get-lock 'autopull-lock))
+    (rc/autocommit--set-lock 'autopull-lock t)
+    (if (rc/autocommit--get-lock 'autocommit-offline)
         (message "[OFFLINE] NOT Syncing the Agenda")
       (if (y-or-n-p (format "Sync the Agenda? [%s]" (rc/autocommit--id)))
           (progn
             (message (format "Syncing the Agenda [%s]" (rc/autocommit--id)))
             (shell-command "git pull"))
         (progn
-          (setq rc/autocommit-offline t)
+          (rc/autocommit--set-lock 'autocommit-offline t)
           (message (format "[OFFLINE] NOT Syncing the Agenda [%s]"
                            (rc/autocommit--id))))))))
 
@@ -118,31 +107,32 @@ autocommit. Usually put into the dir locals file."
 Should be invoked each time a change is made. Usually put into
 dir locals file."
   (interactive)
-  (if rc/autocommit-lock
-      (setq rc/autocommit-changed t)
-    (setq rc/autocommit-lock t)
-    (setq rc/autocommit-changed nil)
+  (if (rc/autocommit--get-lock 'autocommit-lock)
+      (rc/autocommit--set-lock 'autocommit-changed t)
+    (rc/autocommit--set-lock 'autocommit-lock t)
+    (rc/autocommit--set-lock 'autocommit-changed nil)
     (set-process-sentinel (rc/run-commit-process (rc/autocommit--id))
                           (-partial 'rc/autocommit-beat (rc/autocommit--id)))))
 
 (defun rc/run-commit-process (autocommit-directory)
-  (let ((autocommit-message (format-time-string "Autocommit %s")))
-    (let ((default-directory autocommit-directory))
+  (let ((default-directory autocommit-directory))
+    (let ((autocommit-message (format-time-string "Autocommit %s")))
       (start-process-shell-command
        (format "Autocommit-%s" autocommit-directory)
        (format "*Autocommit-%s*" autocommit-directory)
-       (format (if rc/autocommit-offline
+       (format (if (rc/autocommit--get-lock 'autocommit-offline)
                    "git add -A && git commit -m \"%s\""
                  "git add -A && git commit -m \"%s\" && git push origin master")
                autocommit-message)))))
 
 (defun rc/autocommit-beat (autocommit-directory process event)
-  (message (if rc/autocommit-offline
-               "[OFFLINE] Autocommit: %s"
-             "Autocommit: %s")
-           event)
-  (if (not rc/autocommit-changed)
-      (setq rc/autocommit-lock nil)
-    (setq rc/autocommit-changed nil)
-    (set-process-sentinel (rc/run-commit-process autocommit-directory)
-                          (-partial 'rc/autocommit-beat autocommit-directory))))
+  (let ((default-directory autocommit-directory))
+    (message (if (rc/autocommit--get-lock 'autocommit-offline)
+                 "[OFFLINE] Autocommit: %s"
+               "Autocommit: %s")
+             event)
+    (if (not (rc/autocommit--get-lock 'autocommit-changed))
+        (rc/autocommit--set-lock 'autocommit-lock nil)
+      (rc/autocommit--set-lock 'autocommit-changed nil)
+      (set-process-sentinel (rc/run-commit-process autocommit-directory)
+                            (-partial 'rc/autocommit-beat autocommit-directory)))))
