@@ -5,8 +5,16 @@
 (defvar rc/autocommit-local-locks
   (make-hash-table :test 'equal))
 
+(defun rc/file-truename-nilable (filename)
+  (when filename
+    (file-truename filename)))
+
 (defun rc/autocommit--id ()
-  (let ((id (file-truename default-directory)))
+  (let ((id (-> default-directory
+                (locate-dominating-file ".git")
+                (rc/file-truename-nilable))))
+    (when (not id)
+      (error "%s is not inside of a git repository" default-directory))
     (unless (gethash id rc/autocommit-local-locks)
       (puthash id nil rc/autocommit-local-locks))
     id))
