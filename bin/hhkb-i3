@@ -1,0 +1,6 @@
+#!/bin/sh
+
+set -xe
+
+setxkbmap -layout us,ru -option grp:shifts_toggle,ctrl:nocaps,compose:ralt
+xmodmap -e 'keycode 102 = Super_L'
