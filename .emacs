@@ -57,6 +57,7 @@
 (load "~/.emacs.rc/editorconfig-rc.el")
 (load "~/.emacs.rc/nasm-mode-rc.el")
 (load "~/.emacs.rc/latex-mode-rc.el")
+(load "~/.emacs.rc/agda2-mode-rc.el")
 
 ;;; Packages that don't require configuration
 (rc/require 'scala-mode 'jade-mode 'd-mode
