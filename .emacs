@@ -26,7 +26,6 @@
 (load "~/.emacs.rc/word-wrap-rc.el")
 (load "~/.emacs.rc/js2-mode-rc.el")
 (load "~/.emacs.rc/slime-rc.el")
-(load "~/.emacs.rc/batch-mode-rc.el")
 (load "~/.emacs.rc/nxml-mode-rc.el")
 (load "~/.emacs.rc/perl-mode-rc.el")
 (load "~/.emacs.rc/tramp-rc.el")
@@ -73,7 +72,7 @@
             'love-minor-mode 'toml-mode 'ensime 'zeal-at-point
             'elm-mode 'nginx-mode 'kotlin-mode
             'org-pomodoro 'bnfc 'fixmee 'buffer-move
-            'go-mode 'php-mode 'csv-nav 'package-lint 'racket-mode
+            'go-mode 'php-mode 'package-lint 'racket-mode
             'morganey-mode 'uuidgen 'handlebars-mode
             'qml-mode 'ag 'xquery-mode 'fsharp-mode 'emojify)
 
