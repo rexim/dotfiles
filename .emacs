@@ -52,7 +52,6 @@
 (load "~/.emacs.rc/flycheck-rc.el")
 (load "~/.emacs.rc/elpy-rc.el")
 (load "~/.emacs.rc/typescript-rc.el")
-;; (load "~/.emacs.rc/cmake-ide-rc.el")
 (load "~/.emacs.rc/editorconfig-rc.el")
 (load "~/.emacs.rc/nasm-mode-rc.el")
 (load "~/.emacs.rc/latex-mode-rc.el")
@@ -67,7 +66,7 @@
             'cil-mode 'groovy-mode 'rust-mode
             'csharp-mode 'nim-mode 'picolisp-mode
             'jinja2-mode 'htmlize 'markdown-mode
-            'purescript-mode 'gradle-mode ;; 'simple-call-tree
+            'purescript-mode 'gradle-mode
             'nix-mode 'dockerfile-mode
             'love-minor-mode 'toml-mode 'ensime 'zeal-at-point
             'elm-mode 'nginx-mode 'kotlin-mode
