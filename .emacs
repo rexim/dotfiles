@@ -58,22 +58,59 @@
 (load "~/.emacs.rc/agda2-mode-rc.el")
 
 ;;; Packages that don't require configuration
-(rc/require 'scala-mode 'jade-mode 'd-mode
-            'erlang 'nsis-mode 'yaml-mode
-            'tt-mode 'glsl-mode 'tuareg
-            'lua-mode 'less-css-mode 'graphviz-dot-mode
-            'clojure-mode 'cmake-mode 'ack
-            'cil-mode 'groovy-mode 'rust-mode
-            'csharp-mode 'nim-mode 'picolisp-mode
-            'jinja2-mode 'htmlize 'markdown-mode
-            'purescript-mode 'gradle-mode
-            'nix-mode 'dockerfile-mode
-            'love-minor-mode 'toml-mode 'ensime 'zeal-at-point
-            'elm-mode 'nginx-mode 'kotlin-mode
-            'org-pomodoro 'bnfc 'fixmee 'buffer-move
-            'go-mode 'php-mode 'package-lint 'racket-mode
-            'morganey-mode 'uuidgen 'handlebars-mode
-            'qml-mode 'ag 'xquery-mode 'fsharp-mode 'emojify)
+(rc/require
+ 'scala-mode
+ 'jade-mode
+ 'd-mode
+ 'erlang
+ 'nsis-mode
+ 'yaml-mode
+ 'tt-mode
+ 'glsl-mode
+ 'tuareg
+ 'lua-mode
+ 'less-css-mode
+ 'graphviz-dot-mode
+ 'clojure-mode
+ 'cmake-mode
+ 'ack
+ 'cil-mode
+ 'groovy-mode
+ 'rust-mode
+ 'csharp-mode
+ 'nim-mode
+ 'picolisp-mode
+ 'jinja2-mode
+ 'htmlize
+ 'markdown-mode
+ 'purescript-mode
+ 'gradle-mode
+ 'nix-mode
+ 'dockerfile-mode
+ 'love-minor-mode
+ 'toml-mode
+ 'ensime
+ 'zeal-at-point
+ 'elm-mode
+ 'nginx-mode
+ 'kotlin-mode
+ 'org-pomodoro
+ 'bnfc
+ 'fixmee
+ 'buffer-move
+ 'go-mode
+ 'php-mode
+ 'package-lint
+ 'racket-mode
+ 'morganey-mode
+ 'uuidgen
+ 'handlebars-mode
+ 'qml-mode
+ 'ag
+ 'xquery-mode
+ 'fsharp-mode
+ 'emojify
+ )
 
 (load "~/.emacs.shadow/shadow-rc.el" t)
 
