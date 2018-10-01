@@ -3,3 +3,4 @@
 .vimrc|symlink|
 i3|symlink|.config
 .screenlayout|symlink|
+.ghci|symlink|
