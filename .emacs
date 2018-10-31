@@ -110,6 +110,7 @@
  'xquery-mode
  'fsharp-mode
  'emojify
+ 'hindent
  )
 
 (load "~/.emacs.shadow/shadow-rc.el" t)
