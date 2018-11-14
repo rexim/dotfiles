@@ -111,6 +111,7 @@
  'fsharp-mode
  'emojify
  'hindent
+ 'nodejs-repl
  )
 
 (load "~/.emacs.shadow/shadow-rc.el" t)
