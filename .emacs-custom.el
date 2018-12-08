@@ -18,7 +18,8 @@
     (zeal-at-point yaml-mode xquery-mode uuidgen tuareg tt-mode toml-mode tide smex slime rtags rainbow-mode racket-mode racer qml-mode purescript-mode powershell picolisp-mode php-mode paredit pacmacs package-lint org-pomodoro org-cliplink openwith nsis-mode nodejs-repl nix-mode nim-mode nginx-mode neotree nasm-mode multiple-cursors morganey-mode markdown-mode magit love-minor-mode less-css-mode kotlin-mode js2-mode jira-markup-mode jinja2-mode jade-mode jabber ido-ubiquitous htmlize helm-ls-git helm-git-grep helm-cmd-t haskell-mode handlebars-mode gruber-darker-theme groovy-mode graphviz-dot-mode gradle-mode google-translate go-mode glsl-mode ggtags fsharp-mode flycheck-rust fixmee evil erlang ensime emojify elpy elm-mode elfeed editorconfig dropdown-list dockerfile-mode d-mode csv-nav csharp-mode crux cmake-mode clojure-mode cil-mode buffer-move bnfc batch-mode ag ack)))
  '(safe-local-variable-values
    (quote
-    ((haskell-process-args-cabal-repl "--ghc-option=-ferror-spans" "--ghc-option=-Wno-missing-home-modules" "exe:HyperNerd")
+    ((haskell-process-args-cabal-repl "--ghc-option=-ferror-spans" "--ghc-option=-Wno-missing-home-modules" "exe:poutro")
+     (haskell-process-args-cabal-repl "--ghc-option=-ferror-spans" "--ghc-option=-Wno-missing-home-modules" "exe:HyperNerd")
      (fixmee-mode . t)
      (eval progn
            (auto-revert-mode 1)
