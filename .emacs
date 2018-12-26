@@ -112,7 +112,7 @@
  'fsharp-mode
  'emojify
  'hindent
- 'nodejs-repl
+ 'cobol-mode
  )
 
 (load "~/.emacs.shadow/shadow-rc.el" t)
