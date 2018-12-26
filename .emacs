@@ -57,6 +57,7 @@
 (load "~/.emacs.rc/latex-mode-rc.el")
 (load "~/.emacs.rc/agda2-mode-rc.el")
 (load "~/.emacs.rc/nodejs-repl-rc.el")
+(load "~/.emacs.rc/cobol-mode-rc.el")
 
 ;;; Packages that don't require configuration
 (rc/require
@@ -112,7 +113,6 @@
  'fsharp-mode
  'emojify
  'hindent
- 'cobol-mode
  )
 
 (load "~/.emacs.shadow/shadow-rc.el" t)
