@@ -33,6 +33,7 @@
          erlang-mode-hook
          asm-mode-hook
          nasm-mode-hook
+         go-mode-hook
          )))
   (dolist (mode whitespace-enabled-modes)
     (add-hook mode 'rc/set-up-whitespace-handling)))
