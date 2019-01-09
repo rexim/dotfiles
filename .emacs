@@ -113,6 +113,7 @@
  'fsharp-mode
  'emojify
  'hindent
+ 'sml-mode
  )
 
 (load "~/.emacs.shadow/shadow-rc.el" t)
