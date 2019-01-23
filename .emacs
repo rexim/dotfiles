@@ -58,6 +58,7 @@
 (load "~/.emacs.rc/agda2-mode-rc.el")
 (load "~/.emacs.rc/nodejs-repl-rc.el")
 (load "~/.emacs.rc/cobol-mode-rc.el")
+(load "~/.emacs.rc/move-text-rc.el")
 
 ;;; Packages that don't require configuration
 (rc/require
