@@ -1,3 +1,3 @@
 (rc/require 'move-text)
-(global-set-key (kbd "M-[") 'move-text-up)
-(global-set-key (kbd "M-]") 'move-text-down)
+(global-set-key (kbd "M-p") 'move-text-up)
+(global-set-key (kbd "M-n") 'move-text-down)
