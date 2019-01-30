@@ -15,3 +15,8 @@
 (add-hook 'lua-mode-hook 'rc/lua-mode-company-init)
 
 (global-company-mode)
+
+(add-hook 'tuareg-mode-hook
+          (lambda ()
+            (interactive)
+            (company-mode 0)))
