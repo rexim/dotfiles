@@ -4,3 +4,4 @@
 i3|symlink|.config
 .screenlayout|symlink|
 .ghci|symlink|
+.i3status.conf|symlink|
