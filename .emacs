@@ -37,7 +37,6 @@
 (load "~/.emacs.rc/powershell-rc.el")
 (load "~/.emacs.rc/elfeed-rc.el")
 (load "~/.emacs.rc/jira-markup-mode-rc.el")
-(load "~/.emacs.rc/google-translate-rc.el")
 (load "~/.emacs.rc/jabber-rc.el")
 (load "~/.emacs.rc/erc-rc.el")
 (load "~/.emacs.rc/eldoc-mode-rc.el")
