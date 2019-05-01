@@ -1,3 +1,5 @@
+(require 'ansi-color)
+
 (global-set-key (kbd "C-c p") 'find-file-at-point)
 
 (setq-default inhibit-splash-screen t
@@ -7,6 +9,12 @@
               compilation-scroll-output t
               default-input-method "russian-computer"
               visible-bell (equal system-type 'windows-nt))
+
+(defun rc/colorize-compilation-buffer ()
+  (toggle-read-only)
+  (ansi-color-apply-on-region compilation-filter-start (point))
+  (toggle-read-only))
+(add-hook 'compilation-filter-hook 'rc/colorize-compilation-buffer)
 
 (defun rc/buffer-file-name ()
   (if (equal major-mode 'dired-mode)
