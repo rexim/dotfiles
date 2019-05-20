@@ -103,6 +103,13 @@ This command does the inverse of `fill-paragraph'."
                                ,rc/frame-transparency))
       (set-frame-parameter nil 'alpha '(100 100)))))
 
+(defun rc/duplicate-line (&optional arg)
+  "Duplicate current line"
+  (interactive "p")
+  (kmacro-exec-ring-item (quote ([1 67108896 5 134217847 return 25] 0 "%d")) arg))
+
+(global-set-key (kbd "C-,") 'rc/duplicate-line)
+
 ;;; A little hack which fixes a problem with meta key in fluxbox under VNC.
 (setq x-alt-keysym 'meta)
 
