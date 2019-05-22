@@ -103,10 +103,14 @@ This command does the inverse of `fill-paragraph'."
                                ,rc/frame-transparency))
       (set-frame-parameter nil 'alpha '(100 100)))))
 
-(defun rc/duplicate-line (&optional arg)
+(defun rc/duplicate-line ()
   "Duplicate current line"
-  (interactive "p")
-  (kmacro-exec-ring-item (quote ([1 67108896 5 134217847 return 25] 0 "%d")) arg))
+  (interactive)
+  (move-beginning-of-line 1)
+  (kill-line)
+  (yank)
+  (newline)
+  (yank))
 
 (global-set-key (kbd "C-,") 'rc/duplicate-line)
 
