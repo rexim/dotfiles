@@ -41,6 +41,8 @@
 (load "~/.emacs.rc/agda2-mode-rc.el")
 (load "~/.emacs.rc/move-text-rc.el")
 
+(add-to-list 'auto-mode-alist '("\\.ebi\\'" . lisp-mode))
+
 ;;; Packages that don't require configuration
 (rc/require
  'scala-mode
