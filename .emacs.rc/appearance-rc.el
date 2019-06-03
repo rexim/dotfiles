@@ -15,6 +15,7 @@
 (scroll-bar-mode 0)
 (column-number-mode 1)
 (show-paren-mode 1)
+(transient-mark-mode 0)
 
 ;;; Themes
 (rc/require-theme 'gruber-darker)
