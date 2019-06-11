@@ -155,11 +155,11 @@ bar {
         status_command i3status
 }
 
-exec --no-startup-id "setxkbmap -layout us,ru -option grp:shifts_toggle,ctrl:nocaps,compose:ralt"
-exec --no-startup-id sh -c "xmodmap -e 'keycode 102 = Super_L'"
-
-exec --no-startup-id nm-applet
+bindsym Mod1+Return exec "~/Programming/rexim/dotfiles/bin/hhkb-i3"
+bindsym $mod+F1 exec "~/.screenlayout/portable-setup.sh"
+bindsym $mod+F2 exec "~/.screenlayout/home-setup.sh"
 
 focus_follows_mouse no
 
 hide_edge_borders both
+
