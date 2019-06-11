@@ -156,8 +156,8 @@ bar {
 }
 
 bindsym Mod1+Return exec "~/Programming/rexim/dotfiles/bin/hhkb-i3"
-bindsym $mod+F1 exec "~/.screenlayout/portable-setup.sh"
-bindsym $mod+F2 exec "~/.screenlayout/home-setup.sh"
+bindsym $mod+Shift+h exec "~/.screenlayout/home-setup.sh"
+bindsym $mod+Shift+p exec "~/.screenlayout/portable-setup.sh"
 
 focus_follows_mouse no
 
