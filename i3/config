@@ -155,7 +155,7 @@ bar {
         status_command i3status
 }
 
-bindsym Mod1+Return exec "~/Programming/rexim/dotfiles/bin/hhkb-i3"
+bindsym Mod1+F1 exec "~/Programming/rexim/dotfiles/bin/hhkb-i3"
 bindsym $mod+Shift+h exec "~/.screenlayout/home-setup.sh"
 bindsym $mod+Shift+p exec "~/.screenlayout/portable-setup.sh"
 
