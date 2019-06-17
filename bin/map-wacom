@@ -1,0 +1,3 @@
+#!/bin/sh
+
+xsetwacom set 14 maptooutput 1920x1080+0+0
