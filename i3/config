@@ -158,6 +158,7 @@ bar {
 bindsym Mod1+F1 exec "~/Programming/rexim/dotfiles/bin/hhkb-i3"
 bindsym $mod+Shift+h exec "~/.screenlayout/home-setup.sh"
 bindsym $mod+Shift+p exec "~/.screenlayout/portable-setup.sh"
+bindsym $mod+Shift+w exec "~/Programming/rexim/dotfiles/bin/map-wacom"
 
 focus_follows_mouse no
 
