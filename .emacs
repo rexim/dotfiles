@@ -72,7 +72,6 @@
  'racket-mode
  'qml-mode
  'ag
- 'fsharp-mode
  'hindent
  'elpy
  'typescript-mode
