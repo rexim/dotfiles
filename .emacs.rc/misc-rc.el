@@ -21,11 +21,24 @@
       default-directory
     (buffer-file-name)))
 
-(defun rc/clipboard-org-mode-file-link ()
-  (interactive)
-  (let ((org-mode-file-link (format "file:%s::%d"
-                                    (rc/buffer-file-name)
-                                    (line-number-at-pos))))
+(defun rc/parent-directory (path)
+  (file-name-directory (directory-file-name path)))
+
+(defun rc/root-anchor (path anchor)
+  (cond
+   ((string-empty-p anchor) nil)
+   ((file-exists-p (concat (file-name-as-directory path) anchor)) path)
+   ((string-equal path "/") nil)
+   (t (rc/root-anchor (rc/parent-directory path) anchor))))
+
+(defun rc/clipboard-org-mode-file-link (anchor)
+  (interactive "sRoot anchor: ")
+  (let* ((root-dir (rc/root-anchor default-directory anchor))
+         (org-mode-file-link (format "file:%s::%d"
+                                     (if root-dir
+                                         (file-relative-name (rc/buffer-file-name) root-dir)
+                                       (rc/buffer-file-name))
+                                     (line-number-at-pos))))
     (kill-new org-mode-file-link)
     (message org-mode-file-link)))
 
