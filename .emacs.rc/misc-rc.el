@@ -26,7 +26,7 @@
 
 (defun rc/root-anchor (path anchor)
   (cond
-   ((string-empty-p anchor) nil)
+   ((string= anchor "") nil)
    ((file-exists-p (concat (file-name-as-directory path) anchor)) path)
    ((string-equal path "/") nil)
    (t (rc/root-anchor (rc/parent-directory path) anchor))))
