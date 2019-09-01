@@ -6,4 +6,5 @@ set expandtab
 set guifont=Ubuntu\ Mono\ 20
 set guioptions-=m
 set guioptions-=T
+set noesckeys
 colorscheme desert
