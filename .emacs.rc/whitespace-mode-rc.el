@@ -1,15 +1,7 @@
-(defun rc/turn-on-whitespace-mode ()
-  (interactive)
-  (whitespace-mode 1))
-
-(defun rc/delete-trailing-whitespace-on-save ()
-  (interactive)
-  (add-to-list 'write-file-functions 'delete-trailing-whitespace))
-
 (defun rc/set-up-whitespace-handling ()
   (interactive)
-  (rc/turn-on-whitespace-mode)
-  (rc/delete-trailing-whitespace-on-save))
+  (whitespace-mode 1)
+  (add-to-list 'write-file-functions 'delete-trailing-whitespace))
 
 (custom-set-variables
  '(whitespace-style (quote (face tabs spaces trailing space-before-tab
@@ -34,6 +26,7 @@
          asm-mode-hook
          nasm-mode-hook
          go-mode-hook
+         nim-mode-hook
          )))
   (dolist (mode whitespace-enabled-modes)
     (add-hook mode 'rc/set-up-whitespace-handling)))
