@@ -30,7 +30,11 @@
 (load "~/.emacs.rc/org-babel-rc.el")
 (load "~/.emacs.rc/org-capture-rc.el")
 (load "~/.emacs.rc/autocommit-rc.el")
-(load "~/.emacs.rc/powershell-rc.el")
+
+;;; powershell
+(rc/require 'powershell)
+(add-to-list 'auto-mode-alist '("\\.ps1\\'" . powershell-mode))
+(add-to-list 'auto-mode-alist '("\\.psm1\\'" . powershell-mode))
 
 ;;; eldoc mode
 (defun rc/turn-on-eldoc-mode ()
