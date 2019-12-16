@@ -23,12 +23,16 @@
 (load "~/.emacs.rc/rainbow-rc.el")
 (load "~/.emacs.rc/word-wrap-rc.el")
 (load "~/.emacs.rc/js2-mode-rc.el")
-(load "~/.emacs.rc/nxml-mode-rc.el")
 (load "~/.emacs.rc/org-mode-rc.el")
 (load "~/.emacs.rc/org-cliplink-rc.el")
 (load "~/.emacs.rc/org-babel-rc.el")
 (load "~/.emacs.rc/org-capture-rc.el")
 (load "~/.emacs.rc/autocommit-rc.el")
+
+;;; nxml
+(add-to-list 'auto-mode-alist '("\\.html\\'" . nxml-mode))
+(add-to-list 'auto-mode-alist '("\\.xsd\\'" . nxml-mode))
+(add-to-list 'auto-mode-alist '("\\.ant\\'" . nxml-mode))
 
 ;;; tramp
 ;;; http://stackoverflow.com/questions/13794433/how-to-disable-autosave-for-tramp-buffers-in-emacs
