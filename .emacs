@@ -9,12 +9,23 @@
 (load "~/.emacs.rc/misc-rc.el")
 (load "~/.emacs.rc/appearance-rc.el")
 (load "~/.emacs.rc/ido-smex-rc.el")
-(load "~/.emacs.rc/ccmode-rc.el")
 (load "~/.emacs.rc/org-mode-rc.el")
 (load "~/.emacs.rc/org-cliplink-rc.el")
 (load "~/.emacs.rc/org-babel-rc.el")
 (load "~/.emacs.rc/org-capture-rc.el")
 (load "~/.emacs.rc/autocommit-rc.el")
+
+;;; c-mode
+(setq-default c-basic-offset 4
+              c-default-style '((java-mode . "java")
+                                (awk-mode . "awk")
+                                (other . "bsd")))
+
+(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
+
+(add-hook 'c-mode-hook (lambda ()
+                         (interactive)
+                         (c-toggle-comment-style -1)))
 
 ;;; Paredit
 (rc/require 'paredit)
