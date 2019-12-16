@@ -31,7 +31,13 @@
 (load "~/.emacs.rc/org-capture-rc.el")
 (load "~/.emacs.rc/autocommit-rc.el")
 (load "~/.emacs.rc/powershell-rc.el")
-(load "~/.emacs.rc/eldoc-mode-rc.el")
+
+;;; eldoc mode
+(defun rc/turn-on-eldoc-mode ()
+  (interactive)
+  (eldoc-mode 1))
+
+(add-hook 'emacs-lisp-mode-hook 'rc/turn-on-eldoc-mode)
 
 ;;; Company
 (rc/require 'company)
