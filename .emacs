@@ -16,7 +16,6 @@
 (load "~/.emacs.rc/whitespace-mode-rc.el")
 (load "~/.emacs.rc/magit-rc.el")
 (load "~/.emacs.rc/multiple-cursors-rc.el")
-(load "~/.emacs.rc/openwith-rc.el")
 (load "~/.emacs.rc/org-mode-rc.el")
 (load "~/.emacs.rc/org-cliplink-rc.el")
 (load "~/.emacs.rc/org-babel-rc.el")
