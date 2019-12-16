@@ -32,7 +32,6 @@
 (load "~/.emacs.rc/autocommit-rc.el")
 (load "~/.emacs.rc/powershell-rc.el")
 (load "~/.emacs.rc/eldoc-mode-rc.el")
-(load "~/.emacs.rc/recentf-mode-rc.el")
 
 ;;; Company
 (rc/require 'company)
