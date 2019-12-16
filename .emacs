@@ -38,7 +38,6 @@
 (load "~/.emacs.rc/editorconfig-rc.el")
 (load "~/.emacs.rc/nasm-mode-rc.el")
 (load "~/.emacs.rc/latex-mode-rc.el")
-(load "~/.emacs.rc/agda2-mode-rc.el")
 
 ;;; move text
 (rc/require 'move-text)
