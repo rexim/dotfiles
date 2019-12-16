@@ -17,12 +17,18 @@
 (load "~/.emacs.rc/magit-rc.el")
 (load "~/.emacs.rc/multiple-cursors-rc.el")
 (load "~/.emacs.rc/openwith-rc.el")
-(load "~/.emacs.rc/dired-rc.el")
 (load "~/.emacs.rc/org-mode-rc.el")
 (load "~/.emacs.rc/org-cliplink-rc.el")
 (load "~/.emacs.rc/org-babel-rc.el")
 (load "~/.emacs.rc/org-capture-rc.el")
 (load "~/.emacs.rc/autocommit-rc.el")
+
+;;; dired
+(require 'dired-x)
+(setq dired-omit-files
+      (concat dired-omit-files "\\|^\\..+$"))
+(setq-default dired-dwim-target t)
+(setq dired-listing-switches "-alh")
 
 ;;; helm
 (rc/require 'helm 'helm-cmd-t 'helm-git-grep 'helm-ls-git)
