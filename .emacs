@@ -24,12 +24,15 @@
 (load "~/.emacs.rc/word-wrap-rc.el")
 (load "~/.emacs.rc/js2-mode-rc.el")
 (load "~/.emacs.rc/nxml-mode-rc.el")
-(load "~/.emacs.rc/tramp-rc.el")
 (load "~/.emacs.rc/org-mode-rc.el")
 (load "~/.emacs.rc/org-cliplink-rc.el")
 (load "~/.emacs.rc/org-babel-rc.el")
 (load "~/.emacs.rc/org-capture-rc.el")
 (load "~/.emacs.rc/autocommit-rc.el")
+
+;;; tramp
+;;; http://stackoverflow.com/questions/13794433/how-to-disable-autosave-for-tramp-buffers-in-emacs
+(setq tramp-auto-save-directory "/tmp")
 
 ;;; powershell
 (rc/require 'powershell)
