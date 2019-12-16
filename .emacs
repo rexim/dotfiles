@@ -35,7 +35,10 @@
 (load "~/.emacs.rc/recentf-mode-rc.el")
 (load "~/.emacs.rc/company-rc.el")
 (load "~/.emacs.rc/tide-rc.el")
-(load "~/.emacs.rc/editorconfig-rc.el")
+
+;;; Editorconfig
+(rc/require 'editorconfig)
+(editorconfig-mode 1)
 
 ;;; Nasm Mode
 (rc/require 'nasm-mode)
