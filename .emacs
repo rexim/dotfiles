@@ -12,12 +12,22 @@
 (load "~/.emacs.rc/ccmode-rc.el")
 (load "~/.emacs.rc/paredit-rc.el")
 (load "~/.emacs.rc/emacs-lisp-rc.el")
-(load "~/.emacs.rc/haskell-mode-rc.el")
 (load "~/.emacs.rc/org-mode-rc.el")
 (load "~/.emacs.rc/org-cliplink-rc.el")
 (load "~/.emacs.rc/org-babel-rc.el")
 (load "~/.emacs.rc/org-capture-rc.el")
 (load "~/.emacs.rc/autocommit-rc.el")
+
+;;; Haskell mode
+(rc/require 'haskell-mode)
+
+(setq haskell-process-type 'cabal-new-repl)
+(setq haskell-process-log t)
+
+(add-hook 'haskell-mode-hook 'haskell-indent-mode)
+(add-hook 'haskell-mode-hook 'interactive-haskell-mode)
+(add-hook 'haskell-mode-hook 'haskell-doc-mode)
+(add-hook 'haskell-mode-hook 'hindent-mode)
 
 ;;; Whitespace mode
 (defun rc/set-up-whitespace-handling ()
