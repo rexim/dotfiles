@@ -37,13 +37,19 @@
 (load "~/.emacs.rc/tide-rc.el")
 (load "~/.emacs.rc/editorconfig-rc.el")
 (load "~/.emacs.rc/nasm-mode-rc.el")
-(load "~/.emacs.rc/latex-mode-rc.el")
 
-;;; move text
+;;; LaTeX mode
+(add-hook 'tex-mode-hook
+          (lambda ()
+            (interactive)
+            (add-to-list 'tex-verbatim-environments "code")))
+
+;;; Move Text
 (rc/require 'move-text)
 (global-set-key (kbd "M-p") 'move-text-up)
 (global-set-key (kbd "M-n") 'move-text-down)
 
+;;; Ebisp
 (add-to-list 'auto-mode-alist '("\\.ebi\\'" . lisp-mode))
 
 ;;; Packages that don't require configuration
