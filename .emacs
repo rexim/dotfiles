@@ -22,12 +22,20 @@
 (load "~/.emacs.rc/yasnippet-rc.el")
 (load "~/.emacs.rc/rainbow-rc.el")
 (load "~/.emacs.rc/word-wrap-rc.el")
-(load "~/.emacs.rc/js2-mode-rc.el")
 (load "~/.emacs.rc/org-mode-rc.el")
 (load "~/.emacs.rc/org-cliplink-rc.el")
 (load "~/.emacs.rc/org-babel-rc.el")
 (load "~/.emacs.rc/org-capture-rc.el")
 (load "~/.emacs.rc/autocommit-rc.el")
+
+;;; js2
+(rc/require 'js2-mode)
+
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+(add-to-list 'interpreter-mode-alist '("node" . js2-mode))
+
+(add-to-list 'auto-mode-alist '("\\.jsx\\'" . js2-jsx-mode))
+(add-to-list 'interpreter-mode-alist '("node". js2-jsx-mode))
 
 ;;; nxml
 (add-to-list 'auto-mode-alist '("\\.html\\'" . nxml-mode))
