@@ -33,7 +33,17 @@
 (load "~/.emacs.rc/powershell-rc.el")
 (load "~/.emacs.rc/eldoc-mode-rc.el")
 (load "~/.emacs.rc/recentf-mode-rc.el")
-(load "~/.emacs.rc/company-rc.el")
+
+;;; Company
+(rc/require 'company)
+(require 'company)
+
+(global-company-mode)
+
+(add-hook 'tuareg-mode-hook
+          (lambda ()
+            (interactive)
+            (company-mode 0)))
 
 ;;; Tide
 (rc/require 'tide)
