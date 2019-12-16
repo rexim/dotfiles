@@ -11,12 +11,18 @@
 (load "~/.emacs.rc/ido-smex-rc.el")
 (load "~/.emacs.rc/ccmode-rc.el")
 (load "~/.emacs.rc/paredit-rc.el")
-(load "~/.emacs.rc/emacs-lisp-rc.el")
 (load "~/.emacs.rc/org-mode-rc.el")
 (load "~/.emacs.rc/org-cliplink-rc.el")
 (load "~/.emacs.rc/org-babel-rc.el")
 (load "~/.emacs.rc/org-capture-rc.el")
 (load "~/.emacs.rc/autocommit-rc.el")
+
+;;; Emacs lisp
+(add-hook 'emacs-lisp-mode-hook
+          '(lambda ()
+             (local-set-key (kbd "C-c C-j")
+                            (quote eval-print-last-sexp))))
+(add-to-list 'auto-mode-alist '("Cask" . emacs-lisp-mode))
 
 ;;; Haskell mode
 (rc/require 'haskell-mode)
