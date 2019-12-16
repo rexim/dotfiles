@@ -36,7 +36,10 @@
 (load "~/.emacs.rc/company-rc.el")
 (load "~/.emacs.rc/tide-rc.el")
 (load "~/.emacs.rc/editorconfig-rc.el")
-(load "~/.emacs.rc/nasm-mode-rc.el")
+
+;;; Nasm Mode
+(rc/require 'nasm-mode)
+(add-to-list 'auto-mode-alist '("\\.asm\\'" . nasm-mode))
 
 ;;; LaTeX mode
 (add-hook 'tex-mode-hook
