@@ -21,12 +21,18 @@
 (load "~/.emacs.rc/helm-rc.el")
 (load "~/.emacs.rc/yasnippet-rc.el")
 (load "~/.emacs.rc/rainbow-rc.el")
-(load "~/.emacs.rc/word-wrap-rc.el")
 (load "~/.emacs.rc/org-mode-rc.el")
 (load "~/.emacs.rc/org-cliplink-rc.el")
 (load "~/.emacs.rc/org-babel-rc.el")
 (load "~/.emacs.rc/org-capture-rc.el")
 (load "~/.emacs.rc/autocommit-rc.el")
+
+;;; word-wrap
+(defun rc/enable-word-wrap ()
+  (interactive)
+  (toggle-word-wrap 1))
+
+(add-hook 'markdown-mode-hook 'rc/enable-word-wrap)
 
 ;;; js2
 (rc/require 'js2-mode)
