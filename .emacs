@@ -19,12 +19,21 @@
 (load "~/.emacs.rc/openwith-rc.el")
 (load "~/.emacs.rc/dired-rc.el")
 (load "~/.emacs.rc/helm-rc.el")
-(load "~/.emacs.rc/yasnippet-rc.el")
 (load "~/.emacs.rc/org-mode-rc.el")
 (load "~/.emacs.rc/org-cliplink-rc.el")
 (load "~/.emacs.rc/org-babel-rc.el")
 (load "~/.emacs.rc/org-capture-rc.el")
 (load "~/.emacs.rc/autocommit-rc.el")
+
+;;; yasnippet
+(rc/require 'yasnippet)
+
+(require 'yasnippet)
+
+(setq yas/triggers-in-field nil)
+(setq yas-snippet-dirs '("~/.emacs.snippets/"))
+
+(yas-global-mode 1)
 
 ;;; rainbow mode
 (rc/require 'rainbow-mode)
