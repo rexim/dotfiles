@@ -34,7 +34,15 @@
 (load "~/.emacs.rc/eldoc-mode-rc.el")
 (load "~/.emacs.rc/recentf-mode-rc.el")
 (load "~/.emacs.rc/company-rc.el")
-(load "~/.emacs.rc/tide-rc.el")
+
+;;; Tide
+(rc/require 'tide)
+
+(defun rc/turn-on-tide ()
+  (interactive)
+  (tide-setup))
+
+(add-hook 'typescript-mode-hook 'rc/turn-on-tide)
 
 ;;; Editorconfig
 (rc/require 'editorconfig)
