@@ -39,7 +39,11 @@
 (load "~/.emacs.rc/nasm-mode-rc.el")
 (load "~/.emacs.rc/latex-mode-rc.el")
 (load "~/.emacs.rc/agda2-mode-rc.el")
-(load "~/.emacs.rc/move-text-rc.el")
+
+;;; move text
+(rc/require 'move-text)
+(global-set-key (kbd "M-p") 'move-text-up)
+(global-set-key (kbd "M-n") 'move-text-down)
 
 (add-to-list 'auto-mode-alist '("\\.ebi\\'" . lisp-mode))
 
