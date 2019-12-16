@@ -14,12 +14,22 @@
 (load "~/.emacs.rc/emacs-lisp-rc.el")
 (load "~/.emacs.rc/haskell-mode-rc.el")
 (load "~/.emacs.rc/whitespace-mode-rc.el")
-(load "~/.emacs.rc/magit-rc.el")
 (load "~/.emacs.rc/org-mode-rc.el")
 (load "~/.emacs.rc/org-cliplink-rc.el")
 (load "~/.emacs.rc/org-babel-rc.el")
 (load "~/.emacs.rc/org-capture-rc.el")
 (load "~/.emacs.rc/autocommit-rc.el")
+
+;;; magit
+;; magit requres this lib, but it is not installed automatically on
+;; Windows.
+(rc/require 'cl-lib)
+(rc/require 'magit)
+
+(setq magit-auto-revert-mode nil)
+
+(global-set-key (kbd "C-c m s") 'magit-status)
+(global-set-key (kbd "C-c m l") 'magit-log)
 
 ;;; multiple cursors
 (rc/require 'multiple-cursors)
