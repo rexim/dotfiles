@@ -7,12 +7,30 @@
 (load "~/.emacs.rc/rc.el")
 
 (load "~/.emacs.rc/misc-rc.el")
-(load "~/.emacs.rc/appearance-rc.el")
 (load "~/.emacs.rc/org-mode-rc.el")
 (load "~/.emacs.rc/org-cliplink-rc.el")
 (load "~/.emacs.rc/org-babel-rc.el")
 (load "~/.emacs.rc/org-capture-rc.el")
 (load "~/.emacs.rc/autocommit-rc.el")
+
+;;; Appearance
+(defun rc/get-default-font ()
+  (cond
+   ((eq system-type 'windows-nt) "Consolas-13")
+   ((eq system-type 'gnu/linux) "Ubuntu Mono-18")))
+
+(add-to-list 'default-frame-alist `(font . ,(rc/get-default-font)))
+
+(when (display-graphic-p)
+  (set-face-attribute 'fixed-pitch nil :family (rc/get-default-font)))
+
+(tool-bar-mode 0)
+(menu-bar-mode 0)
+(scroll-bar-mode 0)
+(column-number-mode 1)
+(show-paren-mode 1)
+
+(rc/require-theme 'gruber-darker)
 
 ;;; ido
 (rc/require 'smex 'ido-completing-read+)
