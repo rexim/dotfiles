@@ -133,4 +133,3 @@ This command does the inverse of `fill-paragraph'."
 
 (setq confirm-kill-emacs 'y-or-n-p)
 
-(server-start)
