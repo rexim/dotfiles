@@ -8,12 +8,23 @@
 
 (load "~/.emacs.rc/misc-rc.el")
 (load "~/.emacs.rc/appearance-rc.el")
-(load "~/.emacs.rc/ido-smex-rc.el")
 (load "~/.emacs.rc/org-mode-rc.el")
 (load "~/.emacs.rc/org-cliplink-rc.el")
 (load "~/.emacs.rc/org-babel-rc.el")
 (load "~/.emacs.rc/org-capture-rc.el")
 (load "~/.emacs.rc/autocommit-rc.el")
+
+;;; ido
+(rc/require 'smex 'ido-completing-read+)
+
+(require 'ido-completing-read+)
+
+(ido-mode 1)
+(ido-everywhere 1)
+(ido-ubiquitous-mode 1)
+
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
 ;;; c-mode
 (setq-default c-basic-offset 4
