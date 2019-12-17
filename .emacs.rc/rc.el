@@ -34,35 +34,3 @@
 
 (rc/require 'dash-functional)
 (require 'dash-functional)
-
-(defun rc/package-reqs (package)
-  (let ((package-desc
-         (->> package-alist
-              (alist-get package)
-              (car))))
-    (when package-desc
-      (package-desc-reqs package-desc))))
-
-(defun rc/package-dependencies (package)
-  (->> package
-       (rc/package-reqs)
-       (-map #'car)
-       (cons package)))
-
-(defun rc/package-expand-dependencies (packages)
-  (->> packages
-       (-map #'rc/package-dependencies)
-       (-flatten)
-       (remove-duplicates)))
-
-(defun rc/unused-packages ()
-  (let ((all-package (rc/package-expand-dependencies rc/required-packages)))
-    (->> package-alist
-         (-map #'car)
-         (-filter (-lambda (package)
-                    (not (-contains? all-package package)))))))
-
-(defun rc/remove-unused-packages ()
-  (interactive)
-  (message "Unused packages: %s" (rc/unused-packages)))
-
