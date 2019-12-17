@@ -5,25 +5,6 @@
 
 (setq org-export-backends '(md))
 
-(custom-set-variables
- '(org-modules
-   (quote
-    (org-bbdb
-     org-bibtex
-     org-docview
-     org-gnus
-     org-habit
-     org-info
-     org-irc
-     org-mhe
-     org-rmail
-     org-w3m)))
- '(org-enforce-todo-dependencies nil)
- '(org-agenda-dim-blocked-tasks nil)
- '(org-agenda-exporter-settings
-   (quote ((org-agenda-tag-filter-preset (list "+personal")))))
- '(org-refile-use-outline-path (quote file)))
-
 (defun rc/org-increment-move-counter ()
   (interactive)
 
@@ -61,10 +42,6 @@
 ;;; org-cliplink
 
 (rc/require 'org-cliplink)
-
-(when (eq system-type 'gnu/linux)
-  (custom-set-variables
-   '(org-cliplink-transport-implementation (quote url-el))))
 
 (global-set-key (kbd "C-x p i") 'org-cliplink)
 
