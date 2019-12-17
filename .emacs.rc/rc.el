@@ -4,7 +4,6 @@
 ;;              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 
 (defvar rc/package-contents-refreshed nil)
-(defvar rc/required-packages nil)
 
 (defun rc/package-refresh-contents-once ()
   (when (not rc/package-contents-refreshed)
@@ -12,7 +11,6 @@
     (package-refresh-contents)))
 
 (defun rc/require-one-package (package)
-  (push package rc/required-packages)
   (when (not (package-installed-p package))
     (rc/package-refresh-contents-once)
     (package-install package)))
