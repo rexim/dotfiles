@@ -6,4 +6,4 @@ i3|symlink|.config
 .ghci|symlink|
 .i3status.conf|symlink|
 bin/hhkb-i3|symlink|
-bin/mapwacom|symlink|
+bin/map-wacom|symlink|
