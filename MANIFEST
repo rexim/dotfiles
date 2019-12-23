@@ -4,3 +4,4 @@
 .emacs.local|symlink|
 .gitconfig|symlink|
 .rexim|symlink|
+.npmrc|symlink|
