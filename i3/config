@@ -57,7 +57,6 @@ bindsym $mod+Right focus right
 # move focused window
 bindsym $mod+Shift+j move left
 bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
 bindsym $mod+Shift+semicolon move right
 
 # alternatively, you can use the cursor keys:
@@ -160,6 +159,7 @@ bindsym $mod+Shift+h exec "~/.screenlayout/home-setup.sh"
 bindsym $mod+Shift+p exec "~/.screenlayout/portable-setup.sh"
 bindsym $mod+Shift+w exec "~/bin/map-wacom"
 bindsym $mod+b exec "boomer"
+bindsym --release $mod+Shift+l exec "slock"
 
 focus_follows_mouse no
 
