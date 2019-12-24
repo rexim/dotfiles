@@ -1,2 +1,7 @@
 #!/bin/sh
-xrandr --output DP-1 --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-1 --off --output eDP-1 --mode 1366x768 --pos 1920x312 --rotate normal --output HDMI-2 --off
+
+if [ `hostname` = "rexim-B590" ]; then
+    ~/.screenlayout/home-setup-b590.sh
+else
+    ~/.screenlayout/home-setup-g50.sh
+fi
