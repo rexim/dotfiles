@@ -104,6 +104,7 @@
 (add-hook 'nasm-mode-hook 'rc/set-up-whitespace-handling)
 (add-hook 'go-mode-hook 'rc/set-up-whitespace-handling)
 (add-hook 'nim-mode-hook 'rc/set-up-whitespace-handling)
+(add-hook 'yaml-mode-hook 'rc/set-up-whitespace-handling)
 
 ;;; magit
 ;; magit requres this lib, but it is not installed automatically on
