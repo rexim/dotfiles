@@ -10,7 +10,7 @@
 (defun rc/get-default-font ()
   (cond
    ((eq system-type 'windows-nt) "Consolas-13")
-   ((eq system-type 'gnu/linux) "Inconsolata-20")))
+   ((eq system-type 'gnu/linux) "Ubuntu Mono-18")))
 
 (add-to-list 'default-frame-alist `(font . ,(rc/get-default-font)))
 
