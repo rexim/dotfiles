@@ -6,7 +6,7 @@ Xft.hintstyle:  hintmedium
 URxvt.termName: rxvt
 URxvt.depth: 32
 URxvt.transparent: false
-URxvt.font: xft:Ubuntu Mono:size=18
+URxvt.font: xft:Inconsolata:size=20
 URxvt.scrollBar: false
 URxvt.iconFile: .rexim/icons/terminal-icon.png
 
