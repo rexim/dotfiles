@@ -107,7 +107,7 @@
 (add-hook 'yaml-mode-hook 'rc/set-up-whitespace-handling)
 
 ;;; display-line-numbers-mode
-(when (version<= "26.0.50" emacs-version )
+(when (version<= "26.0.50" emacs-version)
   (global-display-line-numbers-mode))
 
 ;;; magit
