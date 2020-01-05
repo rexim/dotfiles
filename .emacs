@@ -280,6 +280,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(display-line-numbers-type (quote relative))
  '(org-agenda-dim-blocked-tasks nil)
  '(org-agenda-exporter-settings (quote ((org-agenda-tag-filter-preset (list "+personal")))))
  '(org-cliplink-transport-implementation (quote url-el))
