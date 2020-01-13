@@ -5,4 +5,4 @@
 .gitconfig|symlink|
 .rexim|symlink|
 .npmrc|symlink|
-.joerc|symlink|
+.jmacsrc|symlink|
