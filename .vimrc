@@ -7,4 +7,5 @@ set guifont=Ubuntu\ Mono\ 20
 set guioptions-=m
 set guioptions-=T
 set noesckeys
+set number
 colorscheme desert
