@@ -8,5 +8,4 @@ set guioptions-=m
 set guioptions-=T
 set noesckeys
 set number
-set nowrap
 colorscheme desert
