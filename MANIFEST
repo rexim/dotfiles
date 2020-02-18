@@ -6,3 +6,4 @@
 .rexim|symlink|
 .npmrc|symlink|
 .jmacsrc|symlink|
+.apvlvrc|symlink|
