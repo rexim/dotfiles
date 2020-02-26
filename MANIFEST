@@ -7,3 +7,4 @@
 .npmrc|symlink|
 .jmacsrc|symlink|
 .apvlvrc|symlink|
+.nexrc|symlink|
