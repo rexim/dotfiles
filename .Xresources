@@ -14,6 +14,8 @@ URxvt*depth: 32
 URxvt*foreground: #e4e4ef
 URxvt*background: #181818
 
+URxvt.perl-ext-common:  resize-font
+
 *color0:  #2E3436
 *color1:  #a40000
 *color2:  #4E9A06
@@ -30,3 +32,7 @@ URxvt*background: #181818
 *color13: #AD7FA8
 *color14: #fcaf3e
 *color15: #EEEEEC
+
+URxvt.keysym.C-minus:  resize-font:smaller
+URxvt.keysym.C-equal:  resize-font:bigger
+URxvt.keysym.C-0:      resize-font:reset

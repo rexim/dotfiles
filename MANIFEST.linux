@@ -8,3 +8,4 @@ i3|symlink|.config
 bin/hhkb-i3|symlink|
 bin/map-wacom|symlink|
 settings.ini|symlink|.config/gtk-3.0
+.urxvt/ext/resize-font|symlink|
