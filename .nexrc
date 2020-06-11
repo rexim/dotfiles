@@ -1,1 +1,2 @@
 set number
+set autoindent
