@@ -9,4 +9,6 @@ set guioptions-=T
 set noesckeys
 set relativenumber
 set number
+set ignorecase
+set smartcase
 colorscheme desert
