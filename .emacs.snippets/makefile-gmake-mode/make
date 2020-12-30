@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: make
+# key: make
+# expand-env: ((yas-indent-line 'fixed))
+# --
+CFLAGS=-Wall -Wextra -std=c11 -pedantic
+LIBS=
+
+$1: $2
+	$(CC) $(CFLAGS) -o $1 $2 $(LIBS)
