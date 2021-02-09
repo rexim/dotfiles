@@ -43,8 +43,6 @@
                                 (awk-mode . "awk")
                                 (other . "bsd")))
 
-(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
-
 (add-hook 'c-mode-hook (lambda ()
                          (interactive)
                          (c-toggle-comment-style -1)))
@@ -284,6 +282,28 @@
 
 (add-to-list 'load-path "~/.emacs.local/")
 (require 'basm-mode)
+
+(require 'nothings-mode)
+(add-to-list 'auto-mode-alist '("\\.[hc]\\'" . nothings-mode))
+
+(defun astyle-buffer (&optional justify)
+  (interactive)
+  (let ((saved-point (point))
+        (saved-window-point (window-point)))
+    (shell-command-on-region
+     (point-min)
+     (point-max)
+     "astyle --style=kr"
+     nil
+     t)
+    (goto-char saved-point)
+    (set-window-point (get-buffer-window) saved-window-point)))
+
+(add-hook 'nothings-mode-hook
+          (lambda ()
+            (interactive)
+            (setq-local fill-paragraph-function 'astyle-buffer)))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
