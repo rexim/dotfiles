@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: sb
+# key: sb
+# expand-env: ((yas-indent-line 'fixed))
+# --
+${1:$(make-string (+ 2 (string-width yas-text)) ? )}SMOL
+${1:$(make-string (+ 2 (string-width yas-text)) ? )}BREK
+($1 minutes)

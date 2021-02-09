@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: tagi
+# key: tagi
+# --
+<$1>$0</$1>
