@@ -288,16 +288,14 @@
 
 (defun astyle-buffer (&optional justify)
   (interactive)
-  (let ((saved-point (point))
-        (saved-window-point (window-point)))
+  (let ((saved-line-number (line-number-at-pos)))
     (shell-command-on-region
      (point-min)
      (point-max)
      "astyle --style=kr"
      nil
      t)
-    (goto-char saved-point)
-    (set-window-point (get-buffer-window) saved-window-point)))
+    (goto-line saved-line-number)))
 
 (add-hook 'nothings-mode-hook
           (lambda ()
