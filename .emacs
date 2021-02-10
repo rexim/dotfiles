@@ -14,9 +14,6 @@
 
 (add-to-list 'default-frame-alist `(font . ,(rc/get-default-font)))
 
-(when (display-graphic-p)
-  (set-face-attribute 'fixed-pitch nil :font (rc/get-default-font)))
-
 (tool-bar-mode 0)
 (menu-bar-mode 0)
 (scroll-bar-mode 0)
