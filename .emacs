@@ -281,7 +281,7 @@
 (add-to-list 'load-path "~/.emacs.local/")
 (require 'basm-mode)
 
-(require 'nothings-mode)
+(require 'simpc-mode)
 (add-to-list 'auto-mode-alist '("\\.[hc]\\(pp\\)\\'" . simpc-mode))
 
 (defun astyle-buffer ()
