@@ -20,7 +20,8 @@
 (column-number-mode 1)
 (show-paren-mode 1)
 
-(rc/require-theme 'gruber-darker)
+;; (rc/require-theme 'gruber-darker)
+(rc/require-theme 'zenburn)
 
 ;;; ido
 (rc/require 'smex 'ido-completing-read+)
