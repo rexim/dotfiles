@@ -282,9 +282,9 @@
 (require 'basm-mode)
 
 (require 'nothings-mode)
-(add-to-list 'auto-mode-alist '("\\.[hc]\\'" . nothings-mode))
+(add-to-list 'auto-mode-alist '("\\.[hc]\\(pp\\)\\'" . simpc-mode))
 
-(defun astyle-buffer (&optional justify)
+(defun astyle-buffer ()
   (interactive)
   (let ((saved-line-number (line-number-at-pos)))
     (shell-command-on-region
@@ -295,7 +295,7 @@
      t)
     (goto-line saved-line-number)))
 
-(add-hook 'nothings-mode-hook
+(add-hook 'simpc-mode-hook
           (lambda ()
             (interactive)
             (setq-local fill-paragraph-function 'astyle-buffer)))
