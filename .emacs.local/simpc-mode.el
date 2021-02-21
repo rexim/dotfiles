@@ -84,3 +84,5 @@
   (setq-local font-lock-defaults '(simpc-font-lock-keywords))
   (setq-local indent-line-function 'simpc-indent-line)
   (setq-local comment-start "// "))
+
+(provide 'simpc-mode)
