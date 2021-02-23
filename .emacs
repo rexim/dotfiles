@@ -282,7 +282,7 @@
 (require 'basm-mode)
 
 (require 'simpc-mode)
-(add-to-list 'auto-mode-alist '("\\.[hc]\\(pp\\)\\'" . simpc-mode))
+(add-to-list 'auto-mode-alist '("\\.[hc]\\(pp\\)?\\'" . simpc-mode))
 
 (defun astyle-buffer ()
   (interactive)
