@@ -300,6 +300,16 @@
             (interactive)
             (setq-local fill-paragraph-function 'astyle-buffer)))
 
+(require 'compile)
+
+;; pascalik.pas(24,44) Error: Can't evaluate constant expression
+
+compilation-error-regexp-alist-alist
+
+(add-to-list 'compilation-error-regexp-alist
+             '("\\([a-zA-Z0-9\\.]+\\)(\\([0-9]+\\)\\(,\\([0-9]+\\)\\)?) \\(Warning:\\)?"
+               1 2 (4) (5)))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
