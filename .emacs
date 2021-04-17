@@ -264,6 +264,8 @@
  'hindent
  'elpy
  'typescript-mode
+ 'rfc-mode
+ 'sml-mode
  )
 
 (load "~/.emacs.shadow/shadow-rc.el" t)
