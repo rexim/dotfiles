@@ -51,7 +51,8 @@
       "eqf" "gef" "gtf" "lef" "ltf" "nef"
       "ret" "call" "native"
       "andb" "orb" "xor" "shr" "shl" "notb"
-      "read8" "read16" "read32" "read64"
+      "read8u" "read16u" "read32u" "read64u"
+      "read8i" "read16i" "read32i" "read64i"
       "write8" "write16" "write32" "write64"
       "i2f" "u2f" "f2i" "f2u")))
 
