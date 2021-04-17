@@ -92,7 +92,6 @@
 (add-hook 'rust-mode-hook 'rc/set-up-whitespace-handling)
 (add-hook 'scala-mode-hook 'rc/set-up-whitespace-handling)
 (add-hook 'markdown-mode-hook 'rc/set-up-whitespace-handling)
-(add-hook 'js2-mode-hook 'rc/set-up-whitespace-handling)
 (add-hook 'haskell-mode-hook 'rc/set-up-whitespace-handling)
 (add-hook 'python-mode-hook 'rc/set-up-whitespace-handling)
 (add-hook 'erlang-mode-hook 'rc/set-up-whitespace-handling)
@@ -162,15 +161,6 @@
   (toggle-word-wrap 1))
 
 (add-hook 'markdown-mode-hook 'rc/enable-word-wrap)
-
-;;; js2
-(rc/require 'js2-mode)
-
-(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
-(add-to-list 'interpreter-mode-alist '("node" . js2-mode))
-
-(add-to-list 'auto-mode-alist '("\\.jsx\\'" . js2-jsx-mode))
-(add-to-list 'interpreter-mode-alist '("node". js2-jsx-mode))
 
 ;;; nxml
 (add-to-list 'auto-mode-alist '("\\.html\\'" . nxml-mode))
