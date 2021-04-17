@@ -276,7 +276,7 @@
 (require 'simpc-mode)
 (add-to-list 'auto-mode-alist '("\\.[hc]\\(pp\\)?\\'" . simpc-mode))
 
-(defun astyle-buffer ()
+(defun astyle-buffer (&optional justify)
   (interactive)
   (let ((saved-line-number (line-number-at-pos)))
     (shell-command-on-region
