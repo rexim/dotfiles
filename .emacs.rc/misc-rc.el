@@ -117,14 +117,24 @@ This command does the inverse of `fill-paragraph'."
                                ,rc/frame-transparency))
       (set-frame-parameter nil 'alpha '(100 100)))))
 
-(defun rc/duplicate-line ()
+(defun rc/duplicate-line (&optional count)
   "Duplicate current line"
-  (interactive)
-  (move-beginning-of-line 1)
-  (kill-line)
-  (yank)
-  (newline)
-  (yank))
+  (interactive (list current-prefix-arg))
+  (let ((cur-line (buffer-substring (point-at-bol) (1+ (point-at-eol))))
+        (count (or count 1)))
+    (if (or (not (integerp count))
+            (< count 0))
+        (user-error "%S is not positive integer" count)
+      (save-excursion
+        (forward-line)
+        (insert (cond
+                 ((= count 1)
+                  cur-line)
+                 ((= count 0)
+                  "")
+                 (t (thread-last cur-line
+                      (make-list count)
+                      (apply 'concat)))))))))
 
 (global-set-key (kbd "C-,") 'rc/duplicate-line)
 
