@@ -23,6 +23,9 @@
 ;; (rc/require-theme 'gruber-darker)
 (rc/require-theme 'zenburn)
 
+(eval-after-load 'zenburn
+  (set-face-attribute 'line-number nil :inherit 'default))
+
 ;;; ido
 (rc/require 'smex 'ido-completing-read+)
 
