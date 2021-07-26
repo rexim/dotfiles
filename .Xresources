@@ -34,8 +34,8 @@ URxvt.iconFile: .rexim/icons/terminal-icon.png
 URxvt*background: #3f3f3f
 URxvt*foreground: #dcdccc
 URxvt*cursorColor: #aaaaaa
-URxvt*colorUL: #366060
-URxvt*underlineColor: #dfaf8f
+! URxvt*colorUL: #366060
+! URxvt*underlineColor: #dfaf8f
 URxvt*color0: #3f3f3f
 URxvt*color1: #cc9393
 URxvt*color2: #7f9f7f
