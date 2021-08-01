@@ -11,4 +11,5 @@ set relativenumber
 set number
 set ignorecase
 set smartcase
+set incsearch
 colorscheme desert
