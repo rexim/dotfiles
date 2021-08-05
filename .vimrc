@@ -12,4 +12,5 @@ set number
 set ignorecase
 set smartcase
 set incsearch
+set autochdir
 colorscheme desert
