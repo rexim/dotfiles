@@ -275,6 +275,7 @@
 
 (add-to-list 'load-path "~/.emacs.local/")
 (require 'basm-mode)
+(require 'porth-mode)
 
 (require 'simpc-mode)
 (add-to-list 'auto-mode-alist '("\\.[hc]\\(pp\\)?\\'" . simpc-mode))
