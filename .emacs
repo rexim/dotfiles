@@ -20,8 +20,9 @@
 (column-number-mode 1)
 (show-paren-mode 1)
 
-;; (rc/require-theme 'gruber-darker)
-(rc/require-theme 'zenburn)
+(rc/require-theme 'gruber-darker)
+;; (rc/require-theme 'zenburn)
+;; (load-theme 'adwaita t)
 
 (eval-after-load 'zenburn
   (set-face-attribute 'line-number nil :inherit 'default))
