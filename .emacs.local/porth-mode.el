@@ -29,6 +29,11 @@
 ;;
 ;; Major Mode for editing Porth source code. It's Forth but written in Python.
 
+;; TODO: jump to the opposite side of the blocks with C-M-f and C-M-b
+;; I think tuareg-mode can do that with similar end-like block, we try
+;; to steal their approach
+;; TODO: color the names of definitions in const, memory, proc, etc differently
+
 (defconst porth-mode-syntax-table
   (with-syntax-table (copy-syntax-table)
     ;; C/C++ style comments
@@ -42,7 +47,7 @@
 
 (eval-and-compile
   (defconst porth-keywords
-    '("if" "else" "end" "while" "do" "macro" "include")))
+    '("if" "else" "while" "do" "include" "memory" "proc" "const" "end" "offset" "reset" "assert" "in")))
 
 (defconst porth-highlights
   `((,(regexp-opt porth-keywords 'symbols) . font-lock-keyword-face)))
