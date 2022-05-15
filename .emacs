@@ -208,10 +208,6 @@
 
 (add-hook 'typescript-mode-hook 'rc/turn-on-tide)
 
-;;; Editorconfig
-(rc/require 'editorconfig)
-(editorconfig-mode 1)
-
 ;;; Proof general
 (rc/require 'proof-general)
 (add-hook 'coq-mode-hook
@@ -236,13 +232,6 @@
 
 ;;; Ebisp
 (add-to-list 'auto-mode-alist '("\\.ebi\\'" . lisp-mode))
-
-;;; Fixmee
-
-(rc/require 'fixmee)
-(require 'fixmee)
-(require 'button-lock)
-(global-fixmee-mode 1)
 
 ;;; Packages that don't require configuration
 (rc/require
