@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: ras
+# key: ras
+# --
+here eputs ": Assertion Failed: $0" eputs
+1 exit

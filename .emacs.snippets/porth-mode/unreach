@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: unreach
+# key: unreach
+# --
+here eputs ": unreachable: $0" eputs
+69 exit

@@ -2,5 +2,5 @@
 # name: todo
 # key: todo
 # --
-here eputs ": TODO: $1" eputs
+here eputs ": TODO: $0" eputs
 1 exit

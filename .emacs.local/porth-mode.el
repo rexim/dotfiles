@@ -47,7 +47,10 @@
 
 (eval-and-compile
   (defconst porth-keywords
-    '("if" "else" "while" "do" "include" "memory" "proc" "const" "end" "offset" "reset" "assert" "in")))
+    '("if" "else" "while" "do" "include" "memory" "proc"
+      "const" "end" "offset" "reset" "assert" "in" "inline"
+      "here" "addr-of" "call-like" "let" "peek" "return"
+      "var" "cast" "struct")))
 
 (defconst porth-highlights
   `((,(regexp-opt porth-keywords 'symbols) . font-lock-keyword-face)))
@@ -55,8 +58,9 @@
 ;;;###autoload
 (define-derived-mode porth-mode prog-mode "porth"
   "Major Mode for editing Porth source code."
+  :syntax-table porth-mode-syntax-table
   (setq font-lock-defaults '(porth-highlights))
-  (set-syntax-table porth-mode-syntax-table))
+  (setq-local comment-start "// "))
 
 ;;;###autoload
 (add-to-list 'auto-mode-alist '("\\.porth\\'" . porth-mode))
