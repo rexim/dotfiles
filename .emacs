@@ -274,6 +274,7 @@
 (add-to-list 'load-path "~/.emacs.local/")
 (require 'basm-mode)
 (require 'porth-mode)
+(require 'noq-mode)
 (require 'jai-mode)
 
 (require 'simpc-mode)
