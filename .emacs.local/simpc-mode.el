@@ -14,16 +14,23 @@
     ;; properly in template syntax)
     (modify-syntax-entry ?< "." table)
     (modify-syntax-entry ?> "." table)
+
     (modify-syntax-entry ?& "." table)
+    (modify-syntax-entry ?% "." table)
     table))
 
+(defun simpc-types ()
+  '("char" "int" "long" "short" "void" "bool" "float" "double" "signed" "unsigned"
+    "char16_t" "char32_t" "char8_t"
+    "int8_t" "uint8_t" "int16_t" "uint16_t" "int32_t" "uint32_t" "int64_t" "uint64_t"))
+
 (defun simpc-keywords ()
-  '("auto" "break" "case" "char" "const" "continue" "default" "do" "double"
-    "else" "enum" "extern" "float" "for" "goto" "if" "int" "long" "register"
-    "return" "short" "signed" "sizeof" "static" "struct" "switch" "typedef"
-    "union" "unsigned" "void" "volatile" "while" "alignas" "alignof" "and"
+  '("auto" "break" "case" "const" "continue" "default" "do"
+    "else" "enum" "extern" "for" "goto" "if" "register"
+    "return"  "sizeof" "static" "struct" "switch" "typedef"
+    "union"  "volatile" "while" "alignas" "alignof" "and"
     "and_eq" "asm" "atomic_cancel" "atomic_commit" "atomic_noexcept" "bitand"
-    "bitor" "bool" "catch" "char16_t" "char32_t" "char8_t" "class" "co_await"
+    "bitor" "catch"  "class" "co_await"
     "co_return" "co_yield" "compl" "concept" "const_cast" "consteval" "constexpr"
     "constinit" "decltype" "delete" "dynamic_cast" "explicit" "export" "false" 
     "friend" "inline" "mutable" "namespace" "new" "noexcept" "not" "not_eq"
@@ -36,7 +43,8 @@
   (list
    `("# *[a-zA-Z0-9_]+" . font-lock-preprocessor-face)
    `("#.*include \\(\\(<\\|\"\\).*\\(>\\|\"\\)\\)" . (1 font-lock-string-face))
-   `(,(regexp-opt (simpc-keywords) 'symbols) . font-lock-keyword-face)))
+   `(,(regexp-opt (simpc-keywords) 'symbols) . font-lock-keyword-face)
+   `(,(regexp-opt (simpc-types) 'symbols) . font-lock-type-face)))
 
 ;;; TODO: try to replace simpc--space-prefix-len with current-indentation
 (defun simpc--space-prefix-len (line)
