@@ -31,9 +31,13 @@
 
 (defconst noq-mode-syntax-table
   (with-syntax-table (copy-syntax-table)
-    ;; Python style comments
+    ;; Python-style comments
     (modify-syntax-entry ?# "<")
     (modify-syntax-entry ?\n ">")
+    ;; C/C++ style comments
+	(modify-syntax-entry ?/ ". 124b")
+	(modify-syntax-entry ?* ". 23")
+	(modify-syntax-entry ?\n "> b")
 	;; (modify-syntax-entry ?/ ". 124b")
 	;; (modify-syntax-entry ?* ". 23")
 	;; (modify-syntax-entry ?\n "> b")
@@ -48,7 +52,7 @@
 
 (eval-and-compile
   (defconst noq-keywords
-    '("undo" "quit" "delete" "load")))
+    '("undo" "quit" "delete" "load" "save")))
 
 (defconst noq-highlights
   `((
@@ -72,7 +76,7 @@
   "Major Mode for editing Noq source code."
   :syntax-table noq-mode-syntax-table
   (setq font-lock-defaults '(noq-highlights))
-  (setq-local comment-start "# "))
+  (setq-local comment-start "// "))
 
 ;;;###autoload
 (add-to-list 'auto-mode-alist '("\\.noq\\'" . noq-mode))
