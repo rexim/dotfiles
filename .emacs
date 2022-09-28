@@ -225,6 +225,8 @@
             (interactive)
             (add-to-list 'tex-verbatim-environments "code")))
 
+(setq font-latex-fontify-sectioning 'color)
+
 ;;; Move Text
 (rc/require 'move-text)
 (global-set-key (kbd "M-p") 'move-text-up)
