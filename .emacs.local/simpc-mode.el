@@ -42,7 +42,7 @@
 
 (defun simpc-font-lock-keywords ()
   (list
-   `("# *[a-zA-Z0-9_]+" . font-lock-preprocessor-face)
+   `("# *[#a-zA-Z0-9_]+" . font-lock-preprocessor-face)
    `("#.*include \\(\\(<\\|\"\\).*\\(>\\|\"\\)\\)" . (1 font-lock-string-face))
    `(,(regexp-opt (simpc-keywords) 'symbols) . font-lock-keyword-face)
    `(,(regexp-opt (simpc-types) 'symbols) . font-lock-type-face)))
