@@ -23,6 +23,7 @@
   '("char" "int" "long" "short" "void" "bool" "float" "double" "signed" "unsigned"
     "char16_t" "char32_t" "char8_t"
     "int8_t" "uint8_t" "int16_t" "uint16_t" "int32_t" "uint32_t" "int64_t" "uint64_t"
+    "uintptr_t"
     "size_t"))
 
 (defun simpc-keywords ()
