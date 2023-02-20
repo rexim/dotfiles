@@ -191,8 +191,9 @@
  (setq-local require-final-newline mode-require-final-newline)
  (setq-local parse-sexp-ignore-comments t)
  (setq-local comment-start-skip "\\(//+\\|/\\*+\\)\\s *")
- (setq-local comment-start "/*")
- (setq-local comment-end "*/")
+ (setq-local comment-start "//")
+ (setq-local block-comment-start "/*")
+ (setq-local block-comment-end "*/")
  (setq-local indent-line-function 'js-indent-line)
  (setq-local font-lock-defaults '(jai-font-lock-defaults))
  (setq-local beginning-of-defun-function 'jai-beginning-of-defun)
@@ -207,7 +208,7 @@
 (add-to-list 'auto-mode-alist '("\\.jai\\'" . jai-mode))
 
 (defconst jai--error-regexp
-  "^\\([^ :]+\\):\\([0-9]+\\),\\([0-9]+\\):")
+  "^\\([^ \n:]+.*\.jai\\):\\([0-9]+\\),\\([0-9]+\\):")
 (push `(jai ,jai--error-regexp 1 2 3 2) compilation-error-regexp-alist-alist)
 (push 'jai compilation-error-regexp-alist)
 
