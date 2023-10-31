@@ -12,6 +12,8 @@ set number
 set ignorecase
 set smartcase
 set incsearch
-set autochdir
 set cinoptions=l1
-colorscheme desert
+set modeline
+colorscheme habamax
+
+autocmd BufEnter * if &filetype == "go" | setlocal noexpandtab
