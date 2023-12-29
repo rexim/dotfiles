@@ -14,6 +14,9 @@ set smartcase
 set incsearch
 set cinoptions=l1
 set modeline
+set keymap=russian-jcukenwin
+set iminsert=0
+set imsearch=0
 colorscheme habamax
 
 autocmd BufEnter * if &filetype == "go" | setlocal noexpandtab
