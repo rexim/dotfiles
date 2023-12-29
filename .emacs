@@ -1,5 +1,7 @@
 (package-initialize)
 
+(add-to-list 'load-path "~/.emacs.local/")
+
 (load "~/.emacs.rc/rc.el")
 
 (load "~/.emacs.rc/misc-rc.el")
@@ -81,6 +83,20 @@
 (add-hook 'haskell-mode-hook 'haskell-doc-mode)
 (add-hook 'haskell-mode-hook 'hindent-mode)
 
+(require 'basm-mode)
+
+(require 'fasm-mode)
+(add-to-list 'auto-mode-alist '("\\.asm\\'" . fasm-mode))
+
+(require 'porth-mode)
+
+(require 'noq-mode)
+
+(require 'jai-mode)
+
+(require 'simpc-mode)
+(add-to-list 'auto-mode-alist '("\\.[hc]\\(pp\\)?\\'" . simpc-mode))
+
 ;;; Whitespace mode
 (defun rc/set-up-whitespace-handling ()
   (interactive)
@@ -101,7 +117,7 @@
 (add-hook 'python-mode-hook 'rc/set-up-whitespace-handling)
 (add-hook 'erlang-mode-hook 'rc/set-up-whitespace-handling)
 (add-hook 'asm-mode-hook 'rc/set-up-whitespace-handling)
-(add-hook 'nasm-mode-hook 'rc/set-up-whitespace-handling)
+(add-hook 'fasm-mode-hook 'rc/set-up-whitespace-handling)
 (add-hook 'go-mode-hook 'rc/set-up-whitespace-handling)
 (add-hook 'nim-mode-hook 'rc/set-up-whitespace-handling)
 (add-hook 'yaml-mode-hook 'rc/set-up-whitespace-handling)
@@ -216,10 +232,6 @@
              (local-set-key (kbd "C-c C-q C-n")
                             (quote proof-assert-until-point-interactive))))
 
-;;; Nasm Mode
-(rc/require 'nasm-mode)
-(add-to-list 'auto-mode-alist '("\\.asm\\'" . nasm-mode))
-
 ;;; LaTeX mode
 (add-hook 'tex-mode-hook
           (lambda ()
@@ -273,15 +285,6 @@
  )
 
 (load "~/.emacs.shadow/shadow-rc.el" t)
-
-(add-to-list 'load-path "~/.emacs.local/")
-(require 'basm-mode)
-(require 'porth-mode)
-(require 'noq-mode)
-(require 'jai-mode)
-
-(require 'simpc-mode)
-(add-to-list 'auto-mode-alist '("\\.[hc]\\(pp\\)?\\'" . simpc-mode))
 
 (defun astyle-buffer (&optional justify)
   (interactive)
