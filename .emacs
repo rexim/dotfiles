@@ -72,6 +72,10 @@
                             (quote eval-print-last-sexp))))
 (add-to-list 'auto-mode-alist '("Cask" . emacs-lisp-mode))
 
+;;; uxntal-mode
+
+(rc/require 'uxntal-mode)
+
 ;;; Haskell mode
 (rc/require 'haskell-mode)
 
