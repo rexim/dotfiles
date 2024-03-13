@@ -17,6 +17,6 @@ set modeline
 set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=0
-colorscheme habamax
+colorscheme desert
 
 autocmd BufEnter * if &filetype == "go" | setlocal noexpandtab
