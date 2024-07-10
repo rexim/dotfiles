@@ -224,6 +224,7 @@
   (tide-setup))
 
 (add-hook 'typescript-mode-hook 'rc/turn-on-tide)
+(add-to-list 'auto-mode-alist '("\\.mts\\'" . typescript-mode))
 
 ;;; Proof general
 (rc/require 'proof-general)
