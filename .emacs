@@ -216,15 +216,19 @@
             (interactive)
             (company-mode 0)))
 
+;;; Typescript
+(rc/require 'typescript-mode)
+(add-to-list 'auto-mode-alist '("\\.mts\\'" . typescript-mode))
+
 ;;; Tide
 (rc/require 'tide)
 
-(defun rc/turn-on-tide ()
+(defun rc/turn-on-tide-and-flycheck ()  ;Flycheck is a dependency of tide
   (interactive)
-  (tide-setup))
+  (tide-setup)
+  (flycheck-mode 1))
 
-(add-hook 'typescript-mode-hook 'rc/turn-on-tide)
-(add-to-list 'auto-mode-alist '("\\.mts\\'" . typescript-mode))
+(add-hook 'typescript-mode-hook 'rc/turn-on-tide-and-flycheck)
 
 ;;; Proof general
 (rc/require 'proof-general)
