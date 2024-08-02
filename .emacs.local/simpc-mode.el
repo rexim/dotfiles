@@ -48,12 +48,7 @@
    `(,(regexp-opt (simpc-keywords) 'symbols) . font-lock-keyword-face)
    `(,(regexp-opt (simpc-types) 'symbols) . font-lock-type-face)))
 
-;;; TODO: try to replace simpc--space-prefix-len with current-indentation
-(defun simpc--space-prefix-len (line)
-  (- (length line)
-     (length (string-trim-left line))))
-
-(defun simpc--previous-non-empty-line ()
+(defun simpc--previous-non-empty-line-and-its-indentation ()
   (save-excursion
     (forward-line -1)
     (while (and (not (bobp))
@@ -63,29 +58,46 @@
       (forward-line -1))
     (thing-at-point 'line t)))
 
+(defun simpc--indentation-of-previous-non-empty-line ()
+  (save-excursion
+    (forward-line -1)
+    (while (and (not (bobp))
+                (string-empty-p
+                 (string-trim-right
+                  (thing-at-point 'line t))))
+      (forward-line -1))
+    (current-indentation)))
+
 (defun simpc--desired-indentation ()
-  (let ((cur-line (string-trim-right (thing-at-point 'line t)))
-        (prev-line (string-trim-right (simpc--previous-non-empty-line)))
-        (indent-len 4))
+  (let* ((cur-line (string-trim-right (thing-at-point 'line t)))
+         (prev-line (string-trim-right (simpc--previous-non-empty-line)))
+         (indent-len 4)
+         (prev-indent (simpc--indentation-of-previous-non-empty-line)))
     (cond
+     ((string-match-p "^\\s-*switch\\s-*(.+)" prev-line)
+      prev-indent)
      ((and (string-suffix-p "{" prev-line)
            (string-prefix-p "}" (string-trim-left cur-line)))
-      (simpc--space-prefix-len prev-line))
+      prev-indent)
      ((string-suffix-p "{" prev-line)
-      (+ (simpc--space-prefix-len prev-line) indent-len))
+      (+ prev-indent indent-len))
      ((string-prefix-p "}" (string-trim-left cur-line))
-      (max (- (simpc--space-prefix-len prev-line) indent-len) 0))
-     (t (simpc--space-prefix-len prev-line)))))
+      (max (- prev-indent indent-len) 0))
+     ((string-suffix-p ":" prev-line)
+      (if (string-suffix-p ":" cur-line)
+          prev-indent
+        (+ prev-indent indent-len)))
+     ((string-suffix-p ":" cur-line)
+      (max (- prev-indent indent-len) 0))
+     (t prev-indent))))
 
 ;;; TODO: customizable indentation (amount of spaces, tabs, etc)
 (defun simpc-indent-line ()
   (interactive)
   (when (not (bobp))
-    (let* ((current-indentation
-            (simpc--space-prefix-len (thing-at-point 'line t)))
-           (desired-indentation
+    (let* ((desired-indentation
             (simpc--desired-indentation))
-           (n (max (- (current-column) current-indentation) 0)))
+           (n (max (- (current-column) (current-indentation)) 0)))
       (indent-line-to desired-indentation)
       (forward-char n))))
 
