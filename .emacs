@@ -101,6 +101,8 @@
 (require 'simpc-mode)
 (add-to-list 'auto-mode-alist '("\\.[hc]\\(pp\\)?\\'" . simpc-mode))
 
+(require 'c3-mode)
+
 ;;; Whitespace mode
 (defun rc/set-up-whitespace-handling ()
   (interactive)
