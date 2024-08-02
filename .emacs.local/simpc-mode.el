@@ -48,7 +48,7 @@
    `(,(regexp-opt (simpc-keywords) 'symbols) . font-lock-keyword-face)
    `(,(regexp-opt (simpc-types) 'symbols) . font-lock-type-face)))
 
-(defun simpc--previous-non-empty-line-and-its-indentation ()
+(defun simpc--previous-non-empty-line ()
   (save-excursion
     (forward-line -1)
     (while (and (not (bobp))
