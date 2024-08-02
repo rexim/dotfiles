@@ -162,7 +162,7 @@
 (setq dired-listing-switches "-alh")
 
 ;;; helm
-(rc/require 'helm 'helm-cmd-t 'helm-git-grep 'helm-ls-git)
+(rc/require 'helm 'helm-git-grep 'helm-ls-git)
 
 (setq helm-ff-transformer-show-only-basename nil)
 
@@ -279,7 +279,6 @@
  'purescript-mode
  'nix-mode
  'dockerfile-mode
- 'love-minor-mode
  'toml-mode
  'nginx-mode
  'kotlin-mode
