@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 SCRIPT_DIR="$( cd "$( dirname "$BASH_SOURCE[0]" )" && pwd )"
 
@@ -26,15 +26,17 @@ deployManifest() {
         operation=$(echo $row | cut -d \| -f 2)
         destination=$(echo $row | cut -d \| -f 3)
 
-        case $operation in
-            symlink)
-                symlinkFile $filename $destination
-                ;;
+        if [[ ! "$row" =~ ^#.* ]]; then
+            case $operation in
+                symlink)
+                    symlinkFile $filename $destination
+                    ;;
 
-            *)
-                echo "[WARNING] Unknown operation $operation. Skipping..."
-                ;;
-        esac
+                *)
+                    echo "[WARNING] Unknown operation $operation. Skipping..."
+                    ;;
+            esac
+        fi
     done
 }
 

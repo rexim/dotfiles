@@ -3,8 +3,8 @@
 .emacs.snippets|symlink|
 .emacs.local|symlink|
 .gitconfig|symlink|
-.rexim|symlink|
-.npmrc|symlink|
-.jmacsrc|symlink|
-.apvlvrc|symlink|
-.nexrc|symlink|
+#.rexim|symlink|
+#.npmrc|symlink|
+#.jmacsrc|symlink|
+#.apvlvrc|symlink|
+#.nexrc|symlink|
