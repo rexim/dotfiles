@@ -20,3 +20,4 @@ set imsearch=0
 colorscheme industry
 
 autocmd BufEnter * if &filetype == "go" | setlocal noexpandtab
+autocmd BufNewFile,BufRead ?\+.c3 setf c
