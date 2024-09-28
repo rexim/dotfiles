@@ -24,7 +24,7 @@ symlinkFile() {
 
 deployManifest() {
     for row in $(cat $SCRIPT_DIR/$1); do
-        if [[ ! "$row" =~ ^#.* ]]; then
+        if [[ "$row" =~ ^#.* ]]; then
             continue
         fi
 
