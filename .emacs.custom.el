@@ -25,6 +25,7 @@
             (quote rc/autocommit-changes)
             nil
             (quote make-it-local))))))
+ '(warning-minimum-level :error)
  '(whitespace-style
    (quote
     (face tabs spaces trailing space-before-tab newline indentation empty space-after-tab space-mark tab-mark))))
