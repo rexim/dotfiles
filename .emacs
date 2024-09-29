@@ -85,7 +85,6 @@
 (add-hook 'haskell-mode-hook 'haskell-indent-mode)
 (add-hook 'haskell-mode-hook 'interactive-haskell-mode)
 (add-hook 'haskell-mode-hook 'haskell-doc-mode)
-(add-hook 'haskell-mode-hook 'hindent-mode)
 
 (require 'basm-mode)
 
@@ -287,7 +286,6 @@
  'racket-mode
  'qml-mode
  'ag
- 'hindent
  'elpy
  'typescript-mode
  'rfc-mode
