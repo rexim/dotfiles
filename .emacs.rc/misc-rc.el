@@ -12,9 +12,9 @@
               visible-bell (equal system-type 'windows-nt))
 
 (defun rc/colorize-compilation-buffer ()
-  (toggle-read-only)
+  (read-only-mode 'toggle)
   (ansi-color-apply-on-region compilation-filter-start (point))
-  (toggle-read-only))
+  (read-only-mode 'toggle))
 (add-hook 'compilation-filter-hook 'rc/colorize-compilation-buffer)
 
 (defun rc/buffer-file-name ()
