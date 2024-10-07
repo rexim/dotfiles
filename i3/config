@@ -35,6 +35,9 @@ floating_modifier $mod
 bindsym $mod+Return exec i3-sensible-terminal
 #bindsym $mod+Return exec st
 
+# scrot
+bindsym --release $mod+s exec "scrot -s"
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -78,7 +81,7 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
+# bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
