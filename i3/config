@@ -32,8 +32,8 @@ font pango:Iosevka 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
-#bindsym $mod+Return exec st
+#bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec st
 
 # scrot
 bindsym --release $mod+s exec "scrot -s"
