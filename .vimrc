@@ -17,7 +17,7 @@ set modeline
 set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=0
-colorscheme desert
+colorscheme koehler
 
 autocmd BufEnter * if &filetype == "go" | setlocal noexpandtab
 autocmd BufNewFile,BufRead ?\+.c3 setf c
