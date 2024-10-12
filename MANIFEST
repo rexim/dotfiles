@@ -4,6 +4,7 @@
 .emacs.local|symlink|
 .emacs.custom.el|symlink|
 .gitconfig|symlink|
+.markut|symlink|
 #.rexim|symlink|
 #.npmrc|symlink|
 #.jmacsrc|symlink|
