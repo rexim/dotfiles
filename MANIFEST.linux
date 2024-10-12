@@ -6,6 +6,6 @@ i3|symlink|.config
 #.ghci|symlink|
 .i3status.conf|symlink|
 bin/hhkb-i3|symlink|
-#bin/map-wacom|symlink|
+bin/map-wacom|symlink|
 settings.ini|symlink|.config/gtk-3.0
 #.urxvt/ext/resize-font|symlink|
