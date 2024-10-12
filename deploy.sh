@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 SCRIPT_DIR="$( cd "$( dirname "$BASH_SOURCE[0]" )" && pwd )"
 
 symlinkFile() {
@@ -44,7 +46,10 @@ deployManifest() {
     done
 }
 
-echo "--- Common configs ---"
-deployManifest MANIFEST
-echo "--- Linux configs ---"
-deployManifest MANIFEST.linux
+if [ -z "$@" ]; then
+    echo "Usage: $0 <MANIFEST>"
+    echo "ERROR: no MANIFEST file is provided"
+    exit 1
+fi
+
+deployManifest $1
