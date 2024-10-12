@@ -213,15 +213,15 @@
 (add-hook 'emacs-lisp-mode-hook 'rc/turn-on-eldoc-mode)
 
 ;;; Company
-;; (rc/require 'company)
-;; (require 'company)
+(rc/require 'company)
+(require 'company)
 
-;; (global-company-mode)
+(global-company-mode)
 
-;; (add-hook 'tuareg-mode-hook
-;;           (lambda ()
-;;             (interactive)
-;;             (company-mode 0)))
+(add-hook 'tuareg-mode-hook
+          (lambda ()
+            (interactive)
+            (company-mode 0)))
 
 ;;; Typescript
 (rc/require 'typescript-mode)
