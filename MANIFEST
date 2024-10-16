@@ -10,3 +10,4 @@
 #.jmacsrc|symlink|
 #.apvlvrc|symlink|
 #.nexrc|symlink|
+.sqliterc|symlink|
