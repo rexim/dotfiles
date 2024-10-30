@@ -9,5 +9,5 @@
 #.npmrc|symlink|
 #.jmacsrc|symlink|
 #.apvlvrc|symlink|
-#.nexrc|symlink|
+.nexrc|symlink|
 .sqliterc|symlink|
