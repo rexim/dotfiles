@@ -20,5 +20,8 @@ set imsearch=0
 set autoindent
 colorscheme koehler
 
+" duplicate line with cursor position preservation 
+nnoremap <C-,> :let current_col = col('.')<CR>yyp:call cursor('.', current_col)<CR>
+
 autocmd BufEnter * if &filetype == "go" | setlocal noexpandtab
 autocmd BufNewFile,BufRead ?\+.c3 setf c
