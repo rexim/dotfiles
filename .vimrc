@@ -20,5 +20,7 @@ set imsearch=0
 set autoindent
 colorscheme koehler
 
+:nnoremap <C-,> :t.<CR>
+
 autocmd BufEnter * if &filetype == "go" | setlocal noexpandtab
 autocmd BufNewFile,BufRead ?\+.c3 setf c
