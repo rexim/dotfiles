@@ -18,7 +18,7 @@ set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=0
 set autoindent
-colorscheme koehler
+colorscheme habamax
 
 autocmd BufEnter * if &filetype == "go" | setlocal noexpandtab
 autocmd BufNewFile,BufRead ?\+.c3 setf c
