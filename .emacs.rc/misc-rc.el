@@ -1,6 +1,6 @@
 (require 'ansi-color)
 
-(global-set-key (kbd "C-c p") 'find-file-at-point)
+(global-set-key (kbd "C-x C-g") 'find-file-at-point)
 (global-set-key (kbd "C-c i m") 'imenu)
 
 (setq-default inhibit-splash-screen t
