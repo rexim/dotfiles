@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: ss
+# key: ss
+# expand-env: ((yas-indent-line 'fixed))
+# --
+${1:$(make-string (+ 2 (string-width yas-text)) ? )}STARTING
+${1:$(make-string (+ 2 (string-width yas-text)) ? )}SOON™
+($1 minutes)
