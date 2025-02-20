@@ -1,1 +1,4 @@
+// -*- mode: js -*-
+home "/.markut.shadow" concat include_if_exists
 "4500k" video_bitrate
+"-r" outf "60" outf             // target framerate is 60fps
