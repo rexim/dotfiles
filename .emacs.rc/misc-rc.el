@@ -131,11 +131,11 @@ This command does the inverse of `fill-paragraph'."
 
 (global-set-key (kbd "C-,") 'rc/duplicate-line)
 
-(defun rc/insert-todays-date ()
+(defun rc/insert-timestamp ()
   (interactive)
-  (insert (format-time-string "%Y-%m-%d")))
+  (insert (format-time-string "%Y-%m-%d (%H:%M:%S)")))
 
-(global-set-key (kbd "C-x p") 'rc/insert-todays-date)
+(global-set-key (kbd "C-x p") 'rc/insert-timestamp)
 
 ;;; A little hack which fixes a problem with meta key in fluxbox under VNC.
 (setq x-alt-keysym 'meta)
