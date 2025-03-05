@@ -11,4 +11,5 @@ settings.ini|symlink|.config/gtk-3.0
 #.urxvt/ext/resize-font|symlink|
 .gdbinit|symlink|
 gf2_config.ini|symlink|.config
+mpv.conf|symlink|.config/mpv
 .SciTEUser.properties|symlink|
