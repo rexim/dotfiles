@@ -133,9 +133,9 @@ This command does the inverse of `fill-paragraph'."
 
 (defun rc/insert-timestamp ()
   (interactive)
-  (insert (format-time-string "%Y-%m-%d (%H:%M:%S)")))
+  (insert (format-time-string "(%Y-%m-%d %H:%M:%S)")))
 
-(global-set-key (kbd "C-x p") 'rc/insert-timestamp)
+(global-set-key (kbd "C-x p d") 'rc/insert-timestamp)
 
 ;;; A little hack which fixes a problem with meta key in fluxbox under VNC.
 (setq x-alt-keysym 'meta)
