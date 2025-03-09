@@ -130,6 +130,14 @@ This command does the inverse of `fill-paragraph'."
 
 (global-set-key (kbd "C-x p d") 'rc/insert-timestamp)
 
+(defun rc/rgrep-selected (beg end)
+  (interactive (if (use-region-p)
+                   (list (region-beginning) (region-end))
+                 (list (point-min) (point-min))))
+  (rgrep (buffer-substring-no-properties beg end) "*" (pwd)))
+
+(global-set-key (kbd "C-x p s") 'rc/rgrep-selected)
+
 ;;; A little hack which fixes a problem with meta key in fluxbox under VNC.
 (setq x-alt-keysym 'meta)
 
