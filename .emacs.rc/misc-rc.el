@@ -67,13 +67,6 @@
         (kill-buffer buffer)
         (message "Killed autoloads buffer %s" name)))))
 
-(defun rc/start-python-simple-http-server ()
-  (interactive)
-  (shell-command "python -m SimpleHTTPServer 3001 &"
-                 "*Simple Python HTTP Server*"))
-
-(global-set-key (kbd "C-x p s") 'rc/start-python-simple-http-server)
-
 ;;; Taken from here:
 ;;; http://blog.bookworm.at/2007/03/pretty-print-xml-with-emacs.html
 (defun bf-pretty-print-xml-region (begin end)
