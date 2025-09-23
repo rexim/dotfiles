@@ -25,3 +25,4 @@ autocmd BufEnter * if &filetype == "go" | setlocal noexpandtab
 autocmd BufNewFile,BufRead ?\+.c3 setf c
 
 map gf :e <cfile><CR>
+map <leader>D :execute 'normal! i' . strftime('(%Y-%m-%d %H:%M:%S)')<CR>
