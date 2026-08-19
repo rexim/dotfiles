@@ -1,4 +1,5 @@
 (defconst tatr-default-priority 100)
+(defconst tatr-default-tags (list "scope"))
 
 (defun tatr-new-huid ()
   (format-time-string "%Y%m%d-%H%M%S" nil t))
@@ -28,9 +29,11 @@
                 (task-md-content (format (concat "# %s\n"
                                                  "\n"
                                                  "- STATUS: OPEN\n"
-                                                 "- PRIORITY: %s\n")
+                                                 "- PRIORITY: %s\n"
+                                                 "- TAGS: %s\n")
                                          title
-                                         tatr-default-priority)))
+                                         tatr-default-priority
+                                         (mapconcat #'identity tatr-default-tags))))
             (write-region task-md-content nil task-md-path)
             (cons huid task-md-path)))))))
 
