@@ -1,3 +1,4 @@
+;; TODO: support Extended HUID \[0-9]{8}-[0-9]{6}(-[a-zA-Z0-9\\-]*)?\
 (defconst tatr-default-priority 100)
 (defconst tatr-default-tags (list "scope"))
 
