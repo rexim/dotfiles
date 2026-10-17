@@ -102,6 +102,8 @@
 (add-to-list 'auto-mode-alist '("\\.[hc]\\(pp\\)?\\'" . simpc-mode))
 (add-to-list 'auto-mode-alist '("\\.[b]\\'" . simpc-mode))
 
+(require 'teal-mode)
+
 (require 'tatr)
 
 (require 'umka-mode)
