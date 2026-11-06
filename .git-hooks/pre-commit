@@ -1,0 +1,6 @@
+#!/bin/sh
+
+if git diff --cached --no-ext-diff | grep -Fq '@''no-commit'; then
+  echo 'Commit blocked: staged diff contains @''no-commit' >&2
+  exit 1
+fi

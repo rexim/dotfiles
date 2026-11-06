@@ -13,3 +13,4 @@ settings.ini|symlink|.config/gtk-3.0
 gf2_config.ini|symlink|.config
 mpv.conf|symlink|.config/mpv
 .SciTEUser.properties|symlink|
+.git-hooks|symlink|
